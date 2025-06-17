@@ -44,6 +44,9 @@ h1, h2, h3, p {
   font-family: var(--font-primary);
 }
 
+h1, h2, h3 {
+font-weight: 500;
+}
 
 h1 {
   font-size: 5rem;
