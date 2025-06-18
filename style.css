@@ -409,7 +409,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 }
 
 
-/* Footer container sans débordement */
+/* Footer  */
 .footer {
   width: 100%;
   margin: 0;
@@ -417,7 +417,6 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   overflow-x: hidden; /* optionnel pour bloquer tout débordement */
 }
 
-/* Container interne avec padding sans dépasser */
 .container-footer {
   max-width: 1200px; /* tu peux ajuster cette largeur */
   margin: 0 auto;
@@ -429,7 +428,6 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   border-radius: 40px;
 }
 
-/* Ligne de liens */
 .lien-footer {
   display: flex;
   justify-content: space-between;
@@ -438,7 +436,6 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   gap: 12px;
 }
 
-/* Reset des marges */
 .fin-footer,
 .info-lien,
 .slogan {
@@ -446,19 +443,33 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   padding: 0;
 }
 
-/* Style des liens */
 .info-lien a {
   text-decoration: none;
   color: #000;
 }
 
-/* Alignement horizontal pour le bas */
 .lien-footer:last-child .info-lien {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+
+
+
+/* Animtion */
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* === RESPONSIVE HERO SECTION === */
 
