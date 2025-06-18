@@ -70,22 +70,22 @@
     <h2>Pourquoi choisir <span class="highlight">Malo Nettoyage</span> ?</h2>
     <div class="list-raison">
       <div class="raison">
-        <h3 class="icon" alt="Icône poignée de main symbolisant entreprise familiale">🤝</h3>
+        <h3 class="icon" role="img" aria-label="Icône poignée de main symbolisant entreprise familiale">🤝</h3>
         <h3>Entreprise familiale</h3>
         <p>Des valeurs humaines, proches de vous</p>
       </div>
       <div class="raison">
-        <h3 class="icon" alt="Icône maison symbolisant proximité et engagement local">🏡</h3>
+        <h3 class="icon" role="img" aria-label="Icône maison symbolisant proximité et engagement local">🏡</h3>
         <h3>Local & engagé</h3>
         <p>Présents à vos côtés, pas à l’autre bout du pays</p>
       </div>
       <div class="raison">
-        <h3 class="icon" alt="Icône feuille symbolisant respect de l’environnement et produits écologiques">🌿</h3>
+        <h3 class="icon" role="img" aria-label="Icône feuille symbolisant respect de l’environnement et produits écologiques">🌿</h3>
         <h3>Respectueux</h3>
         <p>70 % de produits écologiques et sans danger</p>
       </div>
       <div class="raison">
-        <h3 class="icon" alt="Icône bulle de dialogue symbolisant écoute et disponibilité">💬</h3>
+        <h3 class="icon" role="img" aria-label="Icône bulle de dialogue symbolisant écoute et disponibilité">💬</h3>
         <h3>À votre écoute</h3>
         <p>Disponibles 7j/7 pour s’adapter à votre rythme</p>
       </div>
@@ -339,7 +339,7 @@ Superbe entreprise! Je recommande!Au top pour le nettoyage de vitres, fenêtres 
 </div>
 
 
-
+<!-- Tes scripts d'animation ici -->
 <script>
   document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
@@ -349,6 +349,27 @@ Superbe entreprise! Je recommande!Au top pour le nettoyage de vitres, fenêtres 
       item.classList.toggle('active');
     });
   });
+</script>
+
+<!-- Données structurées pour le SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Malo Nettoyage",
+  "image": "https://www.malonettoyage.ch/img/logo-malonettoyage.png",
+  "url": "https://www.malonettoyage.ch/",
+  "telephone": "+41798594120",
+"address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Rue de la Bergerie 5",
+  "postalCode": "1350",
+  "addressLocality": "Payerne",
+  "addressRegion": "Vaud",
+  "addressCountry": "CH"
+},
+  "description": "Services de nettoyage à domicile, fin de bail, vitres et fin de chantier à Payerne et dans la région de la Broye (canton de Vaud et environs)"
+}
 </script>
 
 </body>
