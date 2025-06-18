@@ -133,13 +133,6 @@ p {
   gap: 1rem; /* espace entre h1 et p */
 }
 
-p.slogan {
-  font-size: 1.2rem; /* taille adaptée */
-  font-weight: 500;
-  line-height: 1.5;
-  color: #333;
-}
-
 .img-hero img {
   max-width: 886px;
   width: 100%;
