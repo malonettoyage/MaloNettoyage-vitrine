@@ -534,9 +534,8 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   }
 
   .img-hero img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
+    aspect-ratio: 4 / 2;
+    object-fit: cover;
   }
 
   .img-google img {
