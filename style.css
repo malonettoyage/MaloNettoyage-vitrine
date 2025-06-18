@@ -102,9 +102,13 @@ p {
 .cta {
     color: #fff;
     background: #232323;
-    padding: 12px 24px;
+    padding: 16px 24px;
     border-radius: 1000px;
     text-align: center;
+}
+.cta:hover{
+      background: #1CBF73;
+
 }
 
 .cta, .sous-cta {
@@ -518,7 +522,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 
   .cta {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 16px 20px;
   }
 
   .sous-cta {
