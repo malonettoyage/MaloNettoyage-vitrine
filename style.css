@@ -60,6 +60,8 @@ h2 {
   line-height: 1.1;
   letter-spacing: -2px;
   margin: 0;
+    text-align: center;
+
 }
 
 h3 {
@@ -79,6 +81,13 @@ p {
 
 .section {
   margin-bottom: 96px;
+}
+
+/* Gap */
+.pourquoi-nous, .services, .temoinages, .faq-container, .histoire, .partners-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .hero {
@@ -166,12 +175,6 @@ p {
 
 .highlight {
   color: #1CBF73;
-}
-
-.pourquoi-nous, .services, .temoinages, .faq-container, .histoire {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
 }
 
 .list-raison {
@@ -487,7 +490,6 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 
 
 /* Animtion */
-
 .section {
   opacity: 0;
   transform: translateY(20px);
@@ -524,7 +526,6 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 
 
 /* VIDEO */
-
 .video-section {
   display: flex;
   flex-direction: column;
@@ -573,6 +574,29 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   background: rgba(0, 0, 0, 0.8);
 }
 
+
+
+/* Section Partenaires */
+.partners-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: center;
+  justify-items: center; /* Centre les logos dans chaque colonne */
+  justify-content: center; /* Centre toute la grille si plus petite que la largeur dispo */
+}
+
+.partners-logos img {
+  max-width: 100%;
+  height: auto;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.partners-logos img:hover {
+  transform: scale(1.05);
+}
 
 
 /* === RESPONSIVE HERO SECTION === */
@@ -810,6 +834,11 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
             padding: 16px 16px;
         gap: 32px;
         border-radius: 24px;
+  }
+
+  .partners-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
   }
 
 }
