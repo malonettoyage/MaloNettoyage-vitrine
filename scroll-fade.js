@@ -26,25 +26,56 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
   });
 
-  const video = document.getElementById("portrait-video");
+const video = document.getElementById("portrait-video");
 const toggleBtn = document.getElementById("video-toggle");
 
 let isPlaying = false;
+let hideTimeout;
+
+// Affiche le bouton temporairement
+function showButton(text) {
+  toggleBtn.textContent = text;
+  toggleBtn.style.opacity = "1";
+  toggleBtn.style.pointerEvents = "auto";
+
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    if (isPlaying) { // Ne le cache que si la vidéo joue
+      toggleBtn.style.opacity = "0";
+      toggleBtn.style.pointerEvents = "none";
+    }
+  }, 2000);
+}
 
 toggleBtn.addEventListener("click", () => {
   if (isPlaying) {
     video.pause();
-    toggleBtn.textContent = "▶️ Lire la vidéo";
   } else {
     video.play();
     video.muted = false; // Active le son
-    toggleBtn.textContent = "⏸️ Mettre en pause";
   }
-  isPlaying = !isPlaying;
 });
 
-// Quand la vidéo se termine → redémarre directement
+video.addEventListener("play", () => {
+  isPlaying = true;
+  showButton("⏸️ Mettre en pause");
+});
+
+video.addEventListener("pause", () => {
+  isPlaying = false;
+  showButton("▶️ Lire la vidéo");
+});
+
+// Quand la vidéo se termine
 video.addEventListener("ended", () => {
-  video.currentTime = 0; // Retour au début
-  video.play();          // Relance
+  video.currentTime = 0;
+  video.pause();
+});
+
+// Interaction souris ou tactile → afficher bouton
+video.addEventListener("mousemove", () => {
+  if (isPlaying) showButton("⏸️ Mettre en pause");
+});
+video.addEventListener("touchstart", () => {
+  if (isPlaying) showButton("⏸️ Mettre en pause");
 });

@@ -555,17 +555,17 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 /* Bouton play/pause */
 .video-btn {
   position: absolute;
-  bottom: 12px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  padding: 8px 14px;
+  padding: 12px 18px;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: opacity 0.3s ease, background 0.2s ease;
 }
 
 .video-btn:hover {
