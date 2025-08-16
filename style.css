@@ -133,7 +133,7 @@ p {
     border-radius: 1000px;
     text-align: center;
 }
-.cta:hover{
+.cta:hover {
       background: #1CBF73;
 
 }
@@ -312,11 +312,27 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   transition: height 0.5s ease, opacity 0.5s ease;
 }
 
-
-/* état visible */
 .list-avis-2.show {
   max-height: 2000px;   /* assez grand pour contenir tous les avis */
   opacity: 1;
+}
+
+#voir-plus-avis {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  padding: 16px 24px;
+  background-color: #232323;
+  color: #fff;
+  border-radius: 1000px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+#voir-plus-avis:hover {
+  background-color: #1CBF73;
 }
 
 

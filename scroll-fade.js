@@ -81,11 +81,12 @@ video.addEventListener("touchstart", () => {
 });
 
 
+// Voir plus d'avis - Bouton
 const btnVoirPlus = document.getElementById('voir-plus-avis');
 const rangees = document.querySelectorAll('.list-avis-2, .list-avis-3, .list-avis-4'); // toutes les rangées sauf la première
 let rangIndex = 0; // rangée actuelle à ouvrir
 
-btnVoirPlus.addEventListener('click', (e) => {
+function toggleAvis(e) {
   e.preventDefault();
 
   // si le bouton est en mode "Voir moins"
@@ -118,5 +119,10 @@ btnVoirPlus.addEventListener('click', (e) => {
       btnVoirPlus.classList.add('voir-moins');
     }
   }
-});
+}
+
+// ajouter touchstart pour mobile
+btnVoirPlus.addEventListener('click', toggleAvis);
+btnVoirPlus.addEventListener('touchstart', toggleAvis);
+
 
