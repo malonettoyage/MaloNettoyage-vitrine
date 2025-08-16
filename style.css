@@ -304,8 +304,23 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   color: #232323;
 }
 
-/* Avant vs Après */
+.list-avis-2, .list-avis-3 {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
 
+
+/* état visible */
+.list-avis-2.show {
+  max-height: 2000px;   /* assez grand pour contenir tous les avis */
+  opacity: 1;
+}
+
+
+/* Avant vs Après */
 .avant_apres {
   display: flex;
   flex-direction: column;
@@ -370,7 +385,6 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 
 
 /* FAQ */
-
 .faq-section {
   background-color: #e0f8f3;
   padding: 72px;

@@ -79,3 +79,44 @@ video.addEventListener("mousemove", () => {
 video.addEventListener("touchstart", () => {
   if (isPlaying) showButton("⏸️ Mettre en pause");
 });
+
+
+const btnVoirPlus = document.getElementById('voir-plus-avis');
+const rangees = document.querySelectorAll('.list-avis-2, .list-avis-3, .list-avis-4'); // toutes les rangées sauf la première
+let rangIndex = 0; // rangée actuelle à ouvrir
+
+btnVoirPlus.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // si le bouton est en mode "Voir moins"
+  if (btnVoirPlus.classList.contains('voir-moins')) {
+    // cacher toutes les rangées sauf la première
+    for (let i = 0; i < rangees.length; i++) {
+      const rang = rangees[i];
+      rang.style.height = '0';
+      rang.style.opacity = 0;
+      setTimeout(() => rang.style.display = 'none', 500); // attendre la fin de la transition
+    }
+    rangIndex = 0;
+    btnVoirPlus.textContent = 'Voir plus d’avis';
+    btnVoirPlus.classList.remove('voir-moins');
+    return;
+  }
+
+  // ouvrir la prochaine rangée
+  if (rangIndex < rangees.length) {
+    const rang = rangees[rangIndex];
+    rang.style.display = 'flex'; // nécessaire pour mesurer scrollHeight
+    const fullHeight = rang.scrollHeight + "px";
+    rang.style.height = fullHeight;
+    rang.style.opacity = 1;
+    rangIndex++;
+
+    // si c’était la dernière rangée
+    if (rangIndex >= rangees.length) {
+      btnVoirPlus.textContent = 'Voir moins d’avis';
+      btnVoirPlus.classList.add('voir-moins');
+    }
+  }
+});
+
