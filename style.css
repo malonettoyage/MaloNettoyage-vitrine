@@ -326,9 +326,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   color: #fff;
   border-radius: 1000px;
   text-align: center;
-  font-weight: bold;
   text-decoration: none;
-  font-family: inherit;
 }
 
 #voir-plus-avis:hover {
@@ -868,6 +866,12 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   .partners-logos {
     grid-template-columns: repeat(2, 1fr);
     gap: 0px;
+  }
+
+    #voir-plus-avis {
+    font-size: 1rem;
+    padding: 16px 20px;
+
   }
 
 }
