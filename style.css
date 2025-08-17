@@ -178,13 +178,16 @@ p {
   color: #1CBF73;
 }
 
+
+/* Raisons */
 .list-raison {
     display: flex;
     gap: 35px;
 }
 
 .raison {
-    padding: 24px 24px;
+    flex: 1;            /* chaque bloc prend la même largeur */
+    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -192,6 +195,8 @@ p {
     background-color: #ffffff;
 }
 
+
+/* Services */
 .list-column {
     display: flex;
     flex-direction: column;
@@ -204,7 +209,7 @@ p {
 }
 
 .info-services, .info-histoire {
-    padding: 24px 24px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
