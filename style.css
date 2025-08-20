@@ -784,7 +784,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   }
 
   .list-avant_apres {
-    gap: 24px;
+    gap: 32px;
   }
 
   .tete-avant, .tete-apres {
