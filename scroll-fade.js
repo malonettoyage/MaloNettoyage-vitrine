@@ -78,7 +78,8 @@ video.addEventListener("mousemove", () => {
 });
 video.addEventListener("touchstart", () => {
   if (isPlaying) showButton("⏸️ Mettre en pause");
-});
+}, { passive: true });
+
 
 
 // Voir plus d'avis - Bouton
@@ -123,6 +124,6 @@ function toggleAvis(e) {
 
 // ajouter touchstart pour mobile
 btnVoirPlus.addEventListener('click', toggleAvis);
-btnVoirPlus.addEventListener('touchstart', toggleAvis);
+btnVoirPlus.addEventListener('touchstart', toggleAvis, { passive: true });
 
 
