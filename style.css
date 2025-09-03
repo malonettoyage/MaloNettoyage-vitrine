@@ -18,6 +18,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./Fonts/InstrumentSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./Fonts/InstrumentSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 * {
   box-sizing: border-box;
@@ -37,11 +53,12 @@ body {
   line-height: 1.1;
   font-weight: 500;
   letter-spacing: 0px;
-  font-weight: 200;
 }
 
 h1, h2, h3, p {
   font-family: var(--font-primary);
+  font-weight: 700;
+
 }
 
 h1, h2, h3 {
