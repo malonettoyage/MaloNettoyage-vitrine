@@ -900,6 +900,8 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   .banner {
         padding: 8px;
         border-radius: 24px;
+        margin: 0px 0px 12px 0px;
+
   }
 
   .partners-logos {
