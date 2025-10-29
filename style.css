@@ -630,7 +630,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 /* Section Partenaires */
 .partners-logos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 24px;
   align-items: center;
   justify-items: center; /* Centre les logos dans chaque colonne */
