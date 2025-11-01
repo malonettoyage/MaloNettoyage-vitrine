@@ -918,7 +918,6 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   }
 
   .partners-logos {
-    grid-template-columns: repeat(2, 1fr);
     gap: 0px;
   }
 
