@@ -138,33 +138,36 @@ p {
 
 /* Cta */
 .cta-global {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-        align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
 
 }
 
 .cta {
-    color: #fff;
-    background: #232323;
-    padding: 16px 24px;
-    border-radius: 1000px;
-    text-align: center;
+  color: #fff;
+  background: #232323;
+  padding: 16px 24px;
+  border-radius: 1000px;
+  text-align: center;
 }
 .cta:hover {
-      background: #1CBF73;
+  background: #1CBF73;
 
 }
 
 .cta, .sous-cta {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .sous-cta {
-    color: #232323; /* ou une autre couleur */
+  color: #232323; /* ou une autre couleur */
+  text-decoration: underline;
+
 }
+
 
 .logo {
   max-width: 100px;
