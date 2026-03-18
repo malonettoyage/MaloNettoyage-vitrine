@@ -866,7 +866,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   }
 
 .container-footer {
-    padding: 32px;
+    padding: 24px 16px;
     border-radius: 20px;
   }
 
@@ -895,6 +895,11 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 
   .fin-footer {
     font-size: 16px;
+  }
+
+  .fin-footer-2 {
+    font-size: 14px;
+    color: #6b7280;
   }
 
   .video-section {
