@@ -521,7 +521,8 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   justify-content: space-between;
   flex-wrap: wrap; /* évite les débordements si trop de contenu */
   width: 100%;
-  gap: 12px;
+  gap: 16px;
+  
 }
 
 .fin-footer,
@@ -531,6 +532,10 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   padding: 0;
 }
 
+.info-lien {
+  display: flex;
+  gap: 16px;
+}
 .info-lien a {
   text-decoration: none;
   color: #000;
@@ -541,8 +546,6 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   align-items: center;
   gap: 15px;
 }
-
-
 
 
 /* Animtion */
@@ -663,6 +666,12 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   margin-top: 1rem;
 }
 
+/* Icon reseaux */
+.fa-brands,
+.fa-solid {
+  color: #005528;
+  font-size: 28px;
+}
 
 
 /* === RESPONSIVE HERO SECTION === */
@@ -868,10 +877,10 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   }
 
   .info-lien {
-    flex-wrap: wrap;
-    gap: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .info-lien a,
@@ -939,6 +948,11 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   margin-top: 8px;
   text-align: left;
 
+}
+
+.fa-brands,
+.fa-solid {
+  font-size: 24px;
 }
 
 }
