@@ -14,18 +14,15 @@
 
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
 <script>
-  // Helper function to delay opening a URL until a gtag event is sent.
-  // Call it in response to an action that should navigate to a URL.
-  function gtagSendEvent(url) {
+function gtagSendEvent(url, eventName) {
     var callback = function () {
       if (typeof url === 'string') {
         window.location = url;
       }
     };
-    gtag('event', 'conversion_event_contact', {
+    gtag('event', eventName, {
       'event_callback': callback,
-      'event_timeout': 2000,
-      // <event_parameters>
+      'event_timeout': 2000
     });
     return false;
   }
@@ -102,8 +99,8 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
       <img src="img/hero-img.webp" alt="Équipe Malo Nettoyage souriante avec un homme devant et deux femmes derrière, équipés de matériel de nettoyage professionnel" />
     </div>
     <div class="cta-global">
-      <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent('mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit');">Obtenez votre devis gratuit</a>
-      <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent('tel:+41798594120');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
+      <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent(this.href, 'contact_email');">Obtenez votre devis gratuit</a>
+      <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent(this.href, 'contact_tel');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
     </div>
     <div class="img-google">
       <img src="img/social-proof-google.webp" alt="Avis clients 5 étoiles sur Google pour Malo Nettoyage">
@@ -160,8 +157,8 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="cta-global">
-      <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent('mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit');">Obtenez votre devis gratuit</a>
-      <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent('tel:+41798594120');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
+      <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent(this.href, 'contact_email');">Obtenez votre devis gratuit</a>
+      <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent(this.href, 'contact_tel');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
     </div>
   </div>
 </div>
@@ -239,10 +236,10 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     </div>
 
   </div>
-        <div class="cta-global">
-          <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent('mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit');">Obtenez votre devis gratuit</a>
-          <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent('tel:+41798594120');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
-        </div>
+    <div class="cta-global">
+      <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent(this.href, 'contact_email');">Obtenez votre devis gratuit</a>
+      <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent(this.href, 'contact_tel');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
+    </div>
 
 </div>
 
@@ -504,9 +501,9 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     </p>
   </div>
   </div>
-   <div class="cta-global">
-          <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent('mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit');">Obtenez votre devis gratuit</a>
-          <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent('tel:+41798594120');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
+    <div class="cta-global">
+      <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent(this.href, 'contact_email');">Obtenez votre devis gratuit</a>
+      <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent(this.href, 'contact_tel');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
     </div>
 </div>
 
@@ -519,9 +516,9 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 <video id="portrait-video" src="video/nettoyage.mp4" playsinline poster="video/poster-video.png"></video>
 <button class="video-btn" id="video-toggle">▶️ Lire la vidéo</button>
   </div>
-     <div class="cta-global">
-          <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta">Obtenez votre devis gratuit</a>
-          <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent('tel:+41798594120');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
+    <div class="cta-global">
+      <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent(this.href, 'contact_email');">Obtenez votre devis gratuit</a>
+      <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent(this.href, 'contact_tel');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
     </div>
 </section>
 
@@ -566,8 +563,8 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     <div class="faq-contact">
       <h3>Vous avez encore une question ?</h3>
         <div class="cta-global">
-          <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent('mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit');">Contactez-nous</a>
-          <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent('tel:+41798594120');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
+          <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="return gtagSendEvent(this.href, 'contact_email');">Contactez-nous</a>
+          <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent(this.href, 'contact_tel');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
         </div>
     </div>
   </div>
@@ -589,7 +586,7 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
       <p class="fin-footer">Moins de ménage, plus de temps pour vous.</p>
 
       <div class="info-lien">
-        <a href="tel:+41798594120" class="sous-cta" aria-label="Appeler Malo Nettoyage">
+        <a href="tel:+41798594120" class="sous-cta" onclick="return gtagSendEvent(this.href, 'contact_tel');">
           <i class="fa-solid fa-phone"></i>
         </a>
 
