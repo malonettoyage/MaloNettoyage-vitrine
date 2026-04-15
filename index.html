@@ -154,6 +154,45 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 </div>
 
 
+<!-- Formulaire de contact -->
+<section class="contact-section section">
+  <h2>Obtenez votre <span class="highlight">devis gratuit</span> en quelques clics</h2>
+
+  <form class="contact-form" action="https://formspree.io/f/xbdqdpry" method="POST">
+    <div class="field">
+      <label for="c-name">Votre nom</label>
+      <input type="text" id="c-name" name="name" placeholder="Laura Morel" required>
+    </div>
+
+    <div class="field">
+      <label for="c-email">Votre email</label>
+      <input type="email" id="c-email" name="email" placeholder="lauramorel@exemple.ch" required>
+    </div>
+
+    <div class="field">
+      <label for="c-service">Type de service</label>
+      <select id="c-service" name="service" required>
+        <option value="">— Choisissez un service —</option>
+        <option value="Nettoyage de fin de bail">Nettoyage de fin de bail</option>
+        <option value="Nettoyage régulier">Nettoyage régulier</option>
+        <option value="Nettoyage de vitres">Nettoyage de vitres</option>
+        <option value="Nettoyage de fin de chantier">Nettoyage de fin de chantier</option>
+        <option value="Nettoyage extrême">Nettoyage extrême</option>
+        <option value="Nettoyage profondeur">Nettoyage en profondeur</option>
+        <option value="Autre">Autre</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="c-msg">Votre message</label>
+      <textarea id="c-msg" name="message" placeholder="Décrivez rapidement votre besoin (surface, type de nettoyage, délai…)." required></textarea>
+    </div>
+
+    <button type="submit" class="cta">Recevoir mon devis gratuit</button>
+    <p class="contact-note">Réponse sous 24h – sans engagement</p>
+  </form>
+</section>
+
 
   <!-- Pourquoi -->
   <div class="pourquoi-nous section">
@@ -498,7 +537,6 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 </div>
 
 
-
   <!-- Section Video -->
 <section class="video-section section">
   <h2>L’esprit de <span class="highlight">famille</span> en action</h2>
@@ -511,7 +549,6 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
       <a href="tel:+41798594120" class="sous-cta" onclick="gtagSendEvent('contact_tel');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
     </div>
 </section>
-
 
 
   <!-- faq -->
