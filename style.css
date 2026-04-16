@@ -660,10 +660,16 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 
 /* Cadre Garantie */
 .garantie {
-  background-color: #F3FCF9; /* jaune pastel */
+  background-color: #F3FCF9; /* vert pastel */
   border-left: 3.5px solid #1CBF73; /* bordure verte */
-  padding: 0.9rem;
+  padding: 8px;
   margin-top: 1rem;
+}
+
+.chiffre {
+  background-color: #ffffef; /* jaune pastel */
+  border-left: 3.5px solid #fff383; /* bordure jaune */
+  padding: 8px;
 }
 
 /* Icon reseaux */
