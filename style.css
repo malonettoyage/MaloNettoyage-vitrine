@@ -683,7 +683,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 /* ─── FORMULAIRE ─── */
 
 .contact-section {
-    padding: 24px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 48px;
@@ -703,13 +703,13 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   background: #fff;
   max-width: 700px;
   width: 100%; /* ← IMPORTANT */
-      margin: 0 auto;
-
+  margin: 0 auto;
   border-radius: 16px;
   padding: 16px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 16px rgb(194 194 194 / 15%);;
   text-align: left;
   align-items: center;
+  border: 2px solid #f3f3f3
 }
 
 .contact-form .field {
@@ -774,10 +774,17 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 }
 
 .contact-form .cta:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
+  background-color: #1CBF73;
 }
 
+::placeholder {
+  color: #9f9f9f; /* gris doux */
+  opacity: 1; /* important sinon trop transparent */
+}
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+  color: #f3f3f3;
+}
 
 
 /* === RESPONSIVE HERO SECTION === */
