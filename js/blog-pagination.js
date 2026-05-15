@@ -37,7 +37,7 @@
   }
 
   /* ── AFFICHE LA PAGE DEMANDÉE ── */
-  function afficherPage(page) {
+  function afficherPage(page, scroll = false) {
     pageCourante = page;
     const cards = getCardsVisibles();
 
@@ -60,8 +60,10 @@
     // Rendre la pagination
     renderPagination(totalPages);
 
-    // Remonter en haut de la grille
-    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Remonter en haut de la grille (uniquement sur changement de page utilisateur)
+    if (scroll) {
+      grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   /* ── CONSTRUIT LE HTML DE PAGINATION ── */
@@ -98,7 +100,7 @@
     // Événements sur les boutons
     paginationEl.querySelectorAll('.pagination-btn:not([disabled])').forEach(btn => {
       btn.addEventListener('click', () => {
-        afficherPage(parseInt(btn.dataset.page));
+        afficherPage(parseInt(btn.dataset.page), true);
       });
     });
   }
