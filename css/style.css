@@ -1812,13 +1812,40 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
    (pills cliquables au-dessus de la grille)
 ═══════════════════════════════════════════ */
 
+.blog-filters-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
 .blog-filters {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
 }
+
+.sort-btn {
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 1000px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sort-btn:hover { background: #f3f3f3; color: #232323; border-color: #ccc; }
+.sort-btn[data-order="asc"] { color: #1CBF73; border-color: #1CBF73; }
 
 .filter-btn {
   background: none;

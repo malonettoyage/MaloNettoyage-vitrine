@@ -2,15 +2,15 @@
  * ═══════════════════════════════════════════
  * BLOG PAGINATION — Malo Nettoyage
  * ═══════════════════════════════════════════
- * Gère l'affichage paginé des articles du blog.
+ * Gère l'affichage paginé, le filtrage par catégorie
+ * et le tri par date (plus récents / plus anciens).
  *
  * CONFIGURATION :
  *   ARTICLES_PAR_PAGE → nombre d'articles par page (défaut : 6)
  *
- * COMPATIBLE avec le système de filtres par catégorie.
- * Quand un filtre est actif → tous les articles filtrés
- * sont affichés (pas de pagination, peu de résultats).
- * Quand filtre = "Tous" → pagination normale.
+ * Chaque .article-card doit avoir :
+ *   data-category="..."   → pour les filtres
+ *   data-date="YYYY-MM-DD" → pour le tri automatique
  * ═══════════════════════════════════════════
  */
 
@@ -20,30 +20,54 @@
   const ARTICLES_PAR_PAGE = 6;
 
   /* ── ÉLÉMENTS DOM ── */
-  const grid       = document.getElementById('blog-grid');
+  const grid        = document.getElementById('blog-grid');
   const paginationEl = document.getElementById('blog-pagination');
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns  = document.querySelectorAll('.filter-btn');
+  const sortBtn     = document.getElementById('blog-sort-btn');
 
   if (!grid || !paginationEl) return;
 
   let pageCourante = 1;
   let filtreActif  = 'tous';
+  let sortOrder    = 'desc'; // 'desc' = plus récents en premier
 
-  /* ── RÉCUPÈRE LES CARDS VISIBLES SELON LE FILTRE ── */
-  function getCardsVisibles() {
+  /* ── RÉCUPÈRE LES CARDS FILTRÉES ET TRIÉES ── */
+  function getCardsTriees() {
     const toutes = Array.from(grid.querySelectorAll('.article-card'));
-    if (filtreActif === 'tous') return toutes;
-    return toutes.filter(c => c.dataset.category === filtreActif);
+
+    const filtrees = filtreActif === 'tous'
+      ? toutes
+      : toutes.filter(c => c.dataset.category === filtreActif);
+
+    return filtrees.sort((a, b) => {
+      const dateA = a.dataset.date || '0000-00-00';
+      const dateB = b.dataset.date || '0000-00-00';
+      return sortOrder === 'desc'
+        ? dateB.localeCompare(dateA)
+        : dateA.localeCompare(dateB);
+    });
+  }
+
+  /* ── RÉORDONNE LES CARDS DANS LE DOM SELON LE TRI ── */
+  function reordonnerDOM(cards) {
+    cards.forEach(c => grid.appendChild(c));
   }
 
   /* ── AFFICHE LA PAGE DEMANDÉE ── */
   function afficherPage(page, scroll = false) {
     pageCourante = page;
-    const cards = getCardsVisibles();
+    const cards = getCardsTriees();
+
+    reordonnerDOM(cards);
 
     // Si filtre actif (≠ tous) → tout afficher sans pagination
     if (filtreActif !== 'tous') {
+      Array.from(grid.querySelectorAll('.article-card')).forEach(c => c.classList.remove('hidden'));
       cards.forEach(c => c.classList.remove('hidden'));
+      const toutes = Array.from(grid.querySelectorAll('.article-card'));
+      toutes.forEach(c => {
+        if (c.dataset.category !== filtreActif) c.classList.add('hidden');
+      });
       paginationEl.innerHTML = '';
       return;
     }
@@ -75,12 +99,10 @@
 
     let html = '';
 
-    // Bouton Précédent
     html += `<button class="pagination-btn pagination-prev" ${pageCourante === 1 ? 'disabled' : ''} data-page="${pageCourante - 1}" aria-label="Page précédente">
       <i class="fa-solid fa-chevron-left"></i>
     </button>`;
 
-    // Numéros de page avec ellipses si besoin
     const pages = getPagesAffichees(pageCourante, totalPages);
     pages.forEach(p => {
       if (p === '...') {
@@ -90,14 +112,12 @@
       }
     });
 
-    // Bouton Suivant
     html += `<button class="pagination-btn pagination-next" ${pageCourante === totalPages ? 'disabled' : ''} data-page="${pageCourante + 1}" aria-label="Page suivante">
       <i class="fa-solid fa-chevron-right"></i>
     </button>`;
 
     paginationEl.innerHTML = html;
 
-    // Événements sur les boutons
     paginationEl.querySelectorAll('.pagination-btn:not([disabled])').forEach(btn => {
       btn.addEventListener('click', () => {
         afficherPage(parseInt(btn.dataset.page), true);
@@ -108,24 +128,20 @@
   /* ── CALCULE LES PAGES À AFFICHER (avec ellipses) ── */
   function getPagesAffichees(courante, total) {
     if (total <= 7) {
-      // Afficher toutes les pages
       return Array.from({ length: total }, (_, i) => i + 1);
     }
 
     const pages = [];
 
     if (courante <= 4) {
-      // Début : 1 2 3 4 5 ... dernier
       for (let i = 1; i <= 5; i++) pages.push(i);
       pages.push('...');
       pages.push(total);
     } else if (courante >= total - 3) {
-      // Fin : 1 ... avant-avant-dernier → dernier
       pages.push(1);
       pages.push('...');
       for (let i = total - 4; i <= total; i++) pages.push(i);
     } else {
-      // Milieu : 1 ... courante-1 courante courante+1 ... dernier
       pages.push(1);
       pages.push('...');
       pages.push(courante - 1);
@@ -141,11 +157,30 @@
   /* ── SYNCHRONISATION AVEC LES FILTRES ── */
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
       filtreActif  = btn.dataset.filter;
       pageCourante = 1;
       afficherPage(1);
     });
   });
+
+  /* ── TRI PAR DATE ── */
+  if (sortBtn) {
+    sortBtn.addEventListener('click', () => {
+      sortOrder = sortOrder === 'desc' ? 'asc' : 'desc';
+      sortBtn.dataset.order = sortOrder;
+
+      if (sortOrder === 'desc') {
+        sortBtn.innerHTML = '↓ Plus récents';
+      } else {
+        sortBtn.innerHTML = '↑ Plus anciens';
+      }
+
+      pageCourante = 1;
+      afficherPage(1);
+    });
+  }
 
   /* ── INIT ── */
   afficherPage(1);
