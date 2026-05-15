@@ -9,6 +9,23 @@
  */
 
 (function () {
+
+  // Signature auteur — injectée automatiquement sur toutes les pages article
+  const authorTarget = document.getElementById('autres-articles-container');
+  if (authorTarget) {
+    const author = document.createElement('div');
+    author.className = 'article-author fade-in';
+    author.innerHTML = `
+  <div class="article-author-avatar">
+    <img src="/img/reger-malo-nettoyage_signature.webp" alt="Reger - Fondateur Malo Nettoyage" loading="lazy">
+  </div>
+  <div class="article-author-info">
+    <p class="article-author-name">Rédigé par <strong>Reger</strong> — Fondateur de Malo Nettoyage</p>
+    <p class="article-author-bio">Expert en nettoyage professionnel, spécialisé dans les fins de bail, nettoyages de chantier et entretien de vitres dans tout le canton de Vaud.</p>
+  </div>`;
+    authorTarget.parentNode.insertBefore(author, authorTarget);
+  }
+
   const footer = document.createElement('div');
   footer.innerHTML = `
 

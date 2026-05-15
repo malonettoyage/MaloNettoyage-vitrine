@@ -1730,6 +1730,59 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   display: block;
 }
 
+/* ═══════════════════════════════════════════
+   ARTICLE - SIGNATURE AUTEUR
+═══════════════════════════════════════════ */
+.article-author {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  padding: 22px 24px;
+  background: #f4fdf8;
+  border: 1px solid #c8edd8;
+  border-radius: 16px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.article-author-avatar {
+  min-width: 80px;
+  width: 80px;
+  flex-shrink: 0;
+}
+.article-author-avatar img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.article-author-info { flex: 1; }
+.article-author-name {
+  font-size: 15px;
+  color: #232323;
+  margin: 0 0 5px;
+  font-weight: 500;
+}
+.article-author-name strong {
+  color: #1CBF73;
+  font-weight: 700;}
+
+.article-author-bio {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .article-author {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px; }
+
+  .article-author-avatar {
+    width: 80px;
+    min-width: 80px; }
+}
+
 
 /* ═══════════════════════════════════════════
    ARTICLE - AUTRES ARTICLES

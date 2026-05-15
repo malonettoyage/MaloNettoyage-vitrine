@@ -51,12 +51,12 @@
       extrait:   'Hotte oubliée, joints moisis, vitres avec traces… les pièges les plus fréquents et comment les éviter.'
     },
     {
-      slug:      '/blog/2026-05-09-etats-lieux-validé/',
+      slug:      '/blog/2026-05-09-etats-lieux-valide/',
       titre:     'Comment faire valider son état des lieux du premier coup',
       categorie: 'fin-de-bail',
       badge:     'Fin de bail',
       date:      '9 mai 2026',
-      image:     '/blog/2026-05-09-etats-lieux-validé/img/valide_-fin-de-bail.webp',
+      image:     '/blog/2026-05-09-etats-lieux-valide/img/valide_-fin-de-bail.webp',
       extrait:   'Préparer son appartement et récupérer sa caution en entier : notre méthode en 3 étapes.'
     },
     {
