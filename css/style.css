@@ -1847,6 +1847,11 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 .sort-btn:hover { background: #f3f3f3; color: #232323; border-color: #ccc; }
 .sort-btn[data-order="asc"] { color: #1CBF73; border-color: #1CBF73; }
 
+@media (max-width: 600px) {
+  .blog-filters-bar { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .sort-btn { align-self: flex-start; }
+}
+
 .filter-btn {
   background: none;
   border: 1px solid #e0e0e0;

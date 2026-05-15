@@ -9,7 +9,7 @@
  *   ARTICLES_PAR_PAGE → nombre d'articles par page (défaut : 6)
  *
  * Chaque .article-card doit avoir :
- *   data-category="..."   → pour les filtres
+ *   data-category="..."    → pour les filtres
  *   data-date="YYYY-MM-DD" → pour le tri automatique
  * ═══════════════════════════════════════════
  */
@@ -20,10 +20,10 @@
   const ARTICLES_PAR_PAGE = 6;
 
   /* ── ÉLÉMENTS DOM ── */
-  const grid        = document.getElementById('blog-grid');
+  const grid         = document.getElementById('blog-grid');
   const paginationEl = document.getElementById('blog-pagination');
-  const filterBtns  = document.querySelectorAll('.filter-btn');
-  const sortBtn     = document.getElementById('blog-sort-btn');
+  const filterBtns   = document.querySelectorAll('.filter-btn');
+  const sortBtn      = document.getElementById('blog-sort-btn');
 
   if (!grid || !paginationEl) return;
 
@@ -31,43 +31,45 @@
   let filtreActif  = 'tous';
   let sortOrder    = 'desc'; // 'desc' = plus récents en premier
 
-  /* ── RÉCUPÈRE LES CARDS FILTRÉES ET TRIÉES ── */
-  function getCardsTriees() {
+  /* ── APPLIQUE LE TRI VIA CSS ORDER (pas de déplacement DOM) ── */
+  function appliquerOrdre() {
     const toutes = Array.from(grid.querySelectorAll('.article-card'));
 
-    const filtrees = filtreActif === 'tous'
-      ? toutes
-      : toutes.filter(c => c.dataset.category === filtreActif);
-
-    return filtrees.sort((a, b) => {
+    const triees = [...toutes].sort((a, b) => {
       const dateA = a.dataset.date || '0000-00-00';
       const dateB = b.dataset.date || '0000-00-00';
       return sortOrder === 'desc'
         ? dateB.localeCompare(dateA)
         : dateA.localeCompare(dateB);
     });
+
+    triees.forEach((card, i) => { card.style.order = i; });
   }
 
-  /* ── RÉORDONNE LES CARDS DANS LE DOM SELON LE TRI ── */
-  function reordonnerDOM(cards) {
-    cards.forEach(c => grid.appendChild(c));
+  /* ── RÉCUPÈRE LES CARDS FILTRÉES DANS L'ORDRE DE TRI ── */
+  function getCardsFiltreesTriees() {
+    const toutes = Array.from(grid.querySelectorAll('.article-card'));
+
+    const filtrees = filtreActif === 'tous'
+      ? toutes
+      : toutes.filter(c => c.dataset.category === filtreActif);
+
+    return filtrees.sort((a, b) => parseInt(a.style.order) - parseInt(b.style.order));
   }
 
   /* ── AFFICHE LA PAGE DEMANDÉE ── */
   function afficherPage(page, scroll = false) {
     pageCourante = page;
-    const cards = getCardsTriees();
+    appliquerOrdre();
 
-    reordonnerDOM(cards);
+    const cards = getCardsFiltreesTriees();
+
+    // Masquer toutes les cards d'abord
+    Array.from(grid.querySelectorAll('.article-card')).forEach(c => c.classList.add('hidden'));
 
     // Si filtre actif (≠ tous) → tout afficher sans pagination
     if (filtreActif !== 'tous') {
-      Array.from(grid.querySelectorAll('.article-card')).forEach(c => c.classList.remove('hidden'));
       cards.forEach(c => c.classList.remove('hidden'));
-      const toutes = Array.from(grid.querySelectorAll('.article-card'));
-      toutes.forEach(c => {
-        if (c.dataset.category !== filtreActif) c.classList.add('hidden');
-      });
       paginationEl.innerHTML = '';
       return;
     }
@@ -77,14 +79,10 @@
     const debut      = (pageCourante - 1) * ARTICLES_PAR_PAGE;
     const fin        = debut + ARTICLES_PAR_PAGE;
 
-    // Masquer toutes les cards puis afficher celles de la page courante
-    Array.from(grid.querySelectorAll('.article-card')).forEach(c => c.classList.add('hidden'));
     cards.slice(debut, fin).forEach(c => c.classList.remove('hidden'));
 
-    // Rendre la pagination
     renderPagination(totalPages);
 
-    // Remonter en haut de la grille (uniquement sur changement de page utilisateur)
     if (scroll) {
       grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -171,11 +169,7 @@
       sortOrder = sortOrder === 'desc' ? 'asc' : 'desc';
       sortBtn.dataset.order = sortOrder;
 
-      if (sortOrder === 'desc') {
-        sortBtn.innerHTML = '↓ Plus récents';
-      } else {
-        sortBtn.innerHTML = '↑ Plus anciens';
-      }
+      sortBtn.textContent = sortOrder === 'desc' ? '↓ Plus récents' : '↑ Plus anciens';
 
       pageCourante = 1;
       afficherPage(1);
