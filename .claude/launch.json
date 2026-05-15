@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "malo-nettoyage-local",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3444", "."],
+      "port": 3444
+    }
+  ]
+}

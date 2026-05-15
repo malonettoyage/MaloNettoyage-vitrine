@@ -2,16 +2,22 @@
 <html lang="fr">
 <head>
 
-<!-- Google tag -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC77M9NWHN"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-VC77M9NWHN');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VC77M9NWHN');
+</script>
+<script>
+function gtagSendEvent(eventName) {
+    gtag('event', eventName);
+    return true;
+}
 </script>
 
-<!-- Meta Pixel -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -21,7 +27,6 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init', '532778493168576');
 fbq('track', 'PageView');
 fbq('track', 'Lead', {
@@ -29,29 +34,67 @@ fbq('track', 'Lead', {
   content_category: 'Formulaire'
 });
 </script>
-
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"/>
-</noscript>
-<!-- Fin Pixel -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Votre demande a bien été envoyée. Malo Nettoyage vous répond sous 24h.">
+<link rel="canonical" href="https://www.malonettoyage.ch/merci.html">
 <title>Merci – Malo Nettoyage</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/css/style.css">
 
 </head>
 
 <body>
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-header">
+    <a href="/" class="nav-logo">Malo<span>Nettoyage</span></a>
+    <a href="tel:+41798594120" class="nav-tel">+41 79 859 41 20</a>
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/services/fin-de-bail/">Fin de bail</a></li>
+      <li><a href="/services/nettoyage-fin-de-chantier/">Fin de chantier</a></li>
+      <li><a href="/services/nettoyage-vitres/">Vitres</a></li>
+      <li><a href="/services/nettoyage-regulier/">Régulier</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/devis-gratuit/" class="nav-cta">Devis gratuit</a></li>
+    </ul>
+    <button class="burger" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <ul class="nav-links-mobile">
+    <li><a href="/">Accueil</a></li>
+    <li><a href="/services/fin-de-bail/">Fin de bail</a></li>
+    <li><a href="/services/nettoyage-fin-de-chantier/">Fin de chantier</a></li>
+    <li><a href="/services/nettoyage-vitres/">Vitres</a></li>
+    <li><a href="/services/nettoyage-regulier/">Régulier</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/devis-gratuit/" class="nav-cta">Devis gratuit</a></li>
+  </ul>
+</nav>
 
 <div class="banner">
   <p>+70 clients satisfaits et nous recommandent</p>
 </div>
 
 <div class="hero">
-  <img src="img/logo-malonettoyage.webp" class="logo" alt="Logo Malo Nettoyage">
+  <img src="/img/MaloNettoyage_Logo-black.webp" class="logo" alt="Logo Malo Nettoyage" loading="eager" decoding="async">
 
   <h1>Demande envoyée avec <span class="highlight">succès</span> !</h1>
 
@@ -59,19 +102,18 @@ fbq('track', 'Lead', {
     Merci pour votre demande 🙌<br>
     Nous avons bien reçu votre message et vous répondons sous <strong>24h</strong>.
     <br><br>
-    Besoin d’une réponse rapide ? Appelez-nous directement au<br>
+    Besoin d'une réponse rapide ? Appelez-nous directement au<br>
     <a href="tel:+41798594120" class="sous-cta" onclick="gtagSendEvent('contact_tel');"><strong>+41 79 859 41 20</strong></a>
-
   </p>
 
-    <div class="cta-global" style="margin-top:30px;">
-        <a href="/#realisations" class="cta">Voir nos réalisations</a>
-    </div>
-
-  <div class="img-google">
-    <img src="img/social-proof-google.webp" alt="Avis clients 5 étoiles sur Google pour Malo Nettoyage">
+  <div class="cta-global" style="margin-top:30px;">
+    <a href="/" class="cta">Retour à l'accueil</a>
   </div>
+
+  <div class="img-google"></div>
 </div>
 
+<script src="/js/social-proof.js" defer></script>
+<script src="/js/footer.js" defer></script>
 </body>
 </html>

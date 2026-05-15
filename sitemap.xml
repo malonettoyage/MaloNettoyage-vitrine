@@ -4,39 +4,91 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://www.malonettoyage.ch/</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Services -->
+  <!-- Service : Fin de bail -->
   <url>
-    <loc>https://www.malonettoyage.ch/#services</loc>
-    <lastmod>2025-10-06</lastmod>
+    <loc>https://www.malonettoyage.ch/services/fin-de-bail/</loc>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Avis clients -->
+  <!-- Service : Fin de chantier -->
   <url>
-    <loc>https://www.malonettoyage.ch/#temoignages</loc>
-    <lastmod>2025-10-06</lastmod>
+    <loc>https://www.malonettoyage.ch/services/nettoyage-fin-de-chantier/</loc>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service : Nettoyage de vitres -->
+  <url>
+    <loc>https://www.malonettoyage.ch/services/nettoyage-vitres/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service : Nettoyage régulier -->
+  <url>
+    <loc>https://www.malonettoyage.ch/services/nettoyage-regulier/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Page devis gratuit -->
+  <url>
+    <loc>https://www.malonettoyage.ch/devis-gratuit/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- FAQ -->
+  <!-- Articles de blog -->
   <url>
-    <loc>https://www.malonettoyage.ch/#faq</loc>
-    <lastmod>2025-10-06</lastmod>
+    <loc>https://www.malonettoyage.ch/blog/2026-05-03-checklist-fin-bail/</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Contact -->
   <url>
-    <loc>https://www.malonettoyage.ch/#contact</loc>
-    <lastmod>2025-10-06</lastmod>
+    <loc>https://www.malonettoyage.ch/blog/2026-05-06-erreurs-nettoyage/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/2026-05-09-etats-lieux-valid%C3%A9/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/2026-05-12-vitres-sans-traces/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/2026-05-15-debarras-nettoyage/</loc>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -49,7 +49,7 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 <!-- Balises Open Graph (Facebook + Instagram) -->
 <meta property="og:title" content="Malo Nettoyage - Entreprise Nettoyage à Payerne & Environs" />
 <meta property="og:description" content="Entreprise familiale de nettoyage à Payerne et dans tout le canton de Vaud. Fin de bail, vitres, bureaux et chantiers : un service fiable, soigné et humain." />
-<meta property="og:image" content="https://www.malonettoyage.ch/img/hero.jpg" />
+<meta property="og:image" content="https://www.malonettoyage.ch/img/hero-img.webp" />
 <meta property="og:url" content="https://www.malonettoyage.ch/" />
 <meta property="og:type" content="website" />
 
@@ -57,17 +57,51 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Malo Nettoyage - Entreprise Nettoyage à Payerne & Environs" />
 <meta name="twitter:description" content="Entreprise familiale de nettoyage à Payerne et dans tout le canton de Vaud. Fin de bail, vitres, bureaux et chantiers : un service fiable, soigné et humain." />
-<meta name="twitter:image" content="https://www.malonettoyage.ch/img/hero.jpg" />
-<link rel="icon" type="image/png" href="img/favicon-malonettoyage.webp" sizes="32x32">
-<link rel="apple-touch-icon" href="img/favicon-malonettoyage.webp">
-<link rel="shortcut icon" href="img/favicon-malonettoyage.webp" type="image/x-icon">
+<meta name="twitter:image" content="https://www.malonettoyage.ch/img/hero-img.webp" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<script src="scroll-fade.js" defer></script>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/scroll-fade.js" defer></script>
 
 </head>
 
 <body>
+
+  <nav class="site-nav" id="site-nav">
+  <div class="nav-header">
+    <a href="/" class="nav-logo">Malo<span>Nettoyage</span></a>
+    <a href="tel:+41798594120" class="nav-tel">+41 79 859 41 20</a>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Accueil</a></li>
+      <li><a href="/services/fin-de-bail/">Fin de bail</a></li>
+      <li><a href="/services/nettoyage-fin-de-chantier/">Fin de chantier</a></li>
+      <li><a href="/services/nettoyage-vitres/">Vitres</a></li>
+      <li><a href="/services/nettoyage-regulier/">Régulier</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/devis-gratuit/" class="nav-cta">Devis gratuit</a></li>
+    </ul>
+    <button class="burger" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <ul class="nav-links-mobile">
+    <li><a href="/">Accueil</a></li>
+    <li><a href="/services/fin-de-bail/">Fin de bail</a></li>
+    <li><a href="/services/nettoyage-fin-de-chantier/">Fin de chantier</a></li>
+    <li><a href="/services/nettoyage-vitres/">Vitres</a></li>
+    <li><a href="/services/nettoyage-regulier/">Régulier</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/devis-gratuit/" class="nav-cta">Devis gratuit</a></li>
+  </ul>
+</nav>
 
   <!-- Banner -->
   <div class="banner">
@@ -79,7 +113,7 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
   <!-- Hero -->
   <div class="hero section">
     <div class="titre-logo">
-      <img src="img/logo-malonettoyage.webp" alt="Logo de Malo Nettoyage, spécialiste du nettoyage à Payerne et la Broye" class="logo" loading="eager" decoding="async">
+      <img src="/img/MaloNettoyage_Logo-black.webp" alt="Logo de Malo Nettoyage, spécialiste du nettoyage à Payerne et la Broye" class="logo" loading="eager" decoding="async">
       <div class="titre-texte">
         <h1>Nettoyage à Payerne, Vaud & Fribourg</h1>
         <p>Retrouvez un espace <span class="highlight">impeccable</span>, <span class="highlight">sans stress</span> et en toute confiance !</p>
@@ -87,15 +121,13 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     </div>
 
     <div class="img-hero">
-      <img src="img/hero-img.webp" alt="Équipe Malo Nettoyage souriante avec un homme devant et deux femmes derrière, équipés de matériel de nettoyage professionnel" />
+      <img src="/img/hero-img.webp" alt="Équipe Malo Nettoyage souriante avec un homme devant et deux femmes derrière, équipés de matériel de nettoyage professionnel" loading="eager" />
     </div>
     <div class="cta-global">
       <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="gtagSendEvent('contact_email');">Obtenez votre devis gratuit</a>
       <a href="tel:+41798594120" class="sous-cta" onclick="gtagSendEvent('contact_tel');">ou appelez-nous au <strong>+41 79 859 41 20</strong></a>
     </div>
-    <div class="img-google">
-      <img src="img/social-proof-google.webp" alt="Avis clients 5 étoiles sur Google pour Malo Nettoyage">
-    </div>
+    <div class="img-google"></div>
   </div>
 
 
@@ -103,12 +135,12 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 <section class="partners-section section">
   <h2>Ils nous font <span class="highlight">confiance</span></h2>
   <div class="partners-logos">
-    <img src="logo partenaire/logo-dgip.webp" alt="logo partenaire etat de vaud dgip">
-    <img src="logo partenaire/logo-speedwings.webp" alt="logo partenaire speedwings">
-    <img src="logo partenaire/logo-dom.webp" alt="logo partenaire DOM architectes associés, dom-aa Sàrl">
-    <img src="logo partenaire/logo-metalconcept.png" alt="logo partenaire metal concept SA">
-    <img src="logo partenaire/logo-marques.png" alt="logo partenaire Marques Construction Sàrl">
-    <img src="logo partenaire/logo-bersier.webp" alt="logo partenaire La Gérance Bersier Weibel Sàrl">
+    <img src="/img/logo partenaire/logo-dgip.webp" alt="logo partenaire etat de vaud dgip" loading="lazy">
+    <img src="/img/logo partenaire/logo-speedwings.webp" alt="logo partenaire speedwings" loading="lazy">
+    <img src="/img/logo partenaire/logo-dom.webp" alt="logo partenaire DOM architectes associés, dom-aa Sàrl" loading="lazy">
+    <img src="/img/logo partenaire/logo-metalconcept.png" alt="logo partenaire metal concept SA" loading="lazy">
+    <img src="/img/logo partenaire/logo-marques.png" alt="logo partenaire Marques Construction Sàrl" loading="lazy">
+    <img src="/img/logo partenaire/logo-bersier.webp" alt="logo partenaire La Gérance Bersier Weibel Sàrl" loading="lazy">
   </div>
 </section>
 
@@ -119,33 +151,33 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
   <div class="list-column">
     <div class="list-services">
       <!-- Nettoyage de fin de bail -->
-    <div class="info-services">
-      <img src="img/nettoyage-de-fin-de-bail.webp" alt="Homme souriant portant un t-shirt Malo Nettoyage nettoyant une surface avec un chiffon microfibre" class="img-service">
-      <h3>Nettoyage de fin de bail</h3>
-      <p>Déménagez sereinement, nous respectons les exigences des gérances.</p>
-      <p class="garantie"><b>État des lieux garanti</b> : Si la régie refuse, nous revenons gratuitement.</p>
-      <p class="chiffre"><b>58 sur 58</b> états des lieux validés par les régies.</p>
-    </div>
+      <a href="/services/fin-de-bail/" class="info-services" style="text-decoration:none;color:inherit;">
+        <img src="/img/services/nettoyage-de-fin-de-bail.webp" alt="Homme souriant portant un t-shirt Malo Nettoyage nettoyant une surface avec un chiffon microfibre" class="img-service" loading="lazy">
+        <h3>Nettoyage de fin de bail</h3>
+        <p>Déménagez sereinement, nous respectons les exigences des gérances.</p>
+        <p class="garantie"><strong>État des lieux garanti</strong> : Si la régie refuse, nous revenons gratuitement.</p>
+        <p class="chiffre"><strong>58 sur 58</strong> états des lieux validés par les régies.</p>
+      </a>
       <!-- Nettoyage régulier -->
-    <div class="info-services">
-      <img src="img/nettoyage-particulier.webp" alt="Homme de dos portant un t-shirt Malo Nettoyage passant l’aspirateur chez un particulier" class="img-service">
-      <h3>Nettoyage régulier</h3>
-      <p>Des espaces impeccables, sans stress ni effort, pour particuliers et professionnels.</p>
-    </div>
+      <a href="/services/nettoyage-regulier/" class="info-services" style="text-decoration:none;color:inherit;">
+        <img src="/img/services/nettoyage-regulier.webp" alt="Nettoyage régulier de bureaux et locaux professionnels par Malo Nettoyage" class="img-service" loading="lazy">
+        <h3>Nettoyage régulier</h3>
+        <p>Des locaux professionnels impeccables chaque semaine. Intervention flexible.</p>
+      </a>
     </div>
     <div class="list-services">
       <!-- Nettoyage de vitres -->
-      <div class="info-services">
-        <img src="img/nettoyage-de-vitres.webp" alt="Jeune garçon nettoyant une vitre avec un produit et un racloir" class="img-service">
+      <a href="/services/nettoyage-vitres/" class="info-services" style="text-decoration:none;color:inherit;">
+        <img src="/img/services/nettoyage-de-vitres.webp" alt="Jeune garçon nettoyant une vitre avec un produit et un racloir" class="img-service" loading="lazy">
         <h3>Nettoyage de vitres</h3>
         <p>Offrez-vous la luminosité d’un intérieur propre sans lever le petit doigt.</p>
-      </div>
+      </a>
       <!-- Nettoyage fin de chantier -->
-      <div class="info-services">
-        <img src="img/nettoyage-de-fin-de-chantier.webp" alt="Employé passant une monobrosse sur un sol de chantier" class="img-service">
+      <a href="/services/nettoyage-fin-de-chantier/" class="info-services" style="text-decoration:none;color:inherit;">
+        <img src="/img/services/nettoyage-de-fin-de-chantier.webp" alt="Employé passant une monobrosse sur un sol de chantier" class="img-service" loading="lazy">
         <h3>Nettoyage de fin de chantier</h3>
         <p>Après chantier ou rénovation, retrouvez vos espaces propres immédiatement.</p>
-      </div>
+      </a>
     </div>
     <div class="cta-global">
       <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="gtagSendEvent('contact_email');">Obtenez votre devis gratuit</a>
@@ -174,6 +206,11 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     </div>
 
     <div class="field">
+      <label for="c-tel"><p>Téléphone <span style="color:#999;font-weight:400;">(optionnel)</span></p></label>
+      <input type="tel" id="c-tel" name="telephone" placeholder="+41 79 859 41 20">
+    </div>
+
+    <div class="field">
       <label for="c-service"><p>Type de service</p></label>
       <select id="c-service" name="service" required>
         <option value="">— Choisissez un service —</option>
@@ -191,6 +228,16 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
       <label for="c-msg"><p>Votre message</p></label>
       <textarea id="c-msg" name="message" placeholder="Décrivez votre besoin (type de nettoyage, urgence, délai…). Vous pouvez aussi laisser votre numéro pour un contact plus rapide." required></textarea>
     </div>
+
+    <div class="field">
+      <label for="c-photos"><p>Photos <span style="color:#999;font-weight:400;">(optionnel)</span></p></label>
+      <p class="field-hint">Ajoutez des photos pour une estimation plus précise et plus rapide</p>
+      <label for="c-photos" id="upload-btn" class="upload-button">Ajouter des photos</label>
+      <input type="file" id="c-photos" name="photos" multiple accept="image/*,video/*" style="display: none;">
+      <div id="preview-container" class="preview-container"></div>
+      <div id="upload-status" class="upload-status"></div>
+    </div>
+    <input type="hidden" id="image_links" name="image_links" value="">
 
     <button type="submit" class="cta">Recevoir mon devis gratuit</button>
     <p class="contact-note">Réponse sous 24h – sans engagement</p>
@@ -236,11 +283,11 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     <div class="avant_apres-img">
     <div class="avant">
       <p class="tete-avant"><strong>Avant</strong> notre passage</p>
-      <img src="img/avant-1.webp" alt="Robinet de douche recouvert de calcaire" class="img-avant_apres">
+      <img src="/img/avant-apres/avant-1.webp" alt="Robinet de douche recouvert de calcaire" class="img-avant_apres" loading="lazy">
     </div>
     <div class="apres">
       <p class="tete-apres"><strong>Après</strong> notre passage</p>
-      <img src="img/apres-1.webp" alt="Robinet de douche propre et sans calcaire" class="img-avant_apres">
+      <img src="/img/avant-apres/apres-1.webp" alt="Robinet de douche propre et sans calcaire" class="img-avant_apres" loading="lazy">
     </div>
     </div>
 
@@ -248,11 +295,11 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     <div class="avant_apres-img">
     <div class="avant">
       <p class="tete-avant"><strong>Avant</strong> notre passage</p>
-      <img src="img/avant-6.webp" alt="Coin de fenêtre au sol sale avec poussière, toile d’araignée et pollen" class="img-avant_apres">
+      <img src="/img/avant-apres/avant-6.webp" alt="Coin de fenêtre au sol sale avec poussière, toile d’araignée et pollen" class="img-avant_apres" loading="lazy">
     </div>
     <div class="apres">
       <p class="tete-apres"><strong>Après</strong> notre passage</p>
-      <img src="img/apres-6.webp" alt="Coin de fenêtre propre sans poussière ni saleté" class="img-avant_apres">
+      <img src="/img/avant-apres/apres-6.webp" alt="Coin de fenêtre propre sans poussière ni saleté" class="img-avant_apres" loading="lazy">
     </div>
     </div>
 
@@ -260,11 +307,11 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     <div class="avant_apres-img">
     <div class="avant">
       <p class="tete-avant"><strong>Avant</strong> notre passage</p>
-      <img src="img/avant-7.webp" alt="Robinet de douche recouvert de calcaire" class="img-avant_apres">
+      <img src="/img/avant-apres/avant-7.webp" alt="Robinet de douche recouvert de calcaire" class="img-avant_apres" loading="lazy">
     </div>
     <div class="apres">
       <p class="tete-apres"><strong>Après</strong> notre passage</p>
-      <img src="img/apres-7.webp" alt="Robinet de douche propre et sans calcaire" class="img-avant_apres">
+      <img src="/img/avant-apres/apres-7.webp" alt="Robinet de douche propre et sans calcaire" class="img-avant_apres" loading="lazy">
     </div>
     </div>
 
@@ -282,9 +329,7 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
   <div class="temoignage section">
       <div class="temoignage-head">
         <h2>Ce que nos <span class="highlight">clients</span> disent</h2>
-        <div class="img-google">
-        <img src="img/social-proof-google.webp" alt="Avis clients 5 étoiles sur Google pour Malo Nettoyage">
-        </div>
+        <div class="img-google"></div>
       </div>
 
     <!-- rangé 1 -->
@@ -293,20 +338,20 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
         <!-- Temoinages 1 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-11.webp" alt="Photo de profil Google de G&L AG" class="avatar">
+            <img src="/img/testimonials/avatar-avis-11.webp" alt="Photo de profil Google de G&L AG" class="avatar" loading="lazy">
             <div class="info">
               <h4>Sylvie Di Dario</h4>
               <p class="date">Nettoyage fin de chantier</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
           <p class="avis-texte">Nous avons fait appel à Malo Nettoyage, lors d'une fin de chantier pour un local commercial. Rapidité du devis et prestations réalisées avec professionalisme et dans les temps. Je recommande vivement cette entreprise</p>
@@ -315,20 +360,20 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
         <!-- Temoinages 2 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-5.webp" alt="Photo de profil Google de Nadia Dias" class="avatar">
+            <img src="/img/testimonials/avatar-avis-5.webp" alt="Photo de profil Google de Nadia Dias" class="avatar" loading="lazy">
             <div class="info">
               <h4>Nadia Dias</h4>
               <p class="date">Nettoyage de fin de bail</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
           <p class="avis-texte">Nous avons eu recours à Malo Nettoyage pour le nettoyage complet de notre appartement à vendre. Super professionnels, nettoyage de très grande qualité, rapides, disponibles et fiables. Je recommande les yeux fermés !</p>
@@ -337,20 +382,20 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
           <!-- Temoinages 3 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-1.webp" alt="Photo de profil Google de Ricardo Oliveira" class="avatar">
+            <img src="/img/testimonials/avatar-avis-1.webp" alt="Photo de profil Google de Ricardo Oliveira" class="avatar" loading="lazy">
             <div class="info">
               <h4>Ricardo Oliveira</h4>
               <p class="date">Nettoyage régulier</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
           <p class="avis-texte">Cela fait presque 3 mois que Malo Nettoyage s’occupe du ménage chez mes grands-parents, et c’est un vrai soulagement pour nous. Leur équipe est incroyable. Respectueuse, discrète, toujours souriante et prête à aider, même pour déplacer des meubles sans rien demander en retour. Mes grands-parents se sentent écoutés et respectés, et c’est vraiment précieux. Merci à toute l’équipe. Nous vous recommandons les yeux fermés !          </p>
@@ -367,43 +412,42 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
         <!-- Temoinages 4 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-4.webp" alt="Photo de profil Google de G&L AG" class="avatar">
+            <img src="/img/testimonials/avatar-avis-4.webp" alt="Photo de profil Google de G&L AG" class="avatar" loading="lazy">
             <div class="info">
               <h4>Jonathan Wehren</h4>
               <p class="date">Nettoyage de fin de bail</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
-          <p class="avis-texte">
-          Nettoyage de fin de bail effectué par Malo Nettoyage. Etat des lieux passé sans problème. Prix plus que correct. Très bien, merci beaucoup.
+          <p class="avis-texte">Nettoyage de fin de bail effectué par Malo Nettoyage. Etat des lieux passé sans problème. Prix plus que correct. Très bien, merci beaucoup.</p>
         </div>
         
         <!-- Temoinages 5 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-9.webp" alt="Photo de profil Google de Nadia Dias" class="avatar">
+            <img src="/img/testimonials/avatar-avis-9.webp" alt="Photo de profil Google de Nadia Dias" class="avatar" loading="lazy">
             <div class="info">
               <h4>Eva Giostra</h4>
               <p class="date">Nettoyage vitres et sols</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
           <p class="avis-texte">J’ai fais appel à l’entreprise Malo Nettoyage pour les vitres et sols de ma maison , et j’en suis 100% satisfaite . Travail rapide et efficace , ils m’ont donné entière satisfaction. Personnel chaleureux et à l’écoute.</p>
@@ -412,20 +456,20 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
           <!-- Temoinages 6 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-8.webp" alt="Photo de profil Google de Ricardo Oliveira" class="avatar">
+            <img src="/img/testimonials/avatar-avis-8.webp" alt="Photo de profil Google de Ricardo Oliveira" class="avatar" loading="lazy">
             <div class="info">
               <h4>Johanne Roulin</h4>
               <p class="date">Nettoyage fin de bail</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
           <p class="avis-texte">
@@ -443,45 +487,42 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
         <!-- Temoinages 7 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-6.webp" alt="Photo de profil Google de G&L AG" class="avatar">
+            <img src="/img/testimonials/avatar-avis-6.webp" alt="Photo de profil Google de G&L AG" class="avatar" loading="lazy">
             <div class="info">
               <h4>G&L AG</h4>
               <p class="date">Nettoyage entreprise</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
-          <p class="avis-texte">
-          Excellent suivi clientèle. Toujours le même interlocuteur. Travail professionnel, personnel motivé, objectif fixé pour chaque intervention, horaires respectés.
-          En cas de nécessité le personnel est dévoué pour tout autre aide.
-          Nous recommandons vivement cette entreprise qui travaille actuellement pour nous.
+          <p class="avis-texte">Excellent suivi clientèle. Toujours le même interlocuteur. Travail professionnel, personnel motivé, objectif fixé pour chaque intervention, horaires respectés. En cas de nécessité le personnel est dévoué pour tout autre aide. Nous recommandons vivement cette entreprise qui travaille actuellement pour nous.</p>
         </div>
             
         <!-- Temoinages 8 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-2.webp" alt="Photo de profil Google de Nadia Dias" class="avatar">
+            <img src="/img/testimonials/avatar-avis-2.webp" alt="Photo de profil Google de Nadia Dias" class="avatar" loading="lazy">
             <div class="info">
               <h4>Maurane Keller</h4>
               <p class="date">Nettoyage fin de bail</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
           <p class="avis-texte">Au top mon appartement étais dans un sale etat tout a bien pu être rattraper merci infiniment efficace et super sympathique 👍☺️</p>
@@ -490,20 +531,20 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
           <!-- Temoinages 9 -->
         <div class="avis">
           <div class="avis-tete">
-            <img src="img/avatar-avis-10.webp" alt="Photo de profil Google de Ricardo Oliveira" class="avatar">
+            <img src="/img/testimonials/avatar-avis-10.webp" alt="Photo de profil Google de Ricardo Oliveira" class="avatar" loading="lazy">
             <div class="info">
               <h4>Sylvie Jaccoud</h4>
               <p class="date">Nettoyage vitres</p>
             </div>
-            <img src="img/google-icon.webp" alt="Logo Google" class="google-logo">
+            <img src="/img/icons/google-icon.webp" alt="Logo Google" class="google-logo" loading="lazy">
           </div>
 
           <div class="stars">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
-            <img src="img/stars-icon.webp" alt="Icone etoile" class="stars-icone">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
+            <img src="/img/icons/stars-icon.webp" alt="Icone etoile" class="stars-icone" loading="lazy">
           </div>
 
           <p class="avis-texte">On vous remercie infiniment pour votre travail et gentillesse de chacun. Respectueux et avenant, rapide. Bravo à tous !</p>
@@ -524,7 +565,7 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 <div class="histoire section">
   <h2>Comment tout a <span class="highlight">commencé</span></h2>
   <div class="resume-histoire">
-    <img src="img/malo-profil.webp" alt="..." class="histoire-img">
+    <img src="/img/malo-profil.webp" alt="Malo, fondateur de Malo Nettoyage" class="histoire-img" loading="lazy">
     <div class="info-histoire">
     <p>Pendant mes études, j’aidais mon frère, agent de propreté CFC, et j’ai découvert un métier exigeant mais passionnant.<br><br>
       Après ma formation, nous avons uni nos compétences :<br><br>
@@ -545,7 +586,7 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 <section class="video-section section">
   <h2>L’esprit de <span class="highlight">famille</span> en action</h2>
   <div class="video-container">
-<video id="portrait-video" src="video/nettoyage.mp4" playsinline poster="video/poster-video.png"></video>
+<video id="portrait-video" src="/video/nettoyage.mp4" playsinline poster="/video/poster-video.png"></video>
 <button class="video-btn" id="video-toggle">▶️ Lire la vidéo</button>
   </div>
     <div class="cta-global">
@@ -562,31 +603,31 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     <ul class="faq-list">
       <li class="faq-item">
         <div class="faq-question">
-          <span>Puis-je choisir le jour et l'heure du nettoyage ?</span>
+          <span>Intervenez-vous dans tout le canton de Vaud et Fribourg ?</span>
           <span class="arrow">→</span>
         </div>
         <p class="faq-answer">
-          Oui, nous offrons une flexibilité totale jusqu'à 24h avant l'intervention.
+          Oui. Nous intervenons à Payerne et dans toute la région Broye, ainsi que dans les cantons de Vaud et Fribourg. Indiquez-nous votre adresse dans le formulaire, nous confirmons la disponibilité sous 24h.
         </p>
       </li>
 
       <li class="faq-item">
         <div class="faq-question">
-          <span>Quels sont les tarifs et y a-t-il des frais cachés ?</span>
+          <span>Quels sont vos tarifs ?</span>
           <span class="arrow">→</span>
         </div>
         <p class="faq-answer">
-          Nos tarifs sont clairs et sans frais cachés. Vous obtenez un devis avant toute intervention.
+          Chaque situation est différente, c'est pourquoi nous proposons des devis personnalisés et gratuits. Vous recevez un prix clair avant toute intervention — sans mauvaise surprise.
         </p>
       </li>
 
       <li class="faq-item">
         <div class="faq-question">
-          <span>Puis-je faire confiance à l'intervenant ?</span>
+          <span>Êtes-vous assurés en cas de dégât ?</span>
           <span class="arrow">→</span>
         </div>
         <p class="faq-answer">
-          Absolument. Nos intervenants sont sélectionnés rigoureusement et évalués après chaque mission.
+          Oui. Malo Nettoyage est assuré en responsabilité civile professionnelle auprès d'AXA. En cas de dommage accidentel, vous êtes couverts.
         </p>
       </li>
     </ul>
@@ -600,67 +641,6 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     </div>
   </div>
 </div>
-
-
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container-footer">
-    
-    <img src="img/logo-malonettoyage.webp" 
-         alt="Entreprise de nettoyage Malo Nettoyage en Suisse" 
-         class="logo" 
-         loading="eager" 
-         decoding="async">
-
-    <div class="lien-footer">
-      <p class="fin-footer">Moins de ménage, plus de temps pour vous.</p>
-
-      <div class="info-lien">
-        <a href="tel:+41798594120" class="sous-cta" onclick="gtagSendEvent('contact_tel');">
-          <i class="fa-solid fa-phone"></i>
-        </a>
-
-        <a href="https://www.instagram.com/malonettoyage/" 
-           class="sous-cta" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           aria-label="Instagram Malo Nettoyage">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/company/malonettoyage/" 
-           class="sous-cta" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           aria-label="LinkedIn Malo Nettoyage">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-
-        <a href="https://www.youtube.com/@MaloNettoyage" 
-           class="sous-cta" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           aria-label="YouTube Malo Nettoyage">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="lien-footer">
-      <a href="https://bitter-basil-a9e.notion.site/Politique-de-Confidentialit-1a7d75d10aaf80a2a1a0cec65f5979e0?pvs=74" class="sous-cta">
-        Politique de confidentialité
-      </a>
-
-      <div class="info-lien">
-        <p class="fin-footer-2">© 2026 Malo Nettoyage – Tous droits réservés - Made by Dadee</p>
-      </div>
-    </div>
-
-  </div>
-</footer>
-
-
 <script>
 const form = document.getElementById('contact-form');
 
@@ -690,38 +670,189 @@ if (form) {
 }
 </script>
 
+<script>
+(function() {
+  const CLOUDINARY_CONFIG = { cloudName: "dacbutv4g", uploadPreset: "malo_nettoyage" };
+  let uploadedImages = [];
+
+  const fileInput = document.getElementById('c-photos');
+  const previewContainer = document.getElementById('preview-container');
+  const uploadStatus = document.getElementById('upload-status');
+  const imageLinksField = document.getElementById('image_links');
+
+  if (!fileInput) return;
+
+  fileInput.addEventListener('change', function() {
+    const files = Array.from(fileInput.files);
+    files.forEach(file => uploadFile(file));
+    fileInput.value = '';
+  });
+
+  async function uploadFile(file) {
+    const tempId = Date.now() + Math.random();
+    const item = createPreviewItem(file, tempId);
+    previewContainer.appendChild(item);
+
+    uploadStatus.textContent = "Upload en cours...";
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', CLOUDINARY_CONFIG.uploadPreset);
+
+    try {
+      const resourceType = file.type.startsWith('video') ? 'video' : 'image';
+      const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CONFIG.cloudName}/${resourceType}/upload`, {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      if (data.secure_url) {
+        uploadedImages.push({ id: tempId, url: data.secure_url });
+        syncImageLinks();
+        uploadStatus.textContent = uploadedImages.length + " fichier(s) prêt(s)";
+      }
+    } catch (e) {
+      item.remove();
+      uploadStatus.textContent = "Erreur lors de l'upload.";
+    }
+  }
+
+  function createPreviewItem(file, tempId) {
+    const item = document.createElement('div');
+    item.className = 'preview-item';
+    item.dataset.id = tempId;
+
+    if (file.type.startsWith('image')) {
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      item.appendChild(img);
+    } else {
+      const vid = document.createElement('video');
+      vid.src = URL.createObjectURL(file);
+      vid.muted = true;
+      item.appendChild(vid);
+      const badge = document.createElement('span');
+      badge.className = 'video-badge';
+      badge.textContent = '🎥';
+      item.appendChild(badge);
+    }
+
+    const del = document.createElement('button');
+    del.className = 'preview-delete';
+    del.textContent = '×';
+    del.addEventListener('click', () => {
+      uploadedImages = uploadedImages.filter(img => img.id !== tempId);
+      item.remove();
+      syncImageLinks();
+      uploadStatus.textContent = uploadedImages.length ? uploadedImages.length + " fichier(s) prêt(s)" : "";
+    });
+    item.appendChild(del);
+    return item;
+  }
+
+  function syncImageLinks() {
+    imageLinksField.value = uploadedImages.map(img => img.url).join('\n');
+  }
+})();
+</script>
+
 <!-- Données structurées pour le SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Malo Nettoyage",
-  "image": "https://www.malonettoyage.ch/img/logo-malonettoyage.webp",
-  "url": "https://www.malonettoyage.ch/",
-  "telephone": "+41798594120",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rue de la Bergerie 5",
-    "postalCode": "1530",
-    "addressLocality": "Payerne",
-    "addressRegion": "Vaud",
-    "addressCountry": "CH"
-  },
-  "description": "Services de nettoyage à domicile, fin de bail, vitres et fin de chantier à Payerne et dans la région de la Broye.",
-  "priceRange": "$",
-  "areaServed": {
-    "@type": "Place",
-    "name": "Canton de Vaud et Fribourg"
-  },
-  "openingHours": "Mo-Su 07:00-21:00",
-  "sameAs": [
-    "https://www.instagram.com/malonettoyage/",
-    "https://www.linkedin.com/company/malonettoyage/",
-    "https://www.youtube.com/@MaloNettoyage"
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "CleaningService"],
+      "@id": "https://www.malonettoyage.ch/#business",
+      "name": "Malo Nettoyage",
+      "url": "https://www.malonettoyage.ch/",
+      "telephone": "+41798594120",
+      "email": "hello@malonettoyage.ch",
+      "logo": "https://www.malonettoyage.ch/img/MaloNettoyage_Logo-black.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue de la Bergerie 5",
+        "postalCode": "1530",
+        "addressLocality": "Payerne",
+        "addressRegion": "Vaud",
+        "addressCountry": "CH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.8167,
+        "longitude": 6.9333
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Canton de Vaud",
+          "sameAs": "https://www.wikidata.org/wiki/Q23059"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Canton de Fribourg",
+          "sameAs": "https://www.wikidata.org/wiki/Q23078"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "21:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "70",
+        "bestRating": "5"
+      },
+      "sameAs": [
+        "https://www.instagram.com/malonettoyage/",
+        "https://www.linkedin.com/company/malonettoyage/",
+        "https://www.youtube.com/@MaloNettoyage"
+      ]
+    }
   ]
 }
 </script>
 
+<!-- Données structurées pour le SEO FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous dans tout le canton de Vaud et Fribourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Nous intervenons à Payerne et dans toute la région Broye, ainsi que dans les cantons de Vaud et Fribourg. Indiquez-nous votre adresse dans le formulaire, nous confirmons la disponibilité sous 24h."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont vos tarifs ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chaque situation est différente, c'est pourquoi nous proposons des devis personnalisés et gratuits. Vous recevez un prix clair avant toute intervention — sans mauvaise surprise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Êtes-vous assurés en cas de dégât ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Malo Nettoyage est assuré en responsabilité civile professionnelle auprès d'AXA. En cas de dommage accidentel, vous êtes couverts."
+      }
+    }
+  ]
+}
+</script>
+
+
+<script src="/js/social-proof.js" defer></script>
+<script src="/js/footer.js" defer></script>
 </body>
 
 </html>
