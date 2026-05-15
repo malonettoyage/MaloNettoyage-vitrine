@@ -63,7 +63,10 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="shortcut icon" href="/favicon.ico">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" href="/img/hero-img.webp" as="image" fetchpriority="high">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="/css/style.css">
 <script src="/js/scroll-fade.js" defer></script>
 
@@ -121,7 +124,7 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
     </div>
 
     <div class="img-hero">
-      <img src="/img/hero-img.webp" alt="Équipe Malo Nettoyage souriante avec un homme devant et deux femmes derrière, équipés de matériel de nettoyage professionnel" loading="eager" />
+      <img src="/img/hero-img.webp" alt="Équipe Malo Nettoyage souriante avec un homme devant et deux femmes derrière, équipés de matériel de nettoyage professionnel" loading="eager" fetchpriority="high" />
     </div>
     <div class="cta-global">
       <a href="mailto:hello@malonettoyage.ch?subject=Demande%20de%20devis%20gratuit" class="cta" onclick="gtagSendEvent('contact_email');">Obtenez votre devis gratuit</a>
@@ -586,7 +589,7 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 <section class="video-section section">
   <h2>L’esprit de <span class="highlight">famille</span> en action</h2>
   <div class="video-container">
-<video id="portrait-video" src="/video/nettoyage.mp4" playsinline poster="/video/poster-video.png"></video>
+<video id="portrait-video" src="/video/nettoyage.mp4" playsinline poster="/video/poster-video.webp"></video>
 <button class="video-btn" id="video-toggle">▶️ Lire la vidéo</button>
   </div>
     <div class="cta-global">
