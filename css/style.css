@@ -1638,6 +1638,13 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   max-width: 640px;
   margin: 0 auto 20px;
 }
+.article-updated {
+  display: inline-block;
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+}
+
 .article-read-time {
   font-size: 13px;
   color: #bbb;
@@ -1689,6 +1696,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   font-weight: 600;
   color: #232323;
   margin: 28px 0 10px;
+  letter-spacing: 0.01em;
 }
 .article-body p { margin-bottom: 18px; }
 .article-body ul, .article-body ol {
@@ -1698,6 +1706,33 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 .article-body li { margin-bottom: 8px; }
 .article-body strong { color: #232323; font-weight: 600; }
 .article-body a { color: #1CBF73; text-decoration: underline; }
+
+/* Tableau */
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  font-size: 15px;
+}
+.article-body th {
+  background: #1CBF73;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 14px;
+  text-align: left;
+}
+.article-body td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #e8e8e8;
+  color: #333;
+  vertical-align: top;
+}
+.article-body tr:nth-child(even) td { background: #f8f8f8; }
+.article-body tr:last-child td { border-bottom: none; }
+@media (max-width: 600px) {
+  .article-body table { font-size: 13px; }
+  .article-body th, .article-body td { padding: 9px 10px; }
+}
 
 /* Encadré astuce */
 .article-tip {
@@ -1792,11 +1827,90 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   margin-bottom: 56px;
 }
 .other-articles h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  color: #232323;
 }
-.other-articles .blog-grid { margin-bottom: 0; }
+
+/* Desktop : grille 3 colonnes */
+.autres-articles-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+/* Bouton voir tous les articles */
+.autres-articles-btn {
+  display: table;
+  margin: 40px auto 0;
+  padding: 13px 32px;
+  border: 1.5px solid #1CBF73;
+  border-radius: 10px;
+  color: #1CBF73;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  white-space: nowrap;
+}
+.autres-articles-btn:hover {
+  background: #1CBF73;
+  color: #fff;
+}
+
+/* Mobile : cartes horizontales compactes */
+@media (max-width: 640px) {
+  .autres-articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .other-articles .article-card {
+    flex-direction: row;
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    padding: 14px 0;
+    gap: 14px;
+    align-items: center;
+  }
+  .other-articles .article-card:first-child { border-top: 1px solid #ebebeb; }
+  .other-articles .article-card:hover { transform: none; opacity: 0.75; }
+
+  .other-articles .card-img-wrap {
+    width: 84px;
+    min-width: 84px;
+    height: 62px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .other-articles .card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .other-articles .card-body { padding: 0; flex: 1; min-width: 0; }
+  .other-articles .card-date { display: none; }
+  .other-articles .card-excerpt { display: none; }
+  .other-articles .card-link { display: none; }
+  .other-articles .card-meta { margin-bottom: 5px; }
+
+  .other-articles .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
 
 
 /* ═══════════════════════════════════════════
