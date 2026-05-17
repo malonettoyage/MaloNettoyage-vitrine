@@ -169,7 +169,7 @@
   container.innerHTML = `
     <section class="other-articles fade-in">
       <h2>Autres articles</h2>
-      <div class="autres-articles-list">
+      <div class="blog-grid autres-articles-list">
         ${articles.map(buildCard).join('')}
       </div>
       <a href="/blog/" class="autres-articles-btn">Voir tous les articles →</a>

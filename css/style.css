@@ -1833,11 +1833,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   color: #232323;
 }
 
-/* Desktop : grille 3 colonnes */
-.autres-articles-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.other-articles .blog-grid {
   margin-bottom: 0;
 }
 
