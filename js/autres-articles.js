@@ -86,6 +86,15 @@
       image:     '/blog/2026-05-17-entreprise-nettoyage-payerne/img/entreprise-nettoyage-payerne.webp',
       extrait:   'Assurance RC Pro, devis fixe, garantie retour gratuit : les 3 critères clés pour choisir une entreprise de nettoyage fiable à Payerne et dans la Broye.'
     },
+    {
+      slug:      '/blog/2026-05-18-nettoyer-calcaire-salle-bain/',
+      titre:     'Comment nettoyer le calcaire dans la salle de bain : guide complet 2026',
+      categorie: 'calcaire',
+      badge:     'Calcaire',
+      date:      '18 mai 2026',
+      image:     '/blog/2026-05-18-nettoyer-calcaire-salle-bain/img/calcaire-salle-bain.webp',
+      extrait:   'Vinaigre, produits du commerce ou pH 0.5 : la méthode adaptée à chaque niveau de calcaire. Avec les spécificités de l\'eau très dure en Broye (45.3 °fH).'
+    },
     /* ── AJOUTER LES PROCHAINS ARTICLES ICI ──
     {
       slug:      '/blog/AAAA-MM-JJ-mon-article/',
