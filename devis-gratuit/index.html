@@ -283,5 +283,21 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
 
 <script src="/js/social-proof.js" defer></script>
 <script src="/js/footer.js" defer></script>
+
+<script>
+  // Pré-sélectionne le type de service via paramètre URL (?service=...)
+  (function () {
+    const param = new URLSearchParams(window.location.search).get('service');
+    if (!param) return;
+    const select = document.getElementById('c-service');
+    if (!select) return;
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].value === param) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  })();
+</script>
 </body>
 </html>

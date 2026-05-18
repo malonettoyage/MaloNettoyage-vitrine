@@ -683,28 +683,33 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 /* ─── FORMULAIRE ─── */
 
 .contact-section {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #ffffff;
+  border: 1px solid #f3f3f3;
+  border-radius: 32px;
+  padding: 64px;
+  text-align: left;
 }
 
-
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 16px;
+    border-radius: 20px;
+  }
+}
 
 .contact-form {
-  background: #fff;
-  max-width: 700px;
-  width: 100%; /* ← IMPORTANT */
+  max-width: 640px;
+  width: 100%;
   margin: 0 auto;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 2px 16px rgb(194 194 194 / 15%);;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
   text-align: left;
-  align-items: center;
-  border: 2px solid #f3f3f3;
 }
 
 .contact-form .field {
@@ -724,21 +729,20 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 .contact-form select {
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px 13px;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 12px 16px;
   font-size: 15px;
-  background: #fafafa;
+  background: #fafffd;
   color: #1a1a1a;
   outline: none;
-  transition: border 0.2s;
+  transition: border-color 0.2s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
-  border-color: #3ab090; /* adapte à ta couleur highlight */
-  background: #fff;
+  border-color: #b8b8b8;
 }
 
 .contact-form textarea {
@@ -1086,18 +1090,19 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   display: block;
   text-align: center;
   padding: 14px 24px;
-  background-color: #1CBF73;
-  color: white !important;
-  border: none;
-  border-radius: 1000px;
-  font-size: 16px;
+  background-color: #f7fffe;
+  color: #232323 !important;
+  border: 2.2px dashed #1CBF73;
+  border-radius: 12px;
+  font-size: 15px !important;
+  font-weight: 700 !important;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.2s, color 0.2s;
   margin-top: 12px;
 }
 .upload-button:hover {
-  background-color: #17a862;
-  transform: scale(1.02);
+  background-color: #1CBF73;
+  color: #fff !important;
 }
 .preview-container {
   display: grid;

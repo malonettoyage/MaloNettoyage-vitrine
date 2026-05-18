@@ -33,67 +33,76 @@
   ══════════════════════════════════════════ */
   const ARTICLES = [
     {
-      slug:      '/blog/2026-05-03-checklist-fin-bail/',
+      slug:      '/blog/checklist-fin-bail/',
       titre:     'Checklist complète : tout ce qu\'il faut nettoyer avant de rendre les clés',
       categorie: 'fin-de-bail',
       badge:     'Fin de bail',
       date:      '3 mai 2026',
-      image:     '/blog/2026-05-03-checklist-fin-bail/img/checklist_fin-de-bail.webp',
+      image:     '/blog/checklist-fin-bail/img/checklist_fin-de-bail.webp',
       extrait:   'La liste exhaustive des points contrôlés par les régies lors de l\'état des lieux de sortie.'
     },
     {
-      slug:      '/blog/2026-05-06-erreurs-nettoyage/',
+      slug:      '/blog/erreurs-nettoyage/',
       titre:     '5 erreurs courantes qui font échouer l\'état des lieux de sortie',
       categorie: 'conseils',
       badge:     'Conseils',
       date:      '6 mai 2026',
-      image:     '/blog/2026-05-06-erreurs-nettoyage/img/erreur_etat-lieu.webp',
+      image:     '/blog/erreurs-nettoyage/img/erreur_etat-lieu.webp',
       extrait:   'Hotte oubliée, joints moisis, vitres avec traces… les pièges les plus fréquents et comment les éviter.'
     },
     {
-      slug:      '/blog/2026-05-09-etats-lieux-valide/',
+      slug:      '/blog/etats-lieux-valide/',
       titre:     'Comment faire valider son état des lieux du premier coup',
       categorie: 'fin-de-bail',
       badge:     'Fin de bail',
       date:      '9 mai 2026',
-      image:     '/blog/2026-05-09-etats-lieux-valide/img/valide_-fin-de-bail.webp',
+      image:     '/blog/etats-lieux-valide/img/valide_-fin-de-bail.webp',
       extrait:   'Préparer son appartement et récupérer sa caution en entier : notre méthode en 3 étapes.'
     },
     {
-      slug:      '/blog/2026-05-12-vitres-sans-traces/',
+      slug:      '/blog/vitres-sans-traces/',
       titre:     'Vos vitres restent toujours striées après le nettoyage ? Voici pourquoi',
       categorie: 'vitres',
       badge:     'Vitres',
       date:      '12 mai 2026',
-      image:     '/blog/2026-05-12-vitres-sans-traces/img/vitres-sans-traces.webp',
+      image:     '/blog/vitres-sans-traces/img/vitres-sans-traces.webp',
       extrait:   'Mauvais produit, mauvaise technique, mauvais moment : les vraies raisons des traces sur vos vitres — et comment les éliminer.'
     },
     {
-      slug:      '/blog/2026-05-15-debarras-nettoyage/',
+      slug:      '/blog/debarras-nettoyage/',
       titre:     'Débarras + nettoyage : on s\'occupe de tout',
       categorie: 'conseils',
       badge:     'Conseils',
       date:      '15 mai 2026',
-      image:     '/blog/2026-05-15-debarras-nettoyage/img/debarras-nettoyage.webp',
+      image:     '/blog/debarras-nettoyage/img/debarras-nettoyage.webp',
       extrait:   'Après un décès, avant une vente ou un déménagement — vous n\'avez rien à faire. Débarras et nettoyage coordonnés, clé en main.'
     },
     {
-      slug:      '/blog/2026-05-17-entreprise-nettoyage-payerne/',
+      slug:      '/blog/entreprise-nettoyage-payerne/',
       titre:     'Entreprise de nettoyage à Payerne : comment bien choisir en 2026',
       categorie: 'conseils',
       badge:     'Conseils',
       date:      '17 mai 2026',
-      image:     '/blog/2026-05-17-entreprise-nettoyage-payerne/img/entreprise-nettoyage-payerne.webp',
+      image:     '/blog/entreprise-nettoyage-payerne/img/entreprise-nettoyage-payerne.webp',
       extrait:   'Assurance RC Pro, devis fixe, garantie retour gratuit : les 3 critères clés pour choisir une entreprise de nettoyage fiable à Payerne et dans la Broye.'
     },
     {
-      slug:      '/blog/2026-05-18-nettoyer-calcaire-salle-bain/',
+      slug:      '/blog/nettoyer-calcaire-salle-bain/',
       titre:     'Comment nettoyer le calcaire dans la salle de bain : guide complet 2026',
       categorie: 'calcaire',
       badge:     'Calcaire',
       date:      '18 mai 2026',
-      image:     '/blog/2026-05-18-nettoyer-calcaire-salle-bain/img/calcaire-salle-bain.webp',
+      image:     '/blog/nettoyer-calcaire-salle-bain/img/calcaire-salle-bain.webp',
       extrait:   'Vinaigre, produits du commerce ou pH 0.5 : la méthode adaptée à chaque niveau de calcaire. Avec les spécificités de l\'eau très dure en Broye (45.3 °fH).'
+    },
+    {
+      slug:      '/blog/nettoyage-extreme-sante-mentale/',
+      titre:     'Nettoyage extrême : pourquoi un logement insalubre affecte la santé mentale et physique',
+      categorie: 'extreme',
+      badge:     'Extrême',
+      date:      '19 mai 2026',
+      image:     '/blog/nettoyage-extreme-sante-mentale/img/nettoyage-extreme.webp',
+      extrait:   'Dépression, deuil, isolement — un logement insalubre n\'est jamais un choix. Causes, conséquences sur la santé et solutions concrètes en Vaud et Fribourg.'
     },
     /* ── AJOUTER LES PROCHAINS ARTICLES ICI ──
     {

@@ -44,7 +44,7 @@
   <!-- Blog -->
   <url>
     <loc>https://www.malonettoyage.ch/blog/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -59,50 +59,57 @@
 
   <!-- Articles de blog -->
   <url>
-    <loc>https://www.malonettoyage.ch/blog/2026-05-03-checklist-fin-bail/</loc>
+    <loc>https://www.malonettoyage.ch/blog/checklist-fin-bail/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.malonettoyage.ch/blog/2026-05-06-erreurs-nettoyage/</loc>
+    <loc>https://www.malonettoyage.ch/blog/erreurs-nettoyage/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.malonettoyage.ch/blog/2026-05-09-etats-lieux-valide/</loc>
+    <loc>https://www.malonettoyage.ch/blog/etats-lieux-valide/</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.malonettoyage.ch/blog/2026-05-12-vitres-sans-traces/</loc>
+    <loc>https://www.malonettoyage.ch/blog/vitres-sans-traces/</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.malonettoyage.ch/blog/2026-05-15-debarras-nettoyage/</loc>
+    <loc>https://www.malonettoyage.ch/blog/debarras-nettoyage/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.malonettoyage.ch/blog/2026-05-17-entreprise-nettoyage-payerne/</loc>
+    <loc>https://www.malonettoyage.ch/blog/entreprise-nettoyage-payerne/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.malonettoyage.ch/blog/2026-05-18-nettoyer-calcaire-salle-bain/</loc>
+    <loc>https://www.malonettoyage.ch/blog/nettoyer-calcaire-salle-bain/</loc>
     <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/nettoyage-extreme-sante-mentale/</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
