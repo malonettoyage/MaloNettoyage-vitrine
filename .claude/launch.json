@@ -4,7 +4,7 @@
     {
       "name": "malo-nettoyage-local",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3444", "."],
+      "runtimeArgs": ["serve", "-l", "3444", "/Users/jiasedik/Desktop/MaloNettoyage-vitrine"],
       "port": 3444
     }
   ]
