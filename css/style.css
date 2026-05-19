@@ -2180,12 +2180,13 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
-    background: #fff;
+    z-index: 9999;
+    background: #ffffff;
     border-top: 1px solid #e8e8e8;
-    box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
     padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
     gap: 8px;
+    isolation: isolate;
   }
 
   .mobile-cta-btn {
