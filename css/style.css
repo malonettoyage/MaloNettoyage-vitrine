@@ -2138,3 +2138,65 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   color: #aaa;
   pointer-events: none;
 }
+
+/* ═══════════════════════════════════════════
+   BARRE FIXE MOBILE — Appeler / WhatsApp / Devis
+═══════════════════════════════════════════ */
+.mobile-cta-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    gap: 8px;
+  }
+
+  .mobile-cta-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 4px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .mobile-cta-btn:active {
+    opacity: 0.75;
+  }
+
+  .mobile-cta-call {
+    background: #f5f5f5;
+    color: #232323;
+  }
+
+  .mobile-cta-whatsapp {
+    background: #f0faf4;
+    color: #1CBF73;
+  }
+
+  .mobile-cta-devis {
+    background: #E6F9F4;
+    color: #037627;
+  }
+
+  /* Espace pour ne pas cacher le contenu derrière la barre */
+  body {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
