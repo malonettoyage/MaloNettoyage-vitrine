@@ -60,16 +60,18 @@
     <section class="contact-section section">
       <h2>Devis gratuit — <span class="highlight">réponse sous 24h</span></h2>
 
+      <div class="devis-steps">
+        <span>Demande</span>
+        <span class="devis-steps-arrow">→</span>
+        <span>Visite sans engagement</span>
+        <span class="devis-steps-arrow">→</span>
+        <span>Devis gratuit</span>
+        <span class="devis-steps-arrow">→</span>
+        <span>On nettoie</span>
+      </div>
+
       <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbdqdpry" method="POST">
         <input type="hidden" name="_subject" value="${cfg.subject}">
-
-        <div class="devis-steps">
-          <span>Demande envoyée</span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="0.7em" height="0.7em" fill="currentColor" aria-hidden="true"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-          <span>On vient sur place</span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="0.7em" height="0.7em" fill="currentColor" aria-hidden="true"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-          <span>On nettoie</span>
-        </div>
 
         <div class="field">
           <label for="c-name"><p>Votre nom</p></label>

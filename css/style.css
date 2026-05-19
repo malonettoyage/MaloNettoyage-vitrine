@@ -221,19 +221,55 @@ p {
 
 
 /* Raisons */
+
 .list-raison {
-    display: flex;
-    gap: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  padding: 0;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .raison {
-    flex: 1;            /* chaque bloc prend la même largeur */
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    border-radius: 20px;
-    background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 0;
+  background: none;
+}
+
+.raison + .raison {
+  border-top: 1px solid #f0f0f0;
+}
+
+.raison .icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.raison-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.raison-text h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.raison-text p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
 }
 
 
@@ -660,10 +696,35 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 
 /* Cadre Garantie */
 .garantie {
-  background-color: #F3FCF9; /* vert pastel */
-  border-left: 3.5px solid #1CBF73; /* bordure verte */
+  background-color: #F3FCF9;
+  border-left: 3.5px solid #1CBF73;
   padding: 8px;
   margin-top: 1rem;
+}
+
+.garantie-reassurance {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #E6F9F4;
+  border-radius: 16px;
+  padding: 18px 22px;
+  color: #1a7a4a;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 64px;
+}
+
+.garantie-reassurance img {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.garantie-reassurance h3 {
+  color: #1CBF73;
 }
 
 .chiffre {
@@ -687,19 +748,20 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #f3f3f3;
-  border-radius: 999px;
-  padding: 14px 16px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #232323;
   flex-wrap: wrap;
-  text-align: center;
+  font-size: 15px;
+  color: #555;
+  font-weight: 400;
+  padding: 14px 20px;
+  background: #f3f3f3;
+  border-radius: 50px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.devis-steps svg {
+.devis-steps-arrow {
   color: #1CBF73;
-  flex-shrink: 0;
+  font-weight: 500;
 }
 
 .contact-section {
@@ -894,52 +956,14 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
     gap: 32px;
   }
 
-  .list-raison {
-    flex-direction: column;
-    gap: 0;
-    background: #fff;
-    border-radius: 20px;
-    border: 1px solid #f0f0f0;
-    overflow: hidden;
-    padding: 0;
-  }
-
   .raison {
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-    padding: 18px 20px;
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
-  }
-
-  .raison + .raison {
-    border-top: 1px solid #f0f0f0;
+    padding: 16px 20px;
   }
 
   .raison .icon {
     font-size: 28px;
-    flex-shrink: 0;
-    margin: 0;
   }
 
-  .raison-text {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  .raison-text h3 {
-    font-size: 16px;
-    margin: 0;
-  }
-
-  .raison-text p {
-    font-size: 14px;
-    color: #555;
-    margin: 0;
-  }
 
     .services {
     gap: 32px;
@@ -2226,5 +2250,60 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   /* Espace pour ne pas cacher le contenu derrière la barre */
   body {
     padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
+
+/* ── Desktop : list-raison agrandie ── */
+@media (min-width: 769px) {
+  .list-raison {
+    max-width: 680px;
+  }
+
+  .raison {
+    padding: 32px 36px;
+    gap: 24px;
+  }
+
+  .raison .icon {
+    font-size: 2.5rem;
+  }
+
+  .raison-text h3 {
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+  }
+
+  .raison-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .garantie-reassurance {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 24px 40px;
+    gap: 20px;
+  }
+
+  .garantie-reassurance img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .garantie-reassurance h3 {
+    font-size: 1.75rem;
+    margin-bottom: 6px;
+  }
+
+  .garantie-reassurance p {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
