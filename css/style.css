@@ -682,6 +682,26 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 
 /* ─── FORMULAIRE ─── */
 
+.devis-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f3f3f3;
+  border-radius: 999px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #232323;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.devis-steps svg {
+  color: #1CBF73;
+  flex-shrink: 0;
+}
+
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -1113,6 +1133,13 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 .fa-brands,
 .fa-solid {
   font-size: 24px;
+}
+
+
+.devis-steps {
+  gap: 7px;
+  padding: 14px 16px;
+  font-size: 13px;
 }
 
 }
