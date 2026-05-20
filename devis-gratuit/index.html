@@ -172,6 +172,33 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
   </section>
 
   
+<!-- Submit → redirect vers /merci.html -->
+<script>
+(function () {
+  const form   = document.getElementById('contact-form');
+  const button = form ? form.querySelector('button[type="submit"]') : null;
+  if (!form || !button) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    button.disabled  = true;
+    button.innerText = 'Envoi en cours...';
+
+    fetch(form.action, {
+      method:  'POST',
+      body:    new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(() => {
+      window.location.href = '/merci.html';
+    }).catch(() => {
+      button.disabled  = false;
+      button.innerText = 'Recevoir mon devis gratuit';
+      alert('Erreur lors de l\'envoi, réessaie.');
+    });
+  });
+})();
+</script>
+
 <!-- Cloudinary upload -->
 <script>
 (function() {
