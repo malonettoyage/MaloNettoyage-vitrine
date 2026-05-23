@@ -176,7 +176,22 @@
     });
   }
 
+  /* ── COMPTAGE PAR CATÉGORIE ── */
+  function updateCounts() {
+    const toutes = Array.from(grid.querySelectorAll('.article-card'));
+    filterBtns.forEach(btn => {
+      const filtre = btn.dataset.filter;
+      const count  = filtre === 'tous'
+        ? toutes.length
+        : toutes.filter(c => c.dataset.category === filtre).length;
+      const label  = btn.dataset.label || btn.textContent.trim();
+      btn.dataset.label = label;
+      btn.textContent   = `${label} (${count})`;
+    });
+  }
+
   /* ── INIT ── */
   afficherPage(1);
+  updateCounts();
 
 })();
