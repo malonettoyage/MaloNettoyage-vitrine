@@ -1706,6 +1706,17 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 .breadcrumb span { color: #ccc; }
 .breadcrumb .current { color: #555; }
 
+/* Breadcrumb visible uniquement en desktop sur les pages de services */
+.breadcrumb--service {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .breadcrumb--service {
+    display: flex;
+  }
+}
+
 
 /* ═══════════════════════════════════════════
    ARTICLE - EN-TÊTE (titre, badge, date)
