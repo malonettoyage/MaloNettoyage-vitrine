@@ -135,4 +135,18 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/nettoyer-parquet-carrelage-apres-renovation/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/nettoyage-bureaux/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
