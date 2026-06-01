@@ -2321,3 +2321,26 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
     margin-right: auto;
   }
 }
+
+
+
+/* ═══════════════════════════════════════════
+   STICKY NAV — pages articles uniquement
+   overflow-x: clip permet position: sticky
+   sans casser le reste du site
+═══════════════════════════════════════════ */
+body.page-article {
+  overflow-x: clip;
+}
+
+/* ═══════════════════════════════════════════
+   NAV — effet liquid glass au scroll
+═══════════════════════════════════════════ */
+.site-nav.nav-scrolled {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}

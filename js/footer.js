@@ -107,4 +107,24 @@
       <span>Devis gratuit</span>
     </a>`;
   document.body.appendChild(bar);
+
+
+
+
+
+  /* ══════════════════════════════════════════
+     NAV — liquid glass effect au scroll
+  ══════════════════════════════════════════ */
+  (function () {
+    var nav = document.getElementById('site-nav');
+    if (!nav) return;
+    var scrolled = false;
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 80) {
+        if (!scrolled) { nav.classList.add('nav-scrolled'); scrolled = true; }
+      } else {
+        if (scrolled)  { nav.classList.remove('nav-scrolled'); scrolled = false; }
+      }
+    }, { passive: true });
+  })();
 })();
