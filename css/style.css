@@ -2344,3 +2344,49 @@ body.page-article {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
+
+/* ═══════════════════════════════════════════
+   ARTICLE CTA BOX — encadré service
+   Style cohérent avec .chiffre homepage
+   Utilisé dans les articles pour mettre en
+   avant un service lié au sujet de l'article
+═══════════════════════════════════════════ */
+.article-cta-box {
+  background-color: #fffef0;
+  border-left: 4px solid #f5d800;
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+  margin: 36px 0;
+}
+
+.article-cta-box .acb-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #232323;
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+.article-cta-box .acb-sub {
+  font-size: 1rem;
+  color: #999;
+  font-weight: 400;
+  margin: -6px 0 16px;
+}
+
+.article-cta-box .acb-btn {
+  display: inline-block;
+  background-color: #232323;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.article-cta-box .acb-btn:hover {
+  background-color: #000;
+  text-decoration: none;
+}
