@@ -196,9 +196,16 @@
 
   <url>
     <loc>https://www.malonettoyage.ch/blog/agence-de-proprete/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.malonettoyage.ch/services/nettoyage-insalubre-extreme/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>

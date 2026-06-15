@@ -58,6 +58,7 @@
           <li><a href="/services/nettoyage-fin-de-chantier/">Fin de chantier</a></li>
           <li><a href="/services/nettoyage-vitres/">Vitres</a></li>
           <li><a href="/services/nettoyage-regulier/">Régulier</a></li>
+          <li><a href="/services/nettoyage-insalubre-extreme/">Insalubre</a></li>
           <li><a href="/blog/">Blog</a></li>
         </ul>
       </div>

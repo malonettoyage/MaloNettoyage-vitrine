@@ -46,7 +46,7 @@
     'Nettoyage régulier',
     'Nettoyage de vitres',
     'Nettoyage de fin de chantier',
-    'Nettoyage extrême',
+    'Nettoyage insalubre & extrême',
     'Nettoyage en profondeur',
     'Autre demande'
   ];

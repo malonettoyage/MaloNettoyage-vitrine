@@ -50,6 +50,13 @@
       imageAlt:    'Nettoyage régulier de bureaux et locaux professionnels',
       titre:       'Nettoyage régulier',
       description: 'Bureaux et locaux propres chaque semaine. Facturation mensuelle, même équipe.'
+    },
+    {
+      slug:        '/services/nettoyage-insalubre-extreme/',
+      image:       '/img/services/nettoyage-insalubre.webp',
+      imageAlt:    'Remise en état d\'un logement insalubre par Malo Nettoyage',
+      titre:       'Nettoyage insalubre & extrême',
+      description: 'Syndrome de Diogène, après décès, accumulation : remise en état discrète, sans jugement.'
     }
   ];
 
