@@ -128,4 +128,27 @@
       }
     }, { passive: true });
   })();
+
+
+  /* ══════════════════════════════════════════
+     FORMULAIRES — ajoute la page d'origine
+     Permet de savoir depuis quelle page la demande
+     a été envoyée (accueil, fin de bail, blog…).
+     Capture phase = s'exécute avant le handler qui
+     construit le FormData, donc le champ est inclus.
+  ══════════════════════════════════════════ */
+  (function () {
+    document.addEventListener('submit', function (e) {
+      var form = e.target;
+      if (!form || !form.action || form.action.indexOf('formspree.io') === -1) return;
+      if (form.querySelector('input[data-origin-field]')) return;
+      var pageName = document.title.replace(/\s*[|–-]\s*Malo Nettoyage\s*$/i, '').trim();
+      var inp = document.createElement('input');
+      inp.type = 'hidden';
+      inp.name = "Page d'origine";
+      inp.setAttribute('data-origin-field', '');
+      inp.value = pageName + '  —  ' + window.location.href;
+      form.appendChild(inp);
+    }, true);
+  })();
 })();
