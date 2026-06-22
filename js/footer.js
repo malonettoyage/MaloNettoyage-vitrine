@@ -151,4 +151,43 @@
       form.appendChild(inp);
     }, true);
   })();
+
+
+  /* ══════════════════════════════════════════
+     SOMMAIRE AUTO (desktop) — articles de blog
+     Génère une table des matières à partir des H2.
+     S'applique automatiquement à tous les articles.
+     Masqué sur mobile via CSS.
+  ══════════════════════════════════════════ */
+  (function () {
+    var body = document.querySelector('article.article-body');
+    if (!body) return;
+    var headings = body.querySelectorAll(':scope > h2');
+    if (headings.length < 3) return; // inutile pour un article très court
+
+    function slugify(txt) {
+      return txt.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+    }
+
+    var nav = document.createElement('nav');
+    nav.className = 'article-toc';
+    nav.setAttribute('aria-label', 'Sommaire de l\'article');
+    var html = '<p class="article-toc-title">Dans cet article</p><ol>';
+    headings.forEach(function (h) {
+      if (!h.id) {
+        var base = slugify(h.textContent) || 'section';
+        var id = base, i = 2;
+        while (document.getElementById(id)) { id = base + '-' + i; i++; }
+        h.id = id;
+      }
+      html += '<li><a href="#' + h.id + '">' + h.textContent + '</a></li>';
+    });
+    html += '</ol>';
+    nav.innerHTML = html;
+
+    body.insertBefore(nav, headings[0]);
+  })();
 })();

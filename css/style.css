@@ -2409,3 +2409,66 @@ body.page-article {
   color: #999;
   font-style: normal;
 }
+
+
+/* ═══════════════════════════════════════════
+   SOMMAIRE D'ARTICLE (auto, desktop uniquement)
+═══════════════════════════════════════════ */
+.article-toc {
+  background-color: #f6f8f7;
+  border: 1px solid #e3e8e6;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin: 30px 0;
+}
+.article-toc-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #888;
+  margin: 0 0 12px;
+}
+.article-toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: toc;
+}
+.article-toc li {
+  counter-increment: toc;
+  margin: 8px 0;
+  padding-left: 26px;
+  position: relative;
+}
+.article-toc li::before {
+  content: counter(toc) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #b0b0b0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.article-toc a {
+  color: #1a7a4a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+.article-toc a:hover {
+  color: #1CBF73;
+  text-decoration: underline;
+}
+
+/* Décalage d'ancrage pour ne pas passer sous la nav sticky */
+.article-body h2 { scroll-margin-top: 90px; }
+
+/* Défilement doux vers les ancres */
+html { scroll-behavior: smooth; }
+
+/* Sommaire masqué sur mobile */
+@media (max-width: 768px) {
+  .article-toc { display: none; }
+}
