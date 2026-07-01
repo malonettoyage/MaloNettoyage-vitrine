@@ -28,7 +28,7 @@
       image:       '/img/services/nettoyage-de-fin-de-bail.webp',
       imageAlt:    'Nettoyage complet appartement pour état des lieux de sortie',
       titre:       'Nettoyage de fin de bail',
-      description: '58/58 états des lieux validés. Garantie retour gratuit si la régie refuse.'
+      description: '64/64 états des lieux validés. Garantie retour gratuit si la régie refuse.'
     },
     {
       slug:        '/services/nettoyage-fin-de-chantier/',
