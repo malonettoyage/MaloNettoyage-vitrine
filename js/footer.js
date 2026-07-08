@@ -183,11 +183,46 @@
         while (document.getElementById(id)) { id = base + '-' + i; i++; }
         h.id = id;
       }
-      html += '<li><a href="#' + h.id + '">' + h.textContent + '</a></li>';
+      var label = h.textContent;
+      if (/^FAQ\b/i.test(label.trim())) label = 'FAQ'; // sommaire : « FAQ » seul
+      html += '<li><a href="#' + h.id + '">' + label + '</a></li>';
     });
     html += '</ol>';
     nav.innerHTML = html;
 
-    body.insertBefore(nav, headings[0]);
+    // Placé en haut de l'article (au-dessus de l'encadré « 30 secondes »)
+    body.insertBefore(nav, body.firstElementChild);
+
+    /* ── Scroll-spy : surligne la section active en vert foncé ── */
+    var links = nav.querySelectorAll('a');
+    var current = null;
+    function setActive(id) {
+      if (id === current) return;
+      current = id;
+      links.forEach(function (a) {
+        var on = a.getAttribute('href') === '#' + id;
+        a.classList.toggle('active', on);
+        a.parentElement.classList.toggle('active', on);
+      });
+    }
+    function computeActive() {
+      var activeId = headings[0].id;
+      for (var i = 0; i < headings.length; i++) {
+        if (headings[i].getBoundingClientRect().top <= 130) {
+          activeId = headings[i].id;
+        } else {
+          break;
+        }
+      }
+      setActive(activeId);
+    }
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(function () { computeActive(); ticking = false; });
+      }
+    }, { passive: true });
+    computeActive();
   })();
 })();

@@ -2415,51 +2415,48 @@ body.page-article {
    SOMMAIRE D'ARTICLE (auto, desktop uniquement)
 ═══════════════════════════════════════════ */
 .article-toc {
-  background-color: #f6f8f7;
-  border: 1px solid #e3e8e6;
-  border-radius: 12px;
-  padding: 18px 24px;
   margin: 30px 0;
 }
 .article-toc-title {
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  color: #888;
-  margin: 0 0 12px;
+  letter-spacing: 0.8px;
+  color: #b0b5b2;
+  margin: 0 0 18px;
 }
 .article-toc ol {
   margin: 0;
   padding: 0;
   list-style: none;
-  counter-reset: toc;
+  border-left: 2px solid #ececec;
 }
 .article-toc li {
-  counter-increment: toc;
-  margin: 8px 0;
-  padding-left: 26px;
-  position: relative;
+  margin: 4px 0;
 }
-.article-toc li::before {
-  content: counter(toc) ".";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #b0b0b0;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
+.article-toc li::before { content: none; }
 .article-toc a {
-  color: #1a7a4a;
+  display: block;
+  color: #929894;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.15s ease;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 9px 0 9px 12px;
+  margin-left: -2px;
+  border-left: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 .article-toc a:hover {
   color: #1CBF73;
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+/* Section active au scroll (scroll-spy) — vert doux + fin accent */
+.article-toc a.active {
+  color: #0f5c37;
+  font-weight: 600;
+  border-left-color: #1CBF73;
 }
 
 /* Décalage d'ancrage pour ne pas passer sous la nav sticky */
@@ -2467,6 +2464,23 @@ body.page-article {
 
 /* Défilement doux vers les ancres */
 html { scroll-behavior: smooth; }
+
+/* ── Grand écran : sommaire fixe, collé à gauche façon Wikipédia ── */
+@media (min-width: 1320px) {
+  .article-toc {
+    position: fixed;
+    top: 155px;
+    left: 30px;
+    width: 230px;
+    margin: 0;
+    max-height: calc(100vh - 195px);
+    overflow-y: auto;
+    z-index: 20;
+  }
+  /* Le sommaire fixe est affiché : on cale l'image hero sur la largeur
+     du texte (720px) pour qu'elle ne déborde plus sur le sommaire */
+  .article-hero-img { max-width: 720px; }
+}
 
 /* Sommaire masqué sur mobile */
 @media (max-width: 768px) {
