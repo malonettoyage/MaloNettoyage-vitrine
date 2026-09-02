@@ -1729,6 +1729,7 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 }
 .article-header .card-meta {
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 .article-header h1 {
@@ -1746,10 +1747,13 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
   margin: 0 auto 20px;
 }
 .article-updated {
-  display: inline-block;
+  flex-basis: 100%;
+  width: 100%;
+  text-align: center;
   font-size: 12px;
-  color: #999;
-  margin-left: 10px;
+  color: #aaa;
+  font-style: italic;
+  margin: 2px 0 0;
 }
 
 .article-read-time {

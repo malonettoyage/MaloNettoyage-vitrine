@@ -73,19 +73,23 @@
       <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbdqdpry" method="POST">
         <input type="hidden" name="_subject" value="${cfg.subject}">
 
+        <!-- Piège à bots (honeypot) : invisible pour les humains, rempli par les robots.
+             Formspree rejette automatiquement toute soumission où ce champ n'est pas vide. -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;">
+
         <div class="field">
           <label for="c-name"><p>Votre nom</p></label>
           <input type="text" id="c-name" name="name" placeholder="Laura Morel" required>
         </div>
 
         <div class="field">
-          <label for="c-email"><p>Votre email</p></label>
-          <input type="email" id="c-email" name="email" placeholder="lauramorel@exemple.ch" required>
+          <label for="c-tel"><p>Votre téléphone</p></label>
+          <input type="tel" id="c-tel" name="telephone" placeholder="+41 79 859 41 20" required>
         </div>
 
         <div class="field">
-          <label for="c-tel"><p>Téléphone <span style="color:#999;font-weight:400;">(optionnel)</span></p></label>
-          <input type="tel" id="c-tel" name="telephone" placeholder="+41 79 859 41 20">
+          <label for="c-email"><p>Votre email <span style="color:#999;font-weight:400;">(optionnel)</span></p></label>
+          <input type="email" id="c-email" name="email" placeholder="lauramorel@exemple.ch">
         </div>
 
         <div class="field">
@@ -124,16 +128,31 @@
     button.disabled  = true;
     button.innerText = 'Envoi en cours...';
 
+    function fail(msg) {
+      button.disabled  = false;
+      button.innerText = cfg.submit;
+      alert(msg || "L'envoi a échoué. Merci de nous appeler au +41 79 859 41 20 ou d'écrire à hello@malonettoyage.ch.");
+    }
+
     fetch(form.action, {
       method:  'POST',
       body:    new FormData(form),
       headers: { 'Accept': 'application/json' }
-    }).then(() => {
-      window.location.href = '/merci.html';
-    }).catch(() => {
-      button.disabled  = false;
-      button.innerText = cfg.submit;
-      alert('Erreur, réessaie.');
+    }).then(function (response) {
+      if (response.ok) {
+        window.location.href = '/merci.html';   // succès réel uniquement
+        return;
+      }
+      // Formspree a répondu mais a REJETÉ la demande (quota, spam, form désactivé…)
+      response.json().then(function (data) {
+        var m = data && data.errors
+          ? data.errors.map(function (er) { return er.message; }).join(', ')
+          : null;
+        fail(m ? ('Envoi refusé : ' + m + '. Appelez-nous au +41 79 859 41 20.') : null);
+      }).catch(function () { fail(); });
+    }).catch(function () {
+      // Erreur réseau (pas de connexion, etc.)
+      fail('Erreur réseau. Merci de nous appeler au +41 79 859 41 20 ou d\'écrire à hello@malonettoyage.ch.');
     });
   });
 
