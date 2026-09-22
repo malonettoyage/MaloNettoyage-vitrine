@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "malo-nettoyage-local",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3444", "/Users/jiasedik/Desktop/MaloNettoyage-vitrine"],
-      "port": 3444
+      "name": "static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8099"],
+      "port": 8099
     }
   ]
 }
