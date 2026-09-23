@@ -2,159 +2,71 @@
  * ═══════════════════════════════════════════
  * AUTRES ARTICLES — Malo Nettoyage
  * ═══════════════════════════════════════════
- * Injecte automatiquement 2 articles liés en bas
- * de chaque article de blog.
+ * Injecte les 3 articles LES PLUS RÉCENTS en bas de chaque article.
+ * (Le bouton « Voir tous les articles » mène à /blog/ qui liste tout.)
  *
  * ── POUR AJOUTER UN NOUVEL ARTICLE ──
- *   1. Ajouter un objet dans le tableau ARTICLES ci-dessous
- *   2. C'est tout — tous les articles existants
- *      proposeront le nouvel article automatiquement
- *
- * ── LOGIQUE DE SÉLECTION ──
- *   → Priorité aux articles de la même catégorie
- *   → Si pas assez dans la même catégorie, complète avec les autres
- *   → L'article courant est toujours exclu
- *   → Affiche toujours les 2 plus récents parmi les candidats
+ *   → Ajouter son objet EN HAUT du tableau ARTICLES ci-dessous
+ *     (champ « iso » = AAAA-MM-JJ) et retirer le plus ancien.
+ *   → On garde volontairement ~4 entrées seulement (fichier léger).
  * ═══════════════════════════════════════════
  */
 
 (function () {
 
-  /* ══════════════════════════════════════════
-     REGISTRE DES ARTICLES
-     → Ajouter chaque nouvel article ici
-     → slug      : chemin URL (avec slashs)
-     → titre     : titre complet de l'article
-     → categorie : fin-de-bail | conseils | vitres
-     → badge     : texte affiché sur la card
-     → date      : date lisible en français
-     → image     : chemin vers cover.webp
-     → extrait   : résumé court (1-2 phrases)
-  ══════════════════════════════════════════ */
+  /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
-      slug:      '/blog/checklist-fin-bail/',
-      titre:     'Checklist complète : tout ce qu\'il faut nettoyer avant de rendre les clés',
-      categorie: 'fin-de-bail',
-      badge:     'Fin de bail',
-      date:      '3 mai 2026',
-      image:     '/blog/checklist-fin-bail/img/checklist_fin-de-bail.webp',
-      extrait:   'La liste exhaustive des points contrôlés par les régies lors de l\'état des lieux de sortie.'
+      slug:      "/blog/signaux-alerte-entreprise-nettoyage/",
+      titre:     "7 signaux qui trahissent une mauvaise entreprise de nettoyage",
+      badge:     "Conseils",
+      date:      "22 septembre 2026",
+      iso:       "2026-09-22",
+      image:     "/blog/signaux-alerte-entreprise-nettoyage/img/signaux-alerte-nettoyage.webp",
+      extrait:   "Devis flou, pas d'assurance RC Pro, aucune garantie écrite : 7 signaux concrets pour reconnaître une entreprise de nettoyage peu fiable avant de signer."
     },
     {
-      slug:      '/blog/erreurs-nettoyage/',
-      titre:     '5 erreurs courantes qui font échouer l\'état des lieux de sortie',
-      categorie: 'conseils',
-      badge:     'Conseils',
-      date:      '6 mai 2026',
-      image:     '/blog/erreurs-nettoyage/img/erreur_etat-lieu.webp',
-      extrait:   'Hotte oubliée, joints moisis, vitres avec traces… les pièges les plus fréquents et comment les éviter.'
+      slug:      "/blog/entreprise-nettoyage-moudon/",
+      titre:     "Entreprise de nettoyage à Moudon : services, prix et conseils pour bien choisir",
+      badge:     "Fin de bail",
+      date:      "21 septembre 2026",
+      iso:       "2026-09-21",
+      image:     "/blog/entreprise-nettoyage-moudon/img/nettoyage-moudon.webp",
+      extrait:   "Services, fourchettes de prix et critères de choix pour une entreprise de nettoyage à Moudon et dans la Broye-Vully vaudoise. Zone d'intervention et guide 2026."
     },
     {
-      slug:      '/blog/etats-lieux-valide/',
-      titre:     'Comment faire valider son état des lieux du premier coup',
-      categorie: 'fin-de-bail',
-      badge:     'Fin de bail',
-      date:      '9 mai 2026',
-      image:     '/blog/etats-lieux-valide/img/valide_-fin-de-bail.webp',
-      extrait:   'Préparer son appartement et récupérer sa caution en entier : notre méthode en 3 étapes.'
+      slug:      "/blog/nettoyage-intensif-broye/",
+      titre:     "Nettoyage intensif dans la Broye : Malo Nettoyage intervient pour les cas difficiles",
+      badge:     "Insalubre",
+      date:      "15 septembre 2026",
+      iso:       "2026-09-15",
+      image:     "/blog/nettoyage-intensif-broye/img/nettoyage-intensif-broye.webp",
+      extrait:   "Logement très encrassé, laissé à l'abandon, après hospitalisation ou décès : intervention en profondeur, rapide et discrète dans toute la Broye. Réponse sous 24h."
     },
     {
-      slug:      '/blog/vitres-sans-traces/',
-      titre:     'Vos vitres restent toujours striées après le nettoyage ? Voici pourquoi',
-      categorie: 'vitres',
-      badge:     'Vitres',
-      date:      '12 mai 2026',
-      image:     '/blog/vitres-sans-traces/img/vitres-sans-traces.webp',
-      extrait:   'Mauvais produit, mauvaise technique, mauvais moment : les vraies raisons des traces sur vos vitres — et comment les éliminer.'
-    },
-    {
-      slug:      '/blog/debarras-nettoyage/',
-      titre:     'Débarras + nettoyage : on s\'occupe de tout',
-      categorie: 'conseils',
-      badge:     'Conseils',
-      date:      '15 mai 2026',
-      image:     '/blog/debarras-nettoyage/img/debarras-nettoyage.webp',
-      extrait:   'Après un décès, avant une vente ou un déménagement — vous n\'avez rien à faire. Débarras et nettoyage coordonnés, clé en main.'
-    },
-    {
-      slug:      '/blog/entreprise-nettoyage-payerne/',
-      titre:     'Entreprise de nettoyage à Payerne : comment bien choisir en 2026',
-      categorie: 'conseils',
-      badge:     'Conseils',
-      date:      '17 mai 2026',
-      image:     '/blog/entreprise-nettoyage-payerne/img/entreprise-nettoyage-payerne.webp',
-      extrait:   'Assurance RC Pro, devis fixe, garantie retour gratuit : les 3 critères clés pour choisir une entreprise de nettoyage fiable à Payerne et dans la Broye.'
-    },
-    {
-      slug:      '/blog/nettoyer-calcaire-salle-bain/',
-      titre:     'Comment nettoyer le calcaire dans la salle de bain : guide complet 2026',
-      categorie: 'calcaire',
-      badge:     'Calcaire',
-      date:      '18 mai 2026',
-      image:     '/blog/nettoyer-calcaire-salle-bain/img/calcaire-salle-bain.webp',
-      extrait:   'Vinaigre, produits du commerce ou pH 0.5 : la méthode adaptée à chaque niveau de calcaire. Avec les spécificités de l\'eau très dure en Broye (45.3 °fH).'
-    },
-    {
-      slug:      '/blog/nettoyage-extreme-sante-mentale/',
-      titre:     'Nettoyage extrême : pourquoi un logement insalubre affecte la santé mentale et physique',
-      categorie: 'extreme',
-      badge:     'Extrême',
-      date:      '19 mai 2026',
-      image:     '/blog/nettoyage-extreme-sante-mentale/img/nettoyage-extreme.webp',
-      extrait:   'Dépression, deuil, isolement — un logement insalubre n\'est jamais un choix. Causes, conséquences sur la santé et solutions concrètes en Vaud et Fribourg.'
-    },
-    /* ── AJOUTER LES PROCHAINS ARTICLES ICI ──
-    {
-      slug:      '/blog/AAAA-MM-JJ-mon-article/',
-      titre:     'Titre de l\'article',
-      categorie: 'fin-de-bail',
-      badge:     'Fin de bail',
-      date:      'JJ mois AAAA',
-      image:     '/blog/AAAA-MM-JJ-mon-article/img/cover.webp',
-      extrait:   'Court résumé de l\'article en 1-2 phrases.'
-    },
-    */
+      slug:      "/blog/nettoyage-fin-chantier-fribourg/",
+      titre:     "Nettoyage fin de chantier à Fribourg : service professionnel, prix et zones",
+      badge:     "Fin de chantier",
+      date:      "13 septembre 2026",
+      iso:       "2026-09-13",
+      image:     "/blog/nettoyage-fin-chantier-fribourg/img/nettoyage-fin-chantier-fribourg.webp",
+      extrait:   "Résidus de construction, voile de ciment, poussière fine : prestations, prix et communes couvertes dans le canton de Fribourg. Devis gratuit sous 24h."
+    }
   ];
 
-
-  /* ══════════════════════════════════════════
-     DÉTECTION DE L'ARTICLE COURANT
-  ══════════════════════════════════════════ */
   const container = document.getElementById('autres-articles-container');
   if (!container) return;
 
-  // Normalise le pathname : décode les %XX et s'assure qu'il y a un slash final
   let chemin = decodeURIComponent(window.location.pathname);
   if (!chemin.endsWith('/')) chemin += '/';
 
-  // Trouve l'article courant dans le registre
-  const courant = ARTICLES.find(a => decodeURIComponent(a.slug) === chemin);
+  // 3 plus récents, hors article courant
+  const articles = ARTICLES
+    .filter(a => decodeURIComponent(a.slug) !== chemin)
+    .sort((a, b) => (a.iso < b.iso ? 1 : a.iso > b.iso ? -1 : 0))
+    .slice(0, 3);
+  if (articles.length === 0) return;
 
-
-  /* ══════════════════════════════════════════
-     SÉLECTION DES 2 ARTICLES À AFFICHER
-  ══════════════════════════════════════════ */
-  function selectionnerArticles() {
-    // Tous les articles sauf le courant
-    const candidats = ARTICLES.filter(a => decodeURIComponent(a.slug) !== chemin);
-
-    if (candidats.length === 0) return [];
-
-    // Priorité : même catégorie que l'article courant
-    const memeCat  = courant ? candidats.filter(a => a.categorie === courant.categorie) : [];
-    const autreCat = courant ? candidats.filter(a => a.categorie !== courant.categorie) : candidats;
-
-    // Construit la liste finale : même catégorie d'abord, puis complète si besoin
-    const selection = [...memeCat, ...autreCat];
-
-    return selection.slice(0, 3);
-  }
-
-
-  /* ══════════════════════════════════════════
-     GÉNÈRE LE HTML D'UNE CARD
-  ══════════════════════════════════════════ */
   function buildCard(article) {
     return `
       <a href="${article.slug}" class="article-card">
@@ -176,13 +88,6 @@
         </div>
       </a>`;
   }
-
-
-  /* ══════════════════════════════════════════
-     INJECTION DANS LA PAGE
-  ══════════════════════════════════════════ */
-  const articles = selectionnerArticles();
-  if (articles.length === 0) return;
 
   container.innerHTML = `
     <section class="other-articles fade-in">

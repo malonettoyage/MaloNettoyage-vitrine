@@ -216,11 +216,26 @@
       }
       setActive(activeId);
     }
-    // Masque le sommaire fixe une fois l'article entièrement défilé,
-    // pour qu'il ne chevauche pas les sections « autres articles » / CTA / footer.
+    // Fondu progressif du sommaire fixe en fin d'article, terminé AVANT que la
+    // section suivante (« Autres articles » / CTA / footer) n'atteigne le sommaire.
+    var stopper = document.getElementById('autres-articles-container');
     function updateTocVisibility() {
-      if (getComputedStyle(nav).position !== 'fixed') { nav.style.display = ''; return; }
-      nav.style.display = (body.getBoundingClientRect().bottom < 160) ? 'none' : '';
+      // Hors mode fixe (petits écrans) : sommaire toujours pleinement visible.
+      if (getComputedStyle(nav).position !== 'fixed') {
+        nav.style.opacity = '';
+        nav.style.pointerEvents = '';
+        return;
+      }
+      var r = nav.getBoundingClientRect();
+      var tocBottom = r.top + r.height;               // bas reel du sommaire (fixe)
+      // Reference = haut de la 1re section apres l'article (sinon bas de l'article)
+      var ref = stopper
+        ? stopper.getBoundingClientRect().top
+        : body.getBoundingClientRect().bottom;
+      // Fondu sur 220px, entierement efface 24px avant le contact avec le sommaire.
+      var op = Math.max(0, Math.min(1, (ref - (tocBottom + 24)) / 220));
+      nav.style.opacity = op;
+      nav.style.pointerEvents = op < 0.05 ? 'none' : '';
     }
     function onScroll() { computeActive(); updateTocVisibility(); }
     var ticking = false;
