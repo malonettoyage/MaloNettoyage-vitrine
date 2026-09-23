@@ -216,13 +216,21 @@
       }
       setActive(activeId);
     }
+    // Masque le sommaire fixe une fois l'article entièrement défilé,
+    // pour qu'il ne chevauche pas les sections « autres articles » / CTA / footer.
+    function updateTocVisibility() {
+      if (getComputedStyle(nav).position !== 'fixed') { nav.style.display = ''; return; }
+      nav.style.display = (body.getBoundingClientRect().bottom < 160) ? 'none' : '';
+    }
+    function onScroll() { computeActive(); updateTocVisibility(); }
     var ticking = false;
     window.addEventListener('scroll', function () {
       if (!ticking) {
         ticking = true;
-        window.requestAnimationFrame(function () { computeActive(); ticking = false; });
+        window.requestAnimationFrame(function () { onScroll(); ticking = false; });
       }
     }, { passive: true });
-    computeActive();
+    window.addEventListener('resize', updateTocVisibility, { passive: true });
+    onScroll();
   })();
 })();
