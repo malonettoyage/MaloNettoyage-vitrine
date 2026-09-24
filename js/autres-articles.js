@@ -17,6 +17,15 @@
   /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
+      slug:      "/blog/pourquoi-choisir-malo-nettoyage/",
+      titre:     "Pourquoi choisir Malo Nettoyage dans la Broye : ce qui nous différencie vraiment",
+      badge:     "Conseils",
+      date:      "25 septembre 2026",
+      iso:       "2026-09-25",
+      image:     "/blog/pourquoi-choisir-malo-nettoyage/img/pourquoi-choisir-malo-nettoyage.webp",
+      extrait:   "64/64 états des lieux validés, réponse le weekend, service insalubre rare, duo familial avec Malo Débarras : les preuves concrètes qui nous différencient."
+    },
+    {
       slug:      "/blog/signaux-alerte-entreprise-nettoyage/",
       titre:     "7 signaux qui trahissent une mauvaise entreprise de nettoyage",
       badge:     "Conseils",
@@ -42,15 +51,6 @@
       iso:       "2026-09-15",
       image:     "/blog/nettoyage-intensif-broye/img/nettoyage-intensif-broye.webp",
       extrait:   "Logement très encrassé, laissé à l'abandon, après hospitalisation ou décès : intervention en profondeur, rapide et discrète dans toute la Broye. Réponse sous 24h."
-    },
-    {
-      slug:      "/blog/nettoyage-fin-chantier-fribourg/",
-      titre:     "Nettoyage fin de chantier à Fribourg : service professionnel, prix et zones",
-      badge:     "Fin de chantier",
-      date:      "13 septembre 2026",
-      iso:       "2026-09-13",
-      image:     "/blog/nettoyage-fin-chantier-fribourg/img/nettoyage-fin-chantier-fribourg.webp",
-      extrait:   "Résidus de construction, voile de ciment, poussière fine : prestations, prix et communes couvertes dans le canton de Fribourg. Devis gratuit sous 24h."
     }
   ];
 

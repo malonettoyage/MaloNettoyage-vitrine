@@ -355,4 +355,11 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/pourquoi-choisir-malo-nettoyage/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
