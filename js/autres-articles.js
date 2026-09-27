@@ -17,6 +17,15 @@
   /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
+      slug:      "/blog/protocole-nettoyage-logement-insalubre/",
+      titre:     "Nettoyage d'un logement insalubre : les 4 étapes d'une intervention professionnelle",
+      badge:     "Insalubre",
+      date:      "27 septembre 2026",
+      iso:       "2026-09-27",
+      image:     "/blog/protocole-nettoyage-logement-insalubre/img/protocole-nettoyage-insalubre.webp",
+      extrait:   "Débarras, traitement des nuisibles, désinfection, désodorisation : le protocole en 4 étapes d'un nettoyage professionnel de logement insalubre. Guide complet."
+    },
+    {
       slug:      "/blog/pourquoi-choisir-malo-nettoyage/",
       titre:     "Pourquoi choisir Malo Nettoyage dans la Broye : ce qui nous différencie vraiment",
       badge:     "Conseils",
@@ -42,15 +51,6 @@
       iso:       "2026-09-21",
       image:     "/blog/entreprise-nettoyage-moudon/img/nettoyage-moudon.webp",
       extrait:   "Services, fourchettes de prix et critères de choix pour une entreprise de nettoyage à Moudon et dans la Broye-Vully vaudoise. Zone d'intervention et guide 2026."
-    },
-    {
-      slug:      "/blog/nettoyage-intensif-broye/",
-      titre:     "Nettoyage intensif dans la Broye : Malo Nettoyage intervient pour les cas difficiles",
-      badge:     "Insalubre",
-      date:      "15 septembre 2026",
-      iso:       "2026-09-15",
-      image:     "/blog/nettoyage-intensif-broye/img/nettoyage-intensif-broye.webp",
-      extrait:   "Logement très encrassé, laissé à l'abandon, après hospitalisation ou décès : intervention en profondeur, rapide et discrète dans toute la Broye. Réponse sous 24h."
     }
   ];
 
