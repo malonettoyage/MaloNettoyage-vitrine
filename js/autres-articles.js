@@ -17,6 +17,15 @@
   /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
+      slug:      "/blog/ce-que-la-regie-verifie-etat-des-lieux/",
+      titre:     "Ce que la régie vérifie lors d'un état des lieux : checklist interactive à cocher",
+      badge:     "Fin de bail",
+      date:      "1 octobre 2026",
+      iso:       "2026-10-01",
+      image:     "/blog/ce-que-la-regie-verifie-etat-des-lieux/img/checklist-regie-etat-des-lieux.webp",
+      extrait:   "Les points exacts que la régie inspecte, dans l'ordre — avec une checklist interactive à cocher et à télécharger en PDF. Expérience terrain 64/64 validés."
+    },
+    {
       slug:      "/blog/protocole-nettoyage-logement-insalubre/",
       titre:     "Nettoyage d'un logement insalubre : les 4 étapes d'une intervention professionnelle",
       badge:     "Insalubre",
@@ -42,15 +51,6 @@
       iso:       "2026-09-22",
       image:     "/blog/signaux-alerte-entreprise-nettoyage/img/signaux-alerte-nettoyage.webp",
       extrait:   "Devis flou, pas d'assurance RC Pro, aucune garantie écrite : 7 signaux concrets pour reconnaître une entreprise de nettoyage peu fiable avant de signer."
-    },
-    {
-      slug:      "/blog/entreprise-nettoyage-moudon/",
-      titre:     "Entreprise de nettoyage à Moudon : services, prix et conseils pour bien choisir",
-      badge:     "Fin de bail",
-      date:      "21 septembre 2026",
-      iso:       "2026-09-21",
-      image:     "/blog/entreprise-nettoyage-moudon/img/nettoyage-moudon.webp",
-      extrait:   "Services, fourchettes de prix et critères de choix pour une entreprise de nettoyage à Moudon et dans la Broye-Vully vaudoise. Zone d'intervention et guide 2026."
     }
   ];
 
