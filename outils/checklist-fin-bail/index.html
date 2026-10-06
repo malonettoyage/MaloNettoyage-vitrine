@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5975RK7Z');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checklist état des lieux fin de bail (gratuite) | Malo Nettoyage</title>
+<meta name="description" content="Checklist interactive gratuite pour réussir votre état des lieux de sortie : 51 points contrôlés par les régies de la Broye, points critiques, sauvegarde automatique et PDF.">
+<meta name="theme-color" content="#E6F9F4">
+
+<link rel="canonical" href="https://www.malonettoyage.ch/outils/checklist-fin-bail/">
+<meta property="og:title" content="Checklist état des lieux fin de bail (gratuite)">
+<meta property="og:description" content="Checklist interactive gratuite pour réussir votre état des lieux de sortie : 51 points contrôlés par les régies de la Broye, points critiques, sauvegarde automatique et PDF.">
+<meta property="og:image" content="https://www.malonettoyage.ch/img/MaloNettoyage_Logo-black.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.malonettoyage.ch/outils/checklist-fin-bail/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VC77M9NWHN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VC77M9NWHN');
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '532778493168576');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* =========================================================
+   VERSION 2 : « fiche » (en-tête menthe + feuille blanche)
+   Mêmes tokens et même sauvegarde que la version 1.
+   ========================================================= */
+.malo-tool{
+  --green:#1CBF73; --green-dark:#0f5c37; --green-ink:#0b4a2c;
+  --orange:#ff6b35; --orange-ink:#b3441a; --orange-bg:#fff1ea;
+  --mint:#E6F9F4; --line:#e0e0e0; --text:#232323; --muted:#5c6b64;
+  --bg:#f4f6f5; --white:#fff;
+  --ease:cubic-bezier(.22,.8,.3,1); --spring:cubic-bezier(.34,1.56,.64,1);
+  --sticky-top:0px; /* INTÉGRATEUR : hauteur de votre nav si elle est collante */
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--text); background:var(--white); line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.malo-tool *,.malo-tool *::before,.malo-tool *::after{box-sizing:border-box}
+.malo-tool :focus-visible{outline:3px solid var(--green-dark);outline-offset:2px;border-radius:12px}
+.sr-only{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.print-only{display:none}
+.in{max-width:720px;margin:0 auto}
+
+/* ---------- 1. En-tête menthe ---------- */
+.head{background:var(--mint);padding:12px 20px 52px}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-left:-10px}
+.back{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 10px;color:var(--green-dark);
+  font-weight:600;font-size:15px;text-decoration:none}
+.back svg{width:20px;height:20px}
+.proof-pill{font-size:13px;font-weight:700;color:var(--green-dark);display:inline-flex;align-items:center;gap:6px}
+.proof-pill svg{width:16px;height:16px;color:var(--green)}
+.tag{display:inline-block;margin:14px 0 10px;background:var(--green-dark);color:#fff;font-size:13px;font-weight:700;
+  border-radius:999px;padding:4px 12px}
+.head h1{margin:0 0 8px;font-size:clamp(28px,7.5vw,38px);line-height:1.1;letter-spacing:-.02em;color:var(--green-dark);font-weight:800}
+.head .desc{margin:0;color:var(--muted);font-size:16px;max-width:52ch}
+/* Progression : pourcentage + barre (référence « Complete your profile ») */
+.prog{display:flex;align-items:center;gap:14px;margin-top:22px}
+.prog strong{min-width:3.3em;font-size:24px;font-weight:800;color:var(--green-dark);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.bar{position:relative;flex:1;height:10px;border-radius:999px;background:#fff;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:inherit;background:var(--green);transition:width .5s var(--ease)}
+.bar::after{content:"";position:absolute;inset:0;transform:translateX(-100%);
+  background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.8) 50%,transparent 70%)}
+.bar.sheen::after{animation:sheen .9s var(--ease)}
+@keyframes sheen{to{transform:translateX(100%)}}
+.prog-sub{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;margin-top:10px;font-size:14px}
+.prog-sub .count{color:var(--muted)}
+.prog-sub .crit{display:inline-flex;align-items:center;gap:7px;font-weight:700;color:var(--orange-ink)}
+.prog-sub .crit::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.prog-sub .crit.ok{color:var(--green-dark)}
+.prog-sub .crit.ok::before{background:var(--green)}
+
+/* ---------- 2. Feuille blanche qui chevauche l'en-tête ---------- */
+.sheet{position:relative;margin-top:-28px;background:var(--white);border-radius:28px 28px 0 0;
+  box-shadow:0 -10px 30px -22px rgba(15,92,55,.35)}
+
+/* Barre collante : puces de sections (navigation) */
+.nav{position:sticky;top:var(--sticky-top);z-index:5;border-radius:28px 28px 0 0;
+  background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:14px 0 10px}
+.nav.stuck{border-radius:0;box-shadow:0 1px 0 var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 16px;scroll-snap-type:x proximity;scrollbar-width:none;
+  max-width:752px;margin:0 auto}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;scroll-snap-align:start;display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 14px;
+  border:1.5px solid var(--line);border-radius:999px;background:#fff;color:var(--text);font-size:15px;font-weight:600;
+  text-decoration:none;white-space:nowrap;transition:border-color .2s,background .2s,color .2s;-webkit-tap-highlight-color:transparent}
+.chip:hover{border-color:#c9d3ce}
+.chip .n{font-size:13px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip[aria-current="true"]{border-color:var(--green-dark);background:var(--mint);color:var(--green-dark)}
+.chip.done .n{color:var(--green-dark)}
+
+.body{padding:0 16px}
+/* Filtre façon « All items ▾ » */
+.filter-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0 0}
+.select{position:relative;display:inline-flex;align-items:center}
+.select select{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:inherit;font-size:20px;font-weight:700;
+  color:var(--green-dark);min-height:44px;padding:0 30px 0 0;cursor:pointer}
+.select svg{position:absolute;right:4px;width:20px;height:20px;color:var(--green-dark);pointer-events:none}
+.legend{font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:14px;border-radius:50%;border:2.5px solid var(--orange)}
+
+/* ---------- 3. Sections et lignes ---------- */
+.sec{padding:22px 0 4px;scroll-margin-top:calc(var(--sticky-top) + 76px)}
+.sec-h{display:flex;align-items:center;gap:12px;margin:0 0 6px}
+.emoji{flex:none;width:42px;height:42px;border-radius:13px;background:var(--mint);display:grid;place-items:center;font-size:20px}
+.sec-h h2{margin:0;font-size:19px;line-height:1.2;color:var(--green-dark)}
+.sec-h small{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:2px}
+.sec-n{margin-left:auto;flex:none;font-size:13px;font-weight:700;color:var(--muted);background:var(--bg);border-radius:999px;
+  padding:4px 10px;font-variant-numeric:tabular-nums}
+.sec.done .sec-n{background:var(--mint);color:var(--green-dark)}
+.grp{margin:16px 4px 8px;font-size:14px;font-weight:700;color:var(--muted)}
+.rows{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}
+.grp + .rows{margin-top:0}
+
+/* Ligne : contour + coin arrondi (référence « Complete your profile ») */
+.row{display:flex;align-items:center;gap:14px;min-height:60px;padding:12px 16px;border:1.5px solid var(--line);border-radius:16px;
+  background:#fff;cursor:pointer;transition:border-color .2s,background .2s,transform .15s;-webkit-tap-highlight-color:transparent}
+.row:hover{border-color:#c9d3ce}
+.row:active{transform:scale(.99)}
+.row:has(input:focus-visible){outline:3px solid var(--green-dark);outline-offset:2px}
+.row input{position:absolute;opacity:0;width:1px;height:1px}
+/* Cercle à cocher : gris = normal, orange = critique, vert plein = fait (référence Weekly Groceries) */
+.ring{flex:none;position:relative;width:28px;height:28px;border-radius:50%;border:2.5px solid #b9c5bf;
+  display:grid;place-items:center;transition:background .2s,border-color .2s}
+.c .ring{border-color:var(--orange)}
+.ring::after{content:"";width:6px;height:12px;margin-top:-3px;border:solid #fff;border-width:0 2.6px 2.6px 0;
+  transform:rotate(45deg) scale(0);transition:transform .3s var(--spring)}
+.row input:checked + .ring{background:var(--green);border-color:var(--green)}
+.row input:checked + .ring::after{transform:rotate(45deg) scale(1)}
+.t{flex:1;min-width:0;font-size:16px;line-height:1.4;transition:color .25s}
+.t span{background:linear-gradient(currentColor,currentColor) 0 58%/0 1.5px no-repeat;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size .35s var(--ease)}
+.crit-l{flex:none;font-size:13px;font-weight:700;color:var(--orange-ink)}
+.is-checked .row{border-color:#ecefed}
+.is-checked .t{color:#8a958f}
+.is-checked .t span{background-size:100% 1.5px}
+.is-checked .crit-l{color:#a7b0ab}
+/* Prochain point à faire : fond gris doux (référence) */
+.is-next .row{background:var(--bg);border-color:#cfd8d3}
+
+/* Filtrage (écran uniquement, l'impression montre toujours tout) */
+@media screen{.is-filtered{display:none!important}}
+.empty{margin:28px 0;padding:24px;text-align:center;border:1.5px dashed var(--line);border-radius:16px;color:var(--muted)}
+.empty strong{display:block;color:var(--green-dark);font-size:17px;margin-bottom:4px}
+
+/* ---------- 4. Fin de liste ---------- */
+.done-card{display:none;margin:24px 0 0;padding:22px 20px;border-radius:22px;background:var(--green-dark);color:#fff}
+.done-card.show{display:block;animation:pop .45s var(--spring)}
+@keyframes pop{from{transform:scale(.96);opacity:0}}
+.done-card h2{margin:0 0 6px;font-size:21px}
+.done-card p{margin:0;color:#d9efe5}
+.foot{margin:24px 0 0;padding:20px;border-radius:22px;background:var(--mint)}
+.foot .proof{display:flex;gap:12px;margin:0;color:var(--green-ink);font-size:15.5px}
+.foot .proof svg{flex:none;width:26px;height:26px;color:var(--green)}
+.foot .proof strong{display:block;font-size:17px;color:var(--green-dark)}
+.meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:16px 0 0;font-size:13.5px;color:var(--muted)}
+.linkbtn{border:0;background:none;font:inherit;color:var(--muted);text-decoration:underline;min-height:44px;padding:0 4px;cursor:pointer}
+.linkbtn:hover{color:var(--text)}
+.cross{display:flex;gap:14px;align-items:center;margin:12px 0 0;padding:16px 18px;border:1.5px solid var(--line);border-radius:22px;
+  color:inherit;text-decoration:none;transition:border-color .2s}
+.cross:hover{border-color:#c9d3ce}
+.cross .ico{flex:none;width:44px;height:44px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:21px}
+.cross strong{display:block;color:var(--green-dark);font-size:16px}
+.cross span span{font-size:14.5px;color:var(--muted)}
+.cross .go{margin-left:auto;flex:none;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--green-dark)}
+.cross .go svg{width:18px;height:18px}
+.delegate{margin:20px 0 28px;text-align:center;font-size:15px;color:var(--muted)}
+.delegate a{color:var(--green-dark);font-weight:700;text-underline-offset:3px}
+
+/* ---------- 5. Dock collant en bas (style barre d'app) ---------- */
+.dock{position:sticky;bottom:0;z-index:6;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+.dock-in{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.donut{flex:none;width:42px;height:42px;transform:rotate(-90deg)}
+.donut circle{fill:none;stroke-width:4}
+.donut .trk{stroke:var(--mint)}
+.donut .val{stroke:var(--green);stroke-linecap:round;stroke-dasharray:97.4;stroke-dashoffset:97.4;transition:stroke-dashoffset .5s var(--ease)}
+.dock-txt{line-height:1.2;font-size:13px;color:var(--muted)}
+.dock-txt strong{display:block;font-size:16px;color:var(--text);font-variant-numeric:tabular-nums}
+.btn-pdf{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border:0;border-radius:999px;
+  background:var(--green-dark);color:#fff;font:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:background .2s,transform .15s}
+.btn-pdf:hover{background:var(--green-ink)}
+.btn-pdf:active{transform:scale(.97)}
+.btn-pdf svg{width:18px;height:18px}
+
+@media (min-width:720px){
+  .head{padding:20px 24px 60px}
+  .body{padding:0 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .malo-tool *,.malo-tool *::before,.malo-tool *::after{transition-duration:.01ms!important;animation:none!important}
+}
+
+/* ---------- 6. Impression / PDF ----------
+   INTÉGRATEUR : garder .malo-tool enfant direct de <body> (ou .no-print sur nav/footer). */
+@media print{
+  @page{size:A4;margin:14mm 12mm}
+  body{background:#fff!important}
+  body > *:not(.malo-tool), nav:not(.nav), body > header, body > footer, .no-print{display:none!important}
+  .print-only{display:block!important}
+  .malo-tool{font-size:10.5pt}
+  .head{background:none;padding:0}
+  .head h1{font-size:18pt;margin:0 0 2mm}
+  .sheet{margin:0;box-shadow:none;border-radius:0}
+  .body{padding:0}
+  .sec{padding:3mm 0 0}
+  .sec-h{break-after:avoid}
+  .emoji{width:8mm;height:8mm;font-size:13pt;border-radius:2mm}
+  .sec-n{display:none}
+  .grp{margin:2mm 1mm 1mm;font-size:9.5pt;break-after:avoid}
+  .rows{gap:0;margin-top:1mm}
+  .row{min-height:0;padding:1.2mm 2mm;border:0;border-bottom:1px solid #e5e5e5;border-radius:0;background:none!important;break-inside:avoid}
+  .ring{width:4mm;height:4mm;border-width:1.2px;border-radius:1mm}
+  .ring::after{width:1.4mm;height:2.6mm;border-width:0 1.3px 1.3px 0}
+  .row input:checked + .ring{background:#0f5c37;border-color:#0f5c37;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .t{font-size:10.5pt}
+  .t span{background:none!important}
+  .is-checked .t{text-decoration:line-through}
+  .crit-l{font-size:8pt}
+  .print-head{border-bottom:2px solid #0f5c37;padding-bottom:3mm;margin-bottom:4mm}
+  .print-head .brand{font-weight:800;color:#0f5c37;font-size:12pt}
+  .print-fields{display:grid!important;grid-template-columns:1fr 1fr;gap:3mm 8mm;margin-top:3mm;font-size:10pt}
+  .print-fields span{border-bottom:1px solid #999;padding-bottom:4mm}
+  .print-foot{margin-top:4mm;font-size:9.5pt;border-top:1px solid #ccc;padding-top:2mm}
+}
+</style>
+<style>
+/* Chrome léger des pages outils (header + footer autonomes) */
+.tool-topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1080px;margin:0 auto;padding:14px 16px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.tool-logo{display:inline-flex;align-items:center;text-decoration:none}
+.tool-logo img{height:30px;width:auto;display:block}
+.tool-logo span{color:#1CBF73}
+.tool-back{font-size:14px;font-weight:600;color:#5c6b64;text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:8px 13px;border-radius:999px;border:1px solid #e0e0e0;background:#fff;transition:border-color .2s,color .2s}
+.tool-back:hover{border-color:#1CBF73;color:#0f5c37}
+.tool-footer{margin-top:40px;padding:22px 16px calc(22px + env(safe-area-inset-bottom,0px));border-top:1px solid #e0e0e0;background:#fff;text-align:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.tool-footer p{margin:0;font-size:13.5px;color:#5c6b64}
+.tool-footer a{color:#0f5c37;font-weight:600;text-decoration:none}
+.tool-footer a:hover{text-decoration:underline}
+</style>
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5975RK7Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="tool-topbar">
+  <a href="/" class="tool-logo"><img src="/img/MaloNettoyage_Logo-black.webp" alt="Malo Nettoyage"></a>
+  <a href="/outils/" class="tool-back">← Tous les outils</a>
+</header>
+
+<main class="malo-tool" id="malo-checklist">
+
+  <div class="print-only print-head">
+    <div class="brand">Malo Nettoyage</div>
+    <div>Checklist état des lieux de sortie : <span data-print-meta></span></div>
+    <div class="print-fields" style="display:none"><span>Adresse du logement :</span><span>Date de l'état des lieux :</span></div>
+  </div>
+
+  <!-- ===== En-tête ===== -->
+  <header class="head">
+    <div class="in">
+      <div class="topbar no-print">
+        <a class="back" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Outils</a>
+        <span class="proof-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>64/64 validés</span>
+      </div>
+      <span class="tag no-print">Fin de bail</span>
+      <h1>Checklist état des lieux</h1>
+      <p class="desc no-print">Ce que les régies de la Broye contrôlent à la sortie, pièce par pièce. Votre avancement reste enregistré sur ce téléphone.</p>
+      <div class="no-print">
+        <div class="prog">
+          <strong data-pct aria-hidden="true">0 %</strong>
+          <div class="bar" role="progressbar" aria-label="Points cochés" aria-valuemin="0" aria-valuemax="51" aria-valuenow="0"><i></i></div>
+        </div>
+        <div class="prog-sub">
+          <span class="count"><span data-done>0</span> sur <span data-total>51</span> points</span>
+          <span class="crit" data-crit></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="sheet">
+    <!-- ===== Puces de sections (collantes) ===== -->
+    <nav class="nav no-print" aria-label="Sections de la checklist">
+      <div class="chips" data-chips>
+        <a class="chip" href="#sec-methode" data-chip="methode">🔧 Méthode <span class="n"></span></a>
+        <a class="chip" href="#sec-cuisine" data-chip="cuisine">🍳 Cuisine <span class="n"></span></a>
+        <a class="chip" href="#sec-sdb" data-chip="sdb">🚿 Salle de bain <span class="n"></span></a>
+        <a class="chip" href="#sec-vitres" data-chip="vitres">🪟 Vitres <span class="n"></span></a>
+        <a class="chip" href="#sec-chambres" data-chip="chambres">🛋️ Chambres <span class="n"></span></a>
+        <a class="chip" href="#sec-oublis" data-chip="oublis">🔍 Oublis <span class="n"></span></a>
+        <a class="chip" href="#sec-final" data-chip="final">✅ Contrôle final <span class="n"></span></a>
+      </div>
+    </nav>
+
+    <div class="body in">
+      <div class="filter-row no-print">
+        <label class="select">
+          <span class="sr-only">Afficher</span>
+          <select data-filter>
+            <option value="all">Tous les points</option>
+            <option value="todo">À faire</option>
+            <option value="crit">Points critiques</option>
+            <option value="done">Faits</option>
+          </select>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </label>
+        <span class="legend"><i aria-hidden="true"></i>Critique</span>
+      </div>
+
+      <p class="sr-only" aria-live="polite" data-live></p>
+
+      <!--
+        Une ligne = <li> ; ajouter la classe "c" pour un point critique.
+        data-id identiques à la version 1 : la sauvegarde est partagée.
+      -->
+      <section class="sec" id="sec-methode" data-section="methode">
+        <div class="sec-h"><span class="emoji" aria-hidden="true">🔧</span><h2>Méthode globale<small>La base pour toutes les pièces</small></h2><span class="sec-n" data-n></span></div>
+        <ul class="rows">
+          <li><label class="row"><input type="checkbox" data-id="m1"><span class="ring"></span><span class="t"><span>Nettoyage effectué du haut vers le bas dans chaque pièce</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="m2"><span class="ring"></span><span class="t"><span>Contrôle avec lumière rasante (lampe ou téléphone)</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="m3"><span class="ring"></span><span class="t"><span>Vérification au toucher (surfaces lisses, sans résidus)</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="m4"><span class="ring"></span><span class="t"><span>Photos datées de chaque pièce après nettoyage final</span></span></label></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="sec-cuisine" data-section="cuisine">
+        <div class="sec-h"><span class="emoji" aria-hidden="true">🍳</span><h2>Cuisine<small>La zone la plus contrôlée</small></h2><span class="sec-n" data-n></span></div>
+        <div class="grp-wrap"><p class="grp">Hotte</p><ul class="rows">
+          <li class="c"><label class="row"><input type="checkbox" data-id="c1"><span class="ring"></span><span class="t"><span>Intérieur du caisson nettoyé (parois + grilles)</span></span><span class="crit-l">Critique</span></label></li>
+          <li class="c"><label class="row"><input type="checkbox" data-id="c2"><span class="ring"></span><span class="t"><span>Filtres dégraissés (lave-vaisselle ou trempage bicarbonate)</span></span><span class="crit-l">Critique</span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="c3"><span class="ring"></span><span class="t"><span>Extérieur hotte sans traces de graisse</span></span></label></li>
+        </ul></div>
+        <div class="grp-wrap"><p class="grp">Four</p><ul class="rows">
+          <li class="c"><label class="row"><input type="checkbox" data-id="c4"><span class="ring"></span><span class="t"><span>Intérieur four sans résidus carbonisés</span></span><span class="crit-l">Critique</span></label></li>
+          <li class="c"><label class="row"><input type="checkbox" data-id="c5"><span class="ring"></span><span class="t"><span>Grilles du four propres</span></span><span class="crit-l">Critique</span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="c6"><span class="ring"></span><span class="t"><span>Vitre intérieure du four dégraissée</span></span></label></li>
+        </ul></div>
+        <div class="grp-wrap"><p class="grp">Électroménager</p><ul class="rows">
+          <li><label class="row"><input type="checkbox" data-id="c7"><span class="ring"></span><span class="t"><span>Plaques de cuisson sans graisse ni résidus</span></span></label></li>
+          <li class="c"><label class="row"><input type="checkbox" data-id="c8"><span class="ring"></span><span class="t"><span>Réfrigérateur : intérieur + joints propres</span></span><span class="crit-l">Critique</span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="c9"><span class="ring"></span><span class="t"><span>Derrière/sous les appareils nettoyé</span></span></label></li>
+        </ul></div>
+        <div class="grp-wrap"><p class="grp">Meubles et surfaces</p><ul class="rows">
+          <li><label class="row"><input type="checkbox" data-id="c10"><span class="ring"></span><span class="t"><span>Placards : intérieur ET extérieur propres</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="c11"><span class="ring"></span><span class="t"><span>Poignées dégraissées</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="c12"><span class="ring"></span><span class="t"><span>Crédence sans projections de graisse</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="c13"><span class="ring"></span><span class="t"><span>Joints de carrelage propres</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="c14"><span class="ring"></span><span class="t"><span>Évier et robinetterie sans calcaire (test au toucher)</span></span></label></li>
+        </ul></div>
+      </section>
+
+      <section class="sec" id="sec-sdb" data-section="sdb">
+        <div class="sec-h"><span class="emoji" aria-hidden="true">🚿</span><h2>Salle de bain<small>Calcaire, joints et WC</small></h2><span class="sec-n" data-n></span></div>
+        <div class="grp-wrap"><p class="grp">Calcaire</p><ul class="rows">
+          <li class="c"><label class="row"><input type="checkbox" data-id="s1"><span class="ring"></span><span class="t"><span>Robinetterie lisse au toucher (pas de calcaire résiduel)</span></span><span class="crit-l">Critique</span></label></li>
+          <li class="c"><label class="row"><input type="checkbox" data-id="s2"><span class="ring"></span><span class="t"><span>Dessous du bec et brise-jet détartrés</span></span><span class="crit-l">Critique</span></label></li>
+          <li class="c"><label class="row"><input type="checkbox" data-id="s3"><span class="ring"></span><span class="t"><span>Parois de douche sans voile calcaire (test lumière rasante)</span></span><span class="crit-l">Critique</span></label></li>
+        </ul></div>
+        <div class="grp-wrap"><p class="grp">Joints</p><ul class="rows">
+          <li class="c"><label class="row"><input type="checkbox" data-id="s4"><span class="ring"></span><span class="t"><span>Joints silicone propres, remplacés si noirs ou décollés</span></span><span class="crit-l">Critique</span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="s5"><span class="ring"></span><span class="t"><span>Joints de carrelage sans moisissures</span></span></label></li>
+        </ul></div>
+        <div class="grp-wrap"><p class="grp">WC</p><ul class="rows">
+          <li><label class="row"><input type="checkbox" data-id="s6"><span class="ring"></span><span class="t"><span>Intérieur WC sans tartre</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="s7"><span class="ring"></span><span class="t"><span>Extérieur WC propre (y compris la base côté mur)</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="s8"><span class="ring"></span><span class="t"><span>Abattant propre (dessus et dessous)</span></span></label></li>
+        </ul></div>
+        <div class="grp-wrap"><p class="grp">Finitions</p><ul class="rows">
+          <li><label class="row"><input type="checkbox" data-id="s9"><span class="ring"></span><span class="t"><span>Miroir sans traces</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="s10"><span class="ring"></span><span class="t"><span>Sol propre (joints et coins inclus)</span></span></label></li>
+        </ul></div>
+      </section>
+
+      <section class="sec" id="sec-vitres" data-section="vitres">
+        <div class="sec-h"><span class="emoji" aria-hidden="true">🪟</span><h2>Vitres<small>Tolérance zéro</small></h2><span class="sec-n" data-n></span></div>
+        <ul class="rows">
+          <li class="c"><label class="row"><input type="checkbox" data-id="v1"><span class="ring"></span><span class="t"><span>Vitres propres intérieur (test lumière rasante)</span></span><span class="crit-l">Critique</span></label></li>
+          <li class="c"><label class="row"><input type="checkbox" data-id="v2"><span class="ring"></span><span class="t"><span>Vitres propres extérieur si accessible</span></span><span class="crit-l">Critique</span></label></li>
+          <li class="c"><label class="row"><input type="checkbox" data-id="v3"><span class="ring"></span><span class="t"><span>Rails de fenêtres aspirés puis lavés (secs avant de mouiller)</span></span><span class="crit-l">Critique</span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="v4"><span class="ring"></span><span class="t"><span>Coins supérieurs des vitres propres</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="v5"><span class="ring"></span><span class="t"><span>Encadrements et poignées propres</span></span></label></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="sec-chambres" data-section="chambres">
+        <div class="sec-h"><span class="emoji" aria-hidden="true">🛋️</span><h2>Chambres et séjour<small>Prises, placards, plinthes et sols</small></h2><span class="sec-n" data-n></span></div>
+        <ul class="rows">
+          <li><label class="row"><input type="checkbox" data-id="r1"><span class="ring"></span><span class="t"><span>Interrupteurs et prises sans traces de doigts</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="r2"><span class="ring"></span><span class="t"><span>Placards intérieur propre (fond et coins)</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="r3"><span class="ring"></span><span class="t"><span>Derrière les radiateurs dépoussiéré</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="r4"><span class="ring"></span><span class="t"><span>Plinthes nettoyées (dessus et côtés)</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="r5"><span class="ring"></span><span class="t"><span>Sol aspiré et lavé (coins et angles inclus)</span></span></label></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="sec-oublis" data-section="oublis">
+        <div class="sec-h"><span class="emoji" aria-hidden="true">🔍</span><h2>Zones souvent oubliées<small>Les détails qu'on ne voit plus</small></h2><span class="sec-n" data-n></span></div>
+        <ul class="rows">
+          <li><label class="row"><input type="checkbox" data-id="z1"><span class="ring"></span><span class="t"><span>Grilles de ventilation dépoussiérées</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="z2"><span class="ring"></span><span class="t"><span>Dessous d'évier propre</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="z3"><span class="ring"></span><span class="t"><span>Haut des cadres de fenêtres</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="z4"><span class="ring"></span><span class="t"><span>Portes nettoyées (faces complètes + bas de porte)</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="z5"><span class="ring"></span><span class="t"><span>Poignées de porte désinfectées</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="z6"><span class="ring"></span><span class="t"><span>Encadrements de portes nettoyés</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="z7"><span class="ring"></span><span class="t"><span>Stores ou rideaux dépoussiérés</span></span></label></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="sec-final" data-section="final">
+        <div class="sec-h"><span class="emoji" aria-hidden="true">✅</span><h2>Contrôle final<small>Juste avant l'état des lieux</small></h2><span class="sec-n" data-n></span></div>
+        <ul class="rows">
+          <li><label class="row"><input type="checkbox" data-id="f1"><span class="ring"></span><span class="t"><span>Tour complet de chaque pièce avec regard neuf</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="f2"><span class="ring"></span><span class="t"><span>Lumière rasante utilisée sur toutes les surfaces</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="f3"><span class="ring"></span><span class="t"><span>Aucune odeur persistante (cuisine, salle de bain)</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="f4"><span class="ring"></span><span class="t"><span>Photos datées de chaque pièce terminée</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="f5"><span class="ring"></span><span class="t"><span>État des lieux d'entrée retrouvé pour comparaison</span></span></label></li>
+          <li><label class="row"><input type="checkbox" data-id="f6"><span class="ring"></span><span class="t"><span>Toutes les clés, badges et télécommandes rassemblés</span></span></label></li>
+        </ul>
+      </section>
+
+      <!-- État vide du filtre -->
+      <div class="empty no-print" data-empty hidden><strong></strong><span></span></div>
+
+      <!-- État complété -->
+      <section class="done-card no-print" data-done-card aria-labelledby="done-title">
+        <h2 id="done-title">Tout est coché, vous êtes prêt</h2>
+        <p>Gardez vos photos datées et l'état des lieux d'entrée à portée de main le jour du rendez-vous.</p>
+      </section>
+
+      <section class="foot no-print" aria-label="À propos de cette checklist">
+        <p class="proof">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12 3 3 6-6.5"/></svg>
+          <span><strong>64 états des lieux validés sur 64</strong>Cette checklist reflète exactement ce que les régies de la Broye vérifient.</span>
+        </p>
+        <div class="meta">
+          <span data-saved aria-live="polite"></span>
+          <button class="linkbtn" type="button" data-reset>Tout décocher</button>
+        </div>
+      </section>
+
+      <a class="cross no-print" href="../lettre-resiliation/">
+        <span class="ico" aria-hidden="true">✉️</span>
+        <span><strong>Pas encore résilié votre bail ?</strong><span>Générez votre lettre de résiliation en 4 étapes.</span></span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      </a>
+
+      <!-- INTÉGRATEUR : adapter l'URL de la page devis -->
+      <p class="delegate no-print">Vous préférez déléguer ? <a href="/devis-gratuit/">Demandez un devis gratuit</a></p>
+
+      <p class="print-only print-foot">✓ 64 états des lieux validés sur 64. Cette checklist reflète exactement ce que les régies de la Broye vérifient. Malo Nettoyage, Payerne.</p>
+    </div>
+
+    <!-- ===== Dock collant ===== -->
+    <div class="dock no-print">
+      <div class="dock-in">
+        <svg class="donut" viewBox="0 0 36 36" aria-hidden="true"><circle class="trk" cx="18" cy="18" r="15.5"/><circle class="val" cx="18" cy="18" r="15.5"/></svg>
+        <span class="dock-txt"><strong><span data-done>0</span>/<span data-total>51</span></strong>points cochés</span>
+        <button class="btn-pdf" type="button" data-print>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+          Télécharger en PDF
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+/* Checklist état des lieux, version 2 : JS vanilla, aucune dépendance. */
+(function () {
+  'use strict';
+  var KEY = 'malo-checklist-fin-bail-v1'; // même clé que la version 1 et le hub
+  var root = document.getElementById('malo-checklist');
+  if (!root) return;
+  var $ = function (s, c) { return (c || root).querySelector(s); };
+  var $$ = function (s, c) { return [].slice.call((c || root).querySelectorAll(s)); };
+
+  var items = $$('.rows > li');
+  var inputs = items.map(function (li) { return $('input', li); });
+  var sections = $$('.sec');
+  var chips = $$('[data-chip]');
+  var bar = $('.bar');
+  var live = $('[data-live]');
+  var filterSel = $('[data-filter]');
+  var total = inputs.length;
+  var critTotal = $$('.rows > li.c').length;
+  var doneSec = {};
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  $$('[data-total]').forEach(function (e) { e.textContent = total; });
+  bar.setAttribute('aria-valuemax', total);
+
+  /* ---------- Sauvegarde ---------- */
+  var prev = null;
+  try { prev = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  var savedEl = $('[data-saved]');
+  function save() {
+    var data = {
+      checked: inputs.filter(function (i) { return i.checked; }).map(function (i) { return i.dataset.id; }),
+      open: prev && prev.open ? prev.open : [], // conservé pour la version 1
+      total: total, updated: Date.now()
+    };
+    try { localStorage.setItem(KEY, JSON.stringify(data)); savedEl.textContent = '✓ Enregistré sur cet appareil'; }
+    catch (e) { savedEl.textContent = 'Avancement non enregistré sur ce navigateur'; }
+  }
+
+  /* ---------- Mise à jour ---------- */
+  function update(animate) {
+    var done = 0, critLeft = 0, nextSet = false;
+    items.forEach(function (li, k) {
+      var on = inputs[k].checked;
+      li.classList.toggle('is-checked', on);
+      li.classList.remove('is-next');
+      if (on) done++;
+      else {
+        if (li.classList.contains('c')) critLeft++;
+        if (!nextSet && !li.classList.contains('is-filtered')) { li.classList.add('is-next'); nextSet = true; }
+      }
+    });
+    var pct = total ? Math.round(done / total * 100) : 0;
+    $('[data-pct]').textContent = pct + ' %';
+    $$('[data-done]').forEach(function (e) { e.textContent = done; });
+    $('i', bar).style.width = pct + '%';
+    bar.setAttribute('aria-valuenow', done);
+    bar.setAttribute('aria-valuetext', done + ' sur ' + total + ' points cochés');
+    $('.donut .val').style.strokeDashoffset = (97.4 * (1 - done / total)).toFixed(1);
+
+    var crit = $('[data-crit]');
+    crit.className = 'crit' + (critLeft ? '' : ' ok');
+    crit.textContent = critLeft === critTotal ? critTotal + ' points critiques à traiter en priorité'
+      : critLeft ? critLeft + (critLeft > 1 ? ' critiques restants' : ' critique restant')
+      : 'Tous les critiques sont faits';
+
+    var newly = false;
+    sections.forEach(function (s) {
+      var box = $$('input', s), n = box.filter(function (i) { return i.checked; }).length;
+      var full = n === box.length, id = s.dataset.section;
+      $('[data-n]', s).textContent = n + '/' + box.length;
+      s.classList.toggle('done', full);
+      var chip = $('[data-chip="' + id + '"]');
+      $('.n', chip).textContent = full ? '✓' : n + '/' + box.length;
+      chip.classList.toggle('done', full);
+      if (animate && full && !doneSec[id]) { newly = true; live.textContent = $('h2', s).firstChild.textContent + ' terminée.'; }
+      doneSec[id] = full;
+    });
+    if (newly) { bar.classList.remove('sheen'); void bar.offsetWidth; bar.classList.add('sheen'); }
+    $('[data-done-card]').classList.toggle('show', done === total);
+    if (animate && done === total) live.textContent = 'Checklist terminée.';
+  }
+
+  /* ---------- Filtre ---------- */
+  var EMPTY = {
+    todo: ['Plus rien à faire', 'Tous les points sont cochés.'],
+    crit: ['Aucun point critique', ''],
+    done: ['Aucun point coché pour l\u2019instant', 'Cochez un point pour le retrouver ici.']
+  };
+  function applyFilter() {
+    var f = filterSel.value, any = false;
+    items.forEach(function (li, k) {
+      var on = inputs[k].checked;
+      var show = f === 'all' || (f === 'todo' && !on) || (f === 'done' && on) || (f === 'crit' && li.classList.contains('c'));
+      li.classList.toggle('is-filtered', !show);
+      if (show) any = true;
+    });
+    // Masquer les groupes et sections vides, et les puces correspondantes
+    $$('.grp-wrap').forEach(function (g) { g.classList.toggle('is-filtered', !$$('li:not(.is-filtered)', g).length); });
+    sections.forEach(function (s) {
+      var vis = $$('.rows > li:not(.is-filtered)', s).length > 0;
+      s.classList.toggle('is-filtered', !vis);
+      $('[data-chip="' + s.dataset.section + '"]').classList.toggle('is-filtered', !vis);
+    });
+    var empty = $('[data-empty]');
+    empty.hidden = any;
+    if (!any && EMPTY[f]) { $('strong', empty).textContent = EMPTY[f][0]; $('span', empty).textContent = EMPTY[f][1]; }
+    update(false);
+  }
+  filterSel.addEventListener('change', applyFilter);
+
+  var refilterTimer;
+  inputs.forEach(function (i) {
+    i.addEventListener('change', function () {
+      if (i.checked && navigator.vibrate) { try { navigator.vibrate(8); } catch (e) {} }
+      update(true); save();
+      // Avec « À faire » / « Faits », on laisse voir l'animation avant de masquer la ligne
+      if (filterSel.value === 'todo' || filterSel.value === 'done') {
+        clearTimeout(refilterTimer); refilterTimer = setTimeout(applyFilter, 700);
+      }
+    });
+  });
+
+  /* ---------- Puces : défilement + section active ---------- */
+  var chipBox = $('[data-chips]');
+  function setActive(id) {
+    chips.forEach(function (c) {
+      var on = c.dataset.chip === id;
+      c.setAttribute('aria-current', on ? 'true' : 'false');
+      if (on) chipBox.scrollTo({ left: c.offsetLeft - chipBox.clientWidth / 2 + c.offsetWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  }
+  chips.forEach(function (c) {
+    c.addEventListener('click', function (e) {
+      var s = document.getElementById('sec-' + c.dataset.chip);
+      if (!s) return;
+      e.preventDefault();
+      s.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      setActive(c.dataset.chip);
+    });
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) setActive(en.target.dataset.section); });
+    }, { rootMargin: '-140px 0px -60% 0px' });
+    sections.forEach(function (s) { io.observe(s); });
+    // Ombre sous la barre de puces quand elle colle
+    var nav = $('.nav'), sentinel = document.createElement('div');
+    nav.parentNode.insertBefore(sentinel, nav);
+    new IntersectionObserver(function (en) { nav.classList.toggle('stuck', !en[0].isIntersecting); }).observe(sentinel);
+  }
+
+  /* ---------- PDF ---------- */
+  function fillPrintMeta() {
+    var done = inputs.filter(function (i) { return i.checked; }).length;
+    $('[data-print-meta]').textContent = done + ' sur ' + total + ' points cochés, imprimé le ' +
+      new Date().toLocaleDateString('fr-CH', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+  window.addEventListener('beforeprint', fillPrintMeta);
+  $$('[data-print]').forEach(function (b) { b.addEventListener('click', function () { fillPrintMeta(); window.print(); }); });
+
+  /* ---------- Réinitialiser ---------- */
+  $('[data-reset]').addEventListener('click', function () {
+    if (!window.confirm('Décocher les ' + total + ' points ? Votre avancement sera effacé.')) return;
+    inputs.forEach(function (i) { i.checked = false; });
+    doneSec = {}; save(); applyFilter();
+    live.textContent = 'Toutes les cases ont été décochées.';
+  });
+
+  /* ---------- Restauration ---------- */
+  if (prev && Array.isArray(prev.checked)) {
+    inputs.forEach(function (i) { i.checked = prev.checked.indexOf(i.dataset.id) !== -1; });
+    savedEl.textContent = '✓ Enregistré sur cet appareil';
+  } else {
+    savedEl.textContent = 'Votre avancement s\u2019enregistrera sur cet appareil';
+  }
+  applyFilter();
+  setActive('methode');
+})();
+</script>
+<script>
+/* Aperçu local : quand les pages sont ouvertes directement depuis l'ordinateur (sans serveur),
+   les liens « dossier/ » sont redirigés vers « dossier/index.html ». Sans effet une fois en ligne. */
+if (location.protocol === 'file:') {
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var h = a.getAttribute('href');
+    if (/^[^\/:#?][^:#?]*\/$/.test(h)) a.setAttribute('href', h + 'index.html');
+  });
+}
+</script>
+<footer class="tool-footer">
+  <p>© 2026 Malo Nettoyage · Payerne — <a href="/politique-de-confidentialite/">Politique de confidentialité</a> · <a href="/devis-gratuit/">Devis gratuit</a></p>
+</footer>
+</body>
+</html>

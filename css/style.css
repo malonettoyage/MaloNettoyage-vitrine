@@ -2587,8 +2587,8 @@ html { scroll-behavior: smooth; }
 
 /* Impression : uniquement la checklist (PDF propre, pagination correcte) */
 @media print{
-  body > *:not(.article-body){ display:none !important; }
-  .article-body > *:not(#checklist-etat-des-lieux){ display:none !important; }
+  body.page-article > *:not(.article-body){ display:none !important; }
+  body.page-article .article-body > *:not(#checklist-etat-des-lieux){ display:none !important; }
   .article-body{ margin:0 !important; padding:0 !important; }
   #checklist-etat-des-lieux{ margin:0; border:1px solid #ccc; box-shadow:none; max-width:100%; }
   .checklist-section{ page-break-inside:avoid; }
@@ -2597,3 +2597,4 @@ html { scroll-behavior: smooth; }
   .checklist-item.critical{ border-left:3px solid #ff6b35 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   .checklist-item input[type="checkbox"]{ appearance:auto; }
 }
+
