@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page d'accueil -->
   <url>
     <loc>https://www.malonettoyage.ch/</loc>
     <lastmod>2026-06-01</lastmod>
@@ -12,12 +15,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
-
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Page d'accueil -->
-
 
   <!-- Service : Fin de bail -->
   <url>
@@ -370,39 +367,15 @@
   </url>
 
   <url>
-    <loc>https://www.malonettoyage.ch/blog/ce-que-la-regie-verifie-etat-des-lieux/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <loc>https://www.malonettoyage.ch/blog/moisissures-joints-silicone/</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.malonettoyage.ch/outils/</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.malonettoyage.ch/outils/checklist-fin-bail/</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.malonettoyage.ch/outils/estimation-fin-de-bail/</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.malonettoyage.ch/outils/lettre-resiliation/</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.malonettoyage.ch/outils/etat-des-lieux-entree/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <loc>https://www.malonettoyage.ch/blog/ce-que-la-regie-verifie-etat-des-lieux/</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

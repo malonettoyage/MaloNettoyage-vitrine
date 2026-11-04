@@ -17,6 +17,15 @@
   /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
+      slug:      "/blog/moisissures-joints-silicone/",
+      titre:     "Moisissures sur joints silicone : pourquoi elles reviennent et comment les éliminer vraiment",
+      badge:     "Conseils",
+      date:      "4 novembre 2026",
+      iso:       "2026-11-04",
+      image:     "/blog/moisissures-joints-silicone/img/moisissures-joints-silicone.webp",
+      extrait:   "Le champignon s'installe dans la matière du silicone : pourquoi nettoyer ne suffit pas, la méthode en 5 étapes pour remplacer le joint et l'erreur que tout le monde fait."
+    },
+    {
       slug:      "/blog/ce-que-la-regie-verifie-etat-des-lieux/",
       titre:     "Ce que la régie vérifie lors d'un état des lieux : checklist interactive à cocher",
       badge:     "Fin de bail",
@@ -42,15 +51,6 @@
       iso:       "2026-09-25",
       image:     "/blog/pourquoi-choisir-malo-nettoyage/img/pourquoi-choisir-malo-nettoyage.webp",
       extrait:   "64/64 états des lieux validés, réponse le weekend, service insalubre rare, duo familial avec Malo Débarras : les preuves concrètes qui nous différencient."
-    },
-    {
-      slug:      "/blog/signaux-alerte-entreprise-nettoyage/",
-      titre:     "7 signaux qui trahissent une mauvaise entreprise de nettoyage",
-      badge:     "Conseils",
-      date:      "22 septembre 2026",
-      iso:       "2026-09-22",
-      image:     "/blog/signaux-alerte-entreprise-nettoyage/img/signaux-alerte-nettoyage.webp",
-      extrait:   "Devis flou, pas d'assurance RC Pro, aucune garantie écrite : 7 signaux concrets pour reconnaître une entreprise de nettoyage peu fiable avant de signer."
     }
   ];
 
