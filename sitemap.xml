@@ -9,12 +9,6 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://www.malonettoyage.ch/politique-de-confidentialite/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
 
   <!-- Service : Fin de bail -->
   <url>
@@ -362,6 +356,13 @@
   <url>
     <loc>https://www.malonettoyage.ch/blog/protocole-nettoyage-logement-insalubre/</loc>
     <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.malonettoyage.ch/blog/devis-nettoyage-insalubre-que-preparer/</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

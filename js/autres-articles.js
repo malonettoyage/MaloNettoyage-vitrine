@@ -17,6 +17,15 @@
   /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
+      slug:      "/blog/devis-nettoyage-insalubre-que-preparer/",
+      titre:     "Devis nettoyage insalubre : comment bien préparer sa demande",
+      badge:     "Insalubre",
+      date:      "4 novembre 2026",
+      iso:       "2026-11-04",
+      image:     "/blog/devis-nettoyage-insalubre-que-preparer/img/devis-nettoyage-insalubre.webp",
+      extrait:   "Quelles informations donner, faut-il des photos, ce qui fait varier le prix, les délais et les questions à poser. Un guide simple, discret et sans jugement."
+    },
+    {
       slug:      "/blog/moisissures-joints-silicone/",
       titre:     "Moisissures sur joints silicone : pourquoi elles reviennent et comment les éliminer vraiment",
       badge:     "Conseils",
@@ -42,15 +51,6 @@
       iso:       "2026-09-27",
       image:     "/blog/protocole-nettoyage-logement-insalubre/img/protocole-nettoyage-insalubre.webp",
       extrait:   "Débarras, traitement des nuisibles, désinfection, désodorisation : le protocole en 4 étapes d'un nettoyage professionnel de logement insalubre. Guide complet."
-    },
-    {
-      slug:      "/blog/pourquoi-choisir-malo-nettoyage/",
-      titre:     "Pourquoi choisir Malo Nettoyage dans la Broye : ce qui nous différencie vraiment",
-      badge:     "Conseils",
-      date:      "25 septembre 2026",
-      iso:       "2026-09-25",
-      image:     "/blog/pourquoi-choisir-malo-nettoyage/img/pourquoi-choisir-malo-nettoyage.webp",
-      extrait:   "64/64 états des lieux validés, réponse le weekend, service insalubre rare, duo familial avec Malo Débarras : les preuves concrètes qui nous différencient."
     }
   ];
 
