@@ -17,6 +17,15 @@
   /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
+      slug:      "/blog/fin-de-bail-decembre/",
+      titre:     "Fin de bail en décembre : réussir son nettoyage et son état des lieux pendant les fêtes",
+      badge:     "Fin de bail",
+      date:      "6 novembre 2026",
+      iso:       "2026-11-06",
+      image:     "/blog/fin-de-bail-decembre/img/fin-de-bail-decembre.webp",
+      extrait:   "Jours fériés, froid, journées courtes, régies au ralenti : le rétroplanning de novembre au jour J et les 5 pièges de la période des fêtes pour récupérer sa caution."
+    },
+    {
       slug:      "/blog/devis-nettoyage-insalubre-que-preparer/",
       titre:     "Devis nettoyage insalubre : comment bien préparer sa demande",
       badge:     "Insalubre",
@@ -24,15 +33,6 @@
       iso:       "2026-11-04",
       image:     "/blog/devis-nettoyage-insalubre-que-preparer/img/devis-nettoyage-insalubre.webp",
       extrait:   "Quelles informations donner, faut-il des photos, ce qui fait varier le prix, les délais et les questions à poser. Un guide simple, discret et sans jugement."
-    },
-    {
-      slug:      "/blog/moisissures-joints-silicone/",
-      titre:     "Moisissures sur joints silicone : pourquoi elles reviennent et comment les éliminer vraiment",
-      badge:     "Conseils",
-      date:      "4 novembre 2026",
-      iso:       "2026-11-04",
-      image:     "/blog/moisissures-joints-silicone/img/moisissures-joints-silicone.webp",
-      extrait:   "Le champignon s'installe dans la matière du silicone : pourquoi nettoyer ne suffit pas, la méthode en 5 étapes pour remplacer le joint et l'erreur que tout le monde fait."
     },
     {
       slug:      "/blog/ce-que-la-regie-verifie-etat-des-lieux/",
