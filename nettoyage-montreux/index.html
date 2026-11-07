@@ -69,6 +69,12 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"/></n
   .ville-bloc{max-width:860px;margin-left:auto;margin-right:auto;}
   .ville-section h2{margin-bottom:14px;}
   .ville-section p{line-height:1.75;color:#232323;}
+  .zone-pastilles{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;padding:0;list-style:none;}
+  .zone-pastilles li{background:#E6F9F4;color:#2a3b33;border-radius:999px;padding:7px 14px;font-size:.92rem;font-weight:500;}
+  .zone-pastilles li.lien{transition:background .2s ease;}
+  .zone-pastilles li.lien a{color:#0f5c37;text-decoration:none;display:block;}
+  .zone-pastilles li.lien:hover{background:#1CBF73;}
+  .zone-pastilles li.lien:hover a{color:#fff;}
 </style>
 
 </head>
@@ -180,14 +186,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-<!-- Section locale [VILLE] -->
-<section class="section ville-bloc ville-section">
-  <h2>Où intervenons-nous autour de Montreux ?</h2>
-  <p>Montreux et ses quartiers et villages : Clarens, Territet, Glion, Chernex, Brent et Chailly. Ainsi que Veytaux, Villeneuve et La Tour-de-Peilz.</p>
-  <p class="garantie"><strong>Fin de bail garanti</strong> : 64 états des lieux sur 64 validés — retour gratuit si la régie refuse.</p>
-</section>
-
-
 <!-- Formulaire de contact (commun) + champ caché ville -->
 <section id="contact" class="contact-section section">
   <h2>Obtenez votre <span class="highlight">devis gratuit</span></h2>
@@ -245,6 +243,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button type="submit" class="cta">Recevoir mon devis gratuit</button>
     <p class="contact-note">Réponse sous 24h – sans engagement</p>
   </form>
+</section>
+
+
+<!-- Section locale [VILLE] -->
+<section class="section ville-bloc ville-section">
+  <h2>Où intervenons-nous autour de Montreux ?</h2>
+  <p>Nous intervenons à Montreux et dans ses quartiers et communes voisines :</p>
+  <ul class="zone-pastilles"><li>Clarens</li><li>Territet</li><li>Glion</li><li>Chernex</li><li>Brent</li><li>Veytaux</li><li>Villeneuve</li><li class="lien"><a href="/nettoyage-la-tour-de-peilz/">La Tour-de-Peilz</a></li><li class="lien"><a href="/nettoyage-vevey/">Vevey</a></li></ul>
 </section>
 
 
