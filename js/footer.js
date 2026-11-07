@@ -75,7 +75,7 @@
 
     <!-- Zones d'intervention -->
     <div class="footer-zones">
-      <p><strong>Zones d'intervention :</strong> Payerne · Yverdon-les-Bains · Moudon · Avenches · Estavayer-le-Lac · Fribourg · Romont · Lausanne · Morges · Nyon · et alentours</p>
+      <p><strong>Zones d'intervention :</strong> <a href="/">Payerne</a> · <a href="/nettoyage-estavayer/">Estavayer</a> · <a href="/nettoyage-avenches/">Avenches</a> · <a href="/nettoyage-moudon/">Moudon</a> · <a href="/nettoyage-morat/">Morat</a> · <a href="/nettoyage-romont/">Romont</a> · <a href="/nettoyage-fribourg/">Fribourg</a> · <a href="/nettoyage-villars-sur-glane/">Villars-sur-Glâne</a> · <a href="/nettoyage-bulle/">Bulle</a> · <a href="/nettoyage-lausanne/">Lausanne</a> · <a href="/nettoyage-pully/">Pully</a> · <a href="/nettoyage-renens/">Renens</a> · <a href="/nettoyage-ecublens/">Ecublens</a> · <a href="/nettoyage-crissier/">Crissier</a> · <a href="/nettoyage-morges/">Morges</a> · <a href="/nettoyage-vevey/">Vevey</a> · <a href="/nettoyage-la-tour-de-peilz/">La Tour-de-Peilz</a> · <a href="/nettoyage-montreux/">Montreux</a> · <a href="/nettoyage-yverdon-les-bains/">Yverdon-les-Bains</a> · <a href="/nettoyage-orbe/">Orbe</a> · <a href="/nettoyage-echallens/">Echallens</a> · <a href="/nettoyage-neuchatel/">Neuchâtel</a> · <a href="/nettoyage-sion/">Sion</a> · <a href="/nettoyage-conthey/">Conthey</a> · <a href="/zones-intervention/"><strong>Toutes nos zones</strong></a></p>
     </div>
 
     <!-- Bas du footer : copyright + liens légaux -->

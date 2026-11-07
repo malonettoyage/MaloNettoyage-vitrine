@@ -1480,6 +1480,11 @@ background: linear-gradient(156deg, rgba(230, 249, 244, 1) 0%, rgba(255, 255, 25
 .footer-zones strong {
   color: rgba(255,255,255,0.5);
 }
+.footer-zones a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+}
+.footer-zones a:hover { color: #1CBF73; text-decoration: none; }
 
 .footer-bottom {
   display: flex;
