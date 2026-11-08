@@ -17,6 +17,15 @@
   /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
+      slug:      "/blog/nettoyer-joints-carrelage/",
+      titre:     "Nettoyer les joints de carrelage : calcaire, graisse, moisissures, la méthode adaptée",
+      badge:     "Calcaire",
+      date:      "8 novembre 2026",
+      iso:       "2026-11-08",
+      image:     "/blog/nettoyer-joints-carrelage/img/nettoyer-joints-carrelage.webp",
+      extrait:   "Joints noirs, jaunis ou entartrés : identifier la saleté, puis la méthode graduée du savon et de la brosse à l'antifongique pour les nettoyer sans abîmer le ciment."
+    },
+    {
       slug:      "/blog/fin-de-bail-decembre/",
       titre:     "Fin de bail en décembre : réussir son nettoyage et son état des lieux pendant les fêtes",
       badge:     "Fin de bail",
@@ -42,15 +51,6 @@
       iso:       "2026-10-01",
       image:     "/blog/ce-que-la-regie-verifie-etat-des-lieux/img/checklist-regie-etat-des-lieux.webp",
       extrait:   "Les points exacts que la régie inspecte, dans l'ordre — avec une checklist interactive à cocher et à télécharger en PDF. Expérience terrain 64/64 validés."
-    },
-    {
-      slug:      "/blog/protocole-nettoyage-logement-insalubre/",
-      titre:     "Nettoyage d'un logement insalubre : les 4 étapes d'une intervention professionnelle",
-      badge:     "Insalubre",
-      date:      "27 septembre 2026",
-      iso:       "2026-09-27",
-      image:     "/blog/protocole-nettoyage-logement-insalubre/img/protocole-nettoyage-insalubre.webp",
-      extrait:   "Débarras, traitement des nuisibles, désinfection, désodorisation : le protocole en 4 étapes d'un nettoyage professionnel de logement insalubre. Guide complet."
     }
   ];
 
