@@ -55,7 +55,7 @@
       slug:        '/services/nettoyage-insalubre-extreme/',
       image:       '/img/services/nettoyage-insalubre.webp',
       imageAlt:    'Remise en état d\'un logement insalubre par Malo Nettoyage',
-      titre:       'Nettoyage insalubre & extrême',
+      titre:       'Nettoyage Diogène & insalubre',
       description: 'Syndrome de Diogène, après décès, accumulation : remise en état discrète, sans jugement.'
     }
   ];

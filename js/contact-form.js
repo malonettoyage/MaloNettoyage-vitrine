@@ -37,7 +37,8 @@
     placeholder:  container.dataset.placeholder  || 'Décrivez votre besoin (type de nettoyage, surface, délai…)',
     submit:       container.dataset.submit        || 'Recevoir mon devis gratuit',
     subject:      container.dataset.subject       || 'Nouvelle demande de devis',
-    photosLabel:  container.dataset.photosLabel   || 'Photos'
+    photosLabel:  container.dataset.photosLabel   || 'Photos',
+    hideService:  container.dataset.hideService === 'true'
   };
 
   /* ── OPTIONS DU SELECT ── */
@@ -46,7 +47,7 @@
     'Nettoyage régulier',
     'Nettoyage de vitres',
     'Nettoyage de fin de chantier',
-    'Nettoyage insalubre & extrême',
+    'Nettoyage Diogène & insalubre',
     'Nettoyage en profondeur',
     'Autre demande'
   ];
@@ -54,6 +55,18 @@
   const optionsHTML = SERVICES.map(s =>
     `<option value="${s}"${s === cfg.service ? ' selected' : ''}>${s}</option>`
   ).join('\n          ');
+
+  // Sur une page mono-service (data-hide-service="true"), on masque le menu
+  // et on envoie le service en champ caché (moins de friction).
+  const serviceField = cfg.hideService
+    ? `<input type="hidden" name="service" value="${cfg.service}">`
+    : `<div class="field">
+          <label for="c-service"><p>Type de service</p></label>
+          <select id="c-service" name="service" required>
+            <option value="">— Choisissez un service —</option>
+            ${optionsHTML}
+          </select>
+        </div>`;
 
   /* ── INJECTION DU HTML ── */
   container.innerHTML = `
@@ -92,13 +105,7 @@
           <input type="email" id="c-email" name="email" placeholder="lauramorel@exemple.ch">
         </div>
 
-        <div class="field">
-          <label for="c-service"><p>Type de service</p></label>
-          <select id="c-service" name="service" required>
-            <option value="">— Choisissez un service —</option>
-            ${optionsHTML}
-          </select>
-        </div>
+        ${serviceField}
 
         <div class="field">
           <label for="c-msg"><p>Votre message</p></label>
