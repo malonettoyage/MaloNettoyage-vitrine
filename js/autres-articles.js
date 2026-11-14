@@ -17,6 +17,15 @@
   /* Registre — uniquement les articles les plus récents (du + récent au + ancien) */
   const ARTICLES = [
     {
+      slug:      "/blog/externaliser-internaliser-nettoyage-bureaux/",
+      titre:     "Externaliser ou internaliser le nettoyage de ses bureaux : coût réel, avantages et pièges",
+      badge:     "Nettoyage régulier",
+      date:      "14 novembre 2026",
+      iso:       "2026-11-14",
+      image:     "/blog/externaliser-internaliser-nettoyage-bureaux/img/externaliser-nettoyage-bureaux.webp",
+      extrait:   "Le coût complet d'un nettoyeur interne comparé à un prestataire, et les cas où l'interne reste le bon choix. Un guide pour décider en connaissance de cause."
+    },
+    {
       slug:      "/blog/nettoyer-joints-carrelage/",
       titre:     "Nettoyer les joints de carrelage : calcaire, graisse, moisissures, la méthode adaptée",
       badge:     "Calcaire",
@@ -42,15 +51,6 @@
       iso:       "2026-11-04",
       image:     "/blog/devis-nettoyage-insalubre-que-preparer/img/devis-nettoyage-insalubre.webp",
       extrait:   "Quelles informations donner, faut-il des photos, ce qui fait varier le prix, les délais et les questions à poser. Un guide simple, discret et sans jugement."
-    },
-    {
-      slug:      "/blog/ce-que-la-regie-verifie-etat-des-lieux/",
-      titre:     "Ce que la régie vérifie lors d'un état des lieux : checklist interactive à cocher",
-      badge:     "Fin de bail",
-      date:      "1 octobre 2026",
-      iso:       "2026-10-01",
-      image:     "/blog/ce-que-la-regie-verifie-etat-des-lieux/img/checklist-regie-etat-des-lieux.webp",
-      extrait:   "Les points exacts que la régie inspecte, dans l'ordre — avec une checklist interactive à cocher et à télécharger en PDF. Expérience terrain 64/64 validés."
     }
   ];
 
