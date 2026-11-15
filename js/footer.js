@@ -54,6 +54,7 @@
         <h4>Navigation</h4>
         <ul>
           <li><a href="/">Accueil</a></li>
+          <li><a href="/nos-services/">Tous nos services</a></li>
           <li><a href="/services/fin-de-bail/">Fin de bail</a></li>
           <li><a href="/services/nettoyage-fin-de-chantier/">Fin de chantier</a></li>
           <li><a href="/services/nettoyage-vitres/">Vitres</a></li>

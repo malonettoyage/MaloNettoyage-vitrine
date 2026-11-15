@@ -53,18 +53,12 @@ src="https://www.facebook.com/tr?id=532778493168576&ev=PageView&noscript=1"/></n
 <script src="/js/scroll-fade.js" defer></script>
 
 <style>
-  /* Page zones — liste simple par canton (style épuré, univers Malo) */
-  .zones-hub{max-width:900px;margin-left:auto;margin-right:auto;}
-  .zones-hub .zones-hub-intro{color:#5c6b64;max-width:760px;margin-bottom:48px;}
-  .zones-canton{margin-top:0;}
-  .zones-canton h2{border-bottom:2px solid #E6F9F4;padding-bottom:8px;margin-bottom:18px;}
-  .zones-villes{list-style:none;padding:0;margin:0;columns:3;column-gap:30px;}
-  .zones-villes li{margin:0 0 12px;break-inside:avoid;}
-  .zones-villes a{color:#232323;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:9px;}
-  .zones-villes a::before{content:"";width:7px;height:7px;border-radius:50%;background:#1CBF73;flex:0 0 auto;}
-  .zones-villes a:hover{color:#1CBF73;}
-  @media(max-width:768px){.zones-villes{columns:2;}}
-  @media(max-width:480px){.zones-villes{columns:1;}}
+  /* Page zones — cartes villes par canton (cohérent avec le hub) */
+  .zones-hub{max-width:1000px;margin-left:auto;margin-right:auto;}
+  .ville-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:24px;}
+  .ville-card{padding:14px 16px;background:#fff;border:1px solid #ececec;border-radius:14px;text-decoration:none;color:#232323;}
+  a.ville-card{display:block;transition:box-shadow .18s,transform .18s;}
+  a.ville-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.09);transform:translateY(-2px);}
 </style>
 
 </head>
@@ -116,57 +110,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 
 
-<main class="zones-hub section" style="padding:0 20px;">
-  <h1>Nos zones d'intervention</h1>
-  <p class="zones-hub-intro">
-    Entreprise familiale née à Payerne, Malo Nettoyage se déplace dans toute la Suisse romande : la Broye, les cantons de Vaud, Fribourg, Neuchâtel et le Valais central. Choisissez votre ville ci-dessous, ou demandez directement un devis gratuit — nous confirmons la disponibilité sous 24h.
-  </p>
+<main class="zones-hub" style="padding:0 20px;">
+
+  <div class="hero section fade-in">
+    <div class="titre-logo">
+      <a href="/">
+        <img src="/img/MaloNettoyage_Logo-black.webp" alt="Logo Malo Nettoyage" class="logo" loading="eager">
+      </a>
+      <div class="titre-texte">
+        <h1>Nos <span class="highlight">zones</span> d'intervention</h1>
+        <p style="max-width:640px;margin:0 auto;">
+          Choisissez votre ville ci-dessous, ou demandez directement un devis gratuit — nous confirmons la disponibilité sous 24h.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <div class="zones-canton section">
     <h2>Canton de Vaud</h2>
-    <ul class="zones-villes">
-      <li><a href="/">Payerne</a></li>
-      <li>Avenches</li>
-      <li>Moudon</li>
-      <li>Yverdon-les-Bains</li>
-      <li>Orbe</li>
-      <li>Echallens</li>
-      <li>Lausanne</li>
-      <li>Pully</li>
-      <li>Renens</li>
-      <li>Ecublens</li>
-      <li>Crissier</li>
-      <li>Morges</li>
-      <li>Vevey</li>
-      <li>Montreux</li>
-    </ul>
+    <div class="ville-grid">
+      <a href="/" class="ville-card">Payerne</a>
+      <span class="ville-card">Avenches</span>
+      <span class="ville-card">Moudon</span>
+      <span class="ville-card">Yverdon</span>
+      <span class="ville-card">Orbe</span>
+      <span class="ville-card">Echallens</span>
+      <span class="ville-card">Lausanne</span>
+      <span class="ville-card">Pully</span>
+      <span class="ville-card">Renens</span>
+      <span class="ville-card">Ecublens</span>
+      <span class="ville-card">Crissier</span>
+      <span class="ville-card">Morges</span>
+      <span class="ville-card">Vevey</span>
+      <span class="ville-card">Montreux</span>
+    </div>
   </div>
 
   <div class="zones-canton section">
     <h2>Canton de Fribourg</h2>
-    <ul class="zones-villes">
-      <li>Fribourg</li>
-      <li>Villars-sur-Glâne</li>
-      <li>Bulle</li>
-      <li>Estavayer</li>
-      <li>Morat</li>
-      <li>Romont</li>
-    </ul>
+    <div class="ville-grid">
+      <span class="ville-card">Fribourg</span>
+      <span class="ville-card">Villars-sur-Glâne</span>
+      <span class="ville-card">Bulle</span>
+      <span class="ville-card">Estavayer</span>
+      <span class="ville-card">Morat</span>
+      <span class="ville-card">Romont</span>
+    </div>
   </div>
 
   <div class="zones-canton section">
     <h2>Canton de Neuchâtel</h2>
-    <ul class="zones-villes">
-      <li>Neuchâtel</li>
-    </ul>
+    <div class="ville-grid">
+      <span class="ville-card">Neuchâtel</span>
+    </div>
   </div>
 
   <div class="zones-canton section">
     <h2>Canton du Valais</h2>
-    <ul class="zones-villes">
-      <li>Sion</li>
-      <li>Conthey</li>
-    </ul>
+    <div class="ville-grid">
+      <span class="ville-card">Sion</span>
+      <span class="ville-card">Conthey</span>
+    </div>
   </div>
 
   <div class="blog-cta fade-in">
