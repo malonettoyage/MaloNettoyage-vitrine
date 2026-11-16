@@ -2580,12 +2580,12 @@ html { scroll-behavior: smooth; }
   margin-bottom:1rem; color:#232323; font-size:.9rem;
 }
 .checklist-guarantee strong{ font-size:1rem; }
-.btn-download{
-  background:#1a1a1a; color:#fff; border:none; padding:.85rem 2rem;
-  border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer;
+.article-body .btn-download{
+  background:#1CBF73; color:#fff; border:none; padding:.95rem 2.2rem;
+  border-radius:1000px; font-size:1rem; font-weight:700; cursor:pointer; text-decoration:none;
   transition:background .2s; display:inline-flex; align-items:center; gap:.5rem;
 }
-.btn-download:hover{ background:#000; }
+.article-body .btn-download:hover{ background:#0f5c37; color:#fff; }
 .checklist-cta{ margin-top:1rem; font-size:.9rem; color:#666; }
 .checklist-cta a{ color:#0f5c37; font-weight:600; text-decoration:none; }
 .checklist-cta a:hover{ text-decoration:underline; }
